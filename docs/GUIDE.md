@@ -25,6 +25,24 @@ After creating repo, click "Create New File"
 
 After adding the code, click "Commit Changes" at the end of the form to save it 
 
+```
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>My First Heading</h1>
+        <p>My first paragraph.</p>
+        <h3>A basic form</h3>
+        <form action="https://duckduckgo.com/">
+            <input type="text" name="q">
+            <input type="hidden" name="sites" value="github.com">
+            <button name="search" type="submit">Search github.com using DuckDuckGo</button>
+          </form>
+          <h3>A hyperlink</h3>
+          <a href="https://duckduckgo.com">Duck Duck Go</a>
+    </body>
+</html>
+```
+
 <!-- ![Code Form](./code-form.png) -->
 # Repo
 
@@ -50,10 +68,11 @@ Go back to your GitHub repo and create a new file `test.js`. This code tests ope
 
 ```
 var webdriver = require('w3c-webdriver');
+
 let session;
 (async () => {
   try {
-    session = await webdriver.newSession('http://localhost:4444', {
+    session = await webdriver.newSession('http://localhost:9515', {
       desiredCapabilities: {
         browserName: 'Chrome',
         chromeOptions: {
@@ -61,19 +80,39 @@ let session;
         }
       }
     });
-    await session.go('http://your-netlify-web-address');
-    const element = await session.findElement('css selector', 'a');
-    await element.click();
+    await session.go('https://elated-montalcini-28a317.netlify.com');
+    const screenshot = await session.takeScreenshot();
+    console.log('Opening the homepage (Ok)');
+    const input = await session.findElement('css selector', '[name="q"]');
+    console.log('Found element (Ok)');
+    await input.sendKeys('donald trump simulator');
+    console.log('Value entered in search field (Ok)');
+    const button = await session.findElement('css selector', '[name="search"]');
+    console.log('Found element (Ok)');
+    await button.click();
+    const result = await session.findElement('css selector', '.result__snippet');
+    const text = await result.getText();
+    console.log('Result output (Ok)');
+    const check = text.includes('Donald Trump');
+    if (check === true) 
+    {
+      console.log('The actual results match the expected results')
+    }
+    else
+    {
+      console.log('The actual results does not match the expected results')
+    }
   } catch (err) {
     console.log(err.stack);
-  } finally {
-    session.deleteSession();
   }
 })();
+
 ```
 # To make it easier
 
-The test code is mostly standard setup, so for now the only 3 lines you need to truly understand are
+The test code is mostly standard setup, though if you are new to this, it can look daunting. Don't worry! We all learn in steps, and most of this code is either standard setup or common predefined functions.
+
+### Some examples explained
 
 ##### Open up url and wait for it to load
 
