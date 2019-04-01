@@ -1,4 +1,5 @@
-import webdriver from 'w3c-webdriver';
+var webdriver = require('w3c-webdriver');
+
 let session;
 (async () => {
   try {
