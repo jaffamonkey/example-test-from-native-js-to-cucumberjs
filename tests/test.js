@@ -12,6 +12,8 @@ let session;
       }
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
+    const screenshot = await session.takeScreenshot();
+    screenshot.getScreenshotAs(OutputType.FILE);
     console.log('Opening the homepage (Ok)');
     const input = await session.findElement('css selector', '[name="q"]');
     console.log('Found element (Ok)');

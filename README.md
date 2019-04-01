@@ -5,6 +5,7 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 # Install and run tests
 
 ```
+cd tests
 npm install w3c-webdriver
 npm install chromedriver
 ./node_modules/.bin/chromedriver &

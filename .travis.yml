@@ -6,6 +6,7 @@ language: node_js
 node_js:
   - '11'
 before_script:
+  - cd tests
   - npm install w3c-webdriver
   - npm install chromedriver
   - ./node_modules/.bin/chromedriver &
