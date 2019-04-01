@@ -1,3 +1,5 @@
+_Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
+
 # Install and run tests
 
 ```
