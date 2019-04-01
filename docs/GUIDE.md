@@ -44,11 +44,6 @@ After adding the code, click "Commit Changes" at the end of the form to save it
 ```
 
 <!-- ![Code Form](./code-form.png) -->
-# Repo
-
-Now your GitHub repo will look like this
-
-<!-- ![New Repo View](./new-repo-view.png) -->
 # Test Framework
 
 In order to test, we need help from a tool that will enable our JavaScript code to control the browser.
