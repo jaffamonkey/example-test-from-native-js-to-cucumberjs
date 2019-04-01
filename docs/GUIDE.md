@@ -194,7 +194,9 @@ Then move switch on right so it turns green - your repo will now run through and
 Add the following code to your README, and it will display the lastest Travis status for your code:
 
 ```
-[![Build Status](https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name.svg?branch=master)](https://travis-ci.org/jaffamonkey/replace-this-with-your-repo-name)
+[![Build Status]
+(https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name.svg?branch=master)]
+(https://travis-ci.org/jaffamonkey/replace-this-with-your-repo-name)
 ```
 
 # Create new GitHub repo connection
