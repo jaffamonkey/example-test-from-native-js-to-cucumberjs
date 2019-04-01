@@ -13,10 +13,10 @@ let session;
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
     console.log('Opening the homepage (Ok)');
-    const element = await session.findElement('css selector', 'a');
-    console.log('Finding the link on the homepage (Ok)');
-    await element.click();
-        console.log('Clicking the link (Ok)');
+    const input = await session.findElement('css selector', '[name="q"]');
+    console.log('Found element (Ok)');
+    await a.sendKeys('Heading');
+    console.log('Value entered in search field and submitted (Ok)');
   } catch (err) {
     console.log(err.stack);
    } 
