@@ -189,11 +189,14 @@ Go to your dashboard and search for your repo
 Then move switch on right so it turns green - your repo will now run through and build and test every time you change your code on GitHub.
 
 <!-- ![Add Repo](./travis-success.png) -->
+
+# Activate Travis build badge to your README
 Add the following code to your README, and it will display the lastest Travis status for your code:
 
 ```
 [![Build Status](https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name.svg?branch=master)](https://travis-ci.org/jaffamonkey/replace-this-with-your-repo-name)
 ```
+
 # Create new GitHub repo connection
 
 Click the "New site from Git" button, then click "GutHub" button (which will create connection between netlify and GitHub)
