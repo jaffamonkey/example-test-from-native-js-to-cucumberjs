@@ -55,10 +55,6 @@ So we are going to create a small framework (inside your repo) to run our test c
 npm install w3c-webdriver
 npm install chromedriver
 ```
-Start the chromedriver (now ready to automate browser actions)
-```
-./node_modules/.bin/chromedriver
-```
 # The test file
 
 Go back to your GitHub repo and create a new file `test.js`. This code tests opening site and clicking a link.
@@ -125,11 +121,13 @@ The test code is mostly standard setup, though if you are new to this, it can lo
 
 # Run the tests
 
+#### Start the chromedriver (now ready to automate browser actions)
+```
+./node_modules/.bin/chromedriver
+```
+#### Now run the tests
 ```
 cd tests
-npm install w3c-webdriver
-npm install chromedriver
-./node_modules/.bin/chromedriver &
 node test.js
 ```
 
