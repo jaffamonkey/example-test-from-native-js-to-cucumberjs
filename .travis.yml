@@ -9,6 +9,7 @@ before_script:
   - npm install w3c-webdriver
   - npm install chromedriver
   - ./node_modules/.bin/chromedriver &
+  - wait(5)
 script:
   - node test.js
   
