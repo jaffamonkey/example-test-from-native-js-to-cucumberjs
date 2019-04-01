@@ -29,6 +29,10 @@ let session;
     {
       console.log('The actual results match the expected results')
     }
+    else
+    {
+      console.log('The actual results does not match the expected results')
+    }
   } catch (err) {
     console.log(err.stack);
   }
