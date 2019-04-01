@@ -2,6 +2,8 @@
 
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
+I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver.  The only either requirement is having Node installed.
+
 # Create a repo on github
 
 Github is a service where you can keep your code, and make it available to others.
