@@ -15,8 +15,11 @@ let session;
     console.log('Opening the homepage (Ok)');
     const input = await session.findElement('css selector', '[name="q"]');
     console.log('Found element (Ok)');
-    await a.sendKeys('Heading');
+    await a.sendKeys('donald trump simulator');
     console.log('Value entered in search field and submitted (Ok)');
+    const result = await session.findElement('css selector', '.repo-list');
+    const text = await result.getText();
+    console.log(text)
   } catch (err) {
     console.log(err.stack);
    } 
