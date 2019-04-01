@@ -6,9 +6,9 @@ let session;
     session = await webdriver.newSession('http://localhost:9515', {
       desiredCapabilities: {
         browserName: 'Chrome',
-        chromeOptions: {
-          args: ["headless", "disable-gpu"]
-        }
+        // chromeOptions: {
+        //   args: ["headless", "disable-gpu"]
+        // }
       }
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
@@ -20,10 +20,10 @@ let session;
     const button = await session.findElement('css selector', '[name="search"]');
     console.log('Found element (Ok)');
     await button.click();
-    const result = await session.findElement('css selector', 'p');
-    console.log('Search results page loaded (Ok)');
+    const result = await session.findElement('css selector', '.result__snippet');
     const text = await result.getText();
     console.log(text)
+    console.log('Result output (Ok)');
   } catch (err) {
     console.log(err.stack);
    } 
