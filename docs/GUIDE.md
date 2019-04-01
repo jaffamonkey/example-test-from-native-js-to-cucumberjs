@@ -120,11 +120,24 @@ The test code is mostly standard setup, though if you are new to this, it can lo
 ##### When element has been found, click it
 
 `await element.click();`
+
+# Run the tests
+
+```
+cd tests
+npm install w3c-webdriver
+npm install chromedriver
+./node_modules/.bin/chromedriver &
+node test.js
+```
+
 # Travis Build Server
 
-Now we have the code, we need the tests to make sure our changes don't break it when we change it.
+Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it.
 
 The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code.
+
+Basically all we have to do, is take the exact steps you did in the previous section, and put them intom the simple Travis configuration file format.
 
 You can add this as a step before your code goes to Netlify, to check for test failures.
 
