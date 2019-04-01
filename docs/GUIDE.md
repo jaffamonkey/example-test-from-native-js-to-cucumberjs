@@ -143,7 +143,8 @@ We need to write small configuration file, so that when Travis pulls the code fr
 The file is very simple for us, so create new file in your repo called `.travis.yml`
 
 ```
-sudo: required
+sudo: required // Some installation actions require administrator-level access
+
 dist: trusty // Builds a mininal machine to runs tests on
 
 addons:
@@ -156,8 +157,9 @@ node_js:
   
 before_script:
   - npm install w3c-webdriver // install w3c-webdriver to use browser from DOM level
-  - npm install chromedriver // install chromedriver enable automate of the Chrome browser
+  - npm install chromedriver // install chromedriver, the browser interaction service for Chrome
   - ./node_modules/.bin/chromedriver & // Run the browser interaction service
+  
 script:
   - node test.js // run the tests
 ```
