@@ -6,9 +6,9 @@ let session;
     session = await webdriver.newSession('http://localhost:9515', {
       desiredCapabilities: {
         browserName: 'Chrome',
-        // chromeOptions: {
-        //   args: ["headless", "disable-gpu"]
-        // }
+        chromeOptions: {
+          args: ["headless", "disable-gpu"]
+        }
       }
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
