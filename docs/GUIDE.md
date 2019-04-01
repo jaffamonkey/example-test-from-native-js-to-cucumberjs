@@ -75,10 +75,9 @@ let session;
       }
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
-    const screenshot = await session.takeScreenshot();
-    console.log('Opening the homepage (Ok)');
+    console.log('Now opening the homepage (Ok)');
     const input = await session.findElement('css selector', '[name="q"]');
-    console.log('Found element (Ok)');
+    console.log('Found field with name "q" (Ok)');
     await input.sendKeys('donald trump simulator');
     console.log('Value entered in search field (Ok)');
     const button = await session.findElement('css selector', '[name="search"]');
