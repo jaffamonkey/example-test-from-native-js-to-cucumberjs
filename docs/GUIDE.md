@@ -25,6 +25,24 @@ After creating repo, click "Create New File"
 
 After adding the code, click "Commit Changes" at the end of the form to save it 
 
+```
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>My First Heading</h1>
+        <p>My first paragraph.</p>
+        <h3>A basic form</h3>
+        <form action="https://duckduckgo.com/">
+            <input type="text" name="q">
+            <input type="hidden" name="sites" value="github.com">
+            <button name="search" type="submit">Search github.com using DuckDuckGo</button>
+          </form>
+          <h3>A hyperlink</h3>
+          <a href="https://duckduckgo.com">Duck Duck Go</a>
+    </body>
+</html>
+```
+
 <!-- ![Code Form](./code-form.png) -->
 # Repo
 
