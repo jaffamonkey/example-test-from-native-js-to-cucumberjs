@@ -2,6 +2,8 @@
 
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
+### FOR FULL GUIDE ON THIS REPO PLEASE READ `GUIDE.md` in the `docs` folder
+
 # Install and run tests
 
 ```
@@ -11,4 +13,3 @@ npm install chromedriver
 ./node_modules/.bin/chromedriver &
 node test.js
 ```
-
