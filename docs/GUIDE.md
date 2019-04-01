@@ -52,8 +52,9 @@ In order to test, we need help from a tool that will enable our JavaScript code 
 
 So we are going to create a small framework (inside your repo) to run our test code in.
 ```
-npm install w3c-webdriver
-npm install chromedriver
+your-repo-name>cd tests
+your-repo-name/tests>npm install w3c-webdriver
+your-repo-name/tests>npm install chromedriver
 ```
 # The test file
 
@@ -123,12 +124,12 @@ The test code is mostly standard setup, though if you are new to this, it can lo
 
 #### Start the chromedriver (now ready to automate browser actions)
 ```
-./node_modules/.bin/chromedriver
+your-repo-name>cd tests
+your-repo-name/tests>./node_modules/.bin/chromedriver
 ```
 #### Now run the tests
 ```
-cd tests
-node test.js
+your-repo-name/tests>node test.js
 ```
 
 # Travis Build Server
