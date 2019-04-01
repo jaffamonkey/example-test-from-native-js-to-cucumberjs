@@ -58,7 +58,7 @@ your-repo-name/tests>npm install chromedriver
 ```
 # The test file
 
-Go back to your GitHub repo and create a new file `test.js`. This code tests opening site and clicking a link.
+Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
 ```
 var webdriver = require('w3c-webdriver');
