@@ -145,18 +145,23 @@ The file is very simple for us, so create new file in your repo called `.travis.
 ```
 sudo: required
 dist: trusty
+// Builds a mininal machine to runs tests on
 addons:
   chrome: stable
+  // installs latest stable Chrome
 language: node_js
+// define primary platform language
 node_js:
   - '11'
-install:
-  - npm install
+// Specify the version of the primary platform language
 before_script:
+// install the neccessary tools to enable us to automate the browser
   - npm install w3c-webdriver
   - npm install chromedriver
+// Run the browser interaction service
   - ./node_modules/.bin/chromedriver &
 script:
+// run the tests
   - node test.js
 ```
 # Netlify
