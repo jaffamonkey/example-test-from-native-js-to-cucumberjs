@@ -12,7 +12,7 @@ let session;
       }
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
-    const screenshot = await sessiontakeScreenshot();
+    const screenshot = await session.takeScreenshot();
     console.log('Opening the homepage (Ok)');
     const input = await session.findElement('css selector', '[name="q"]');
     console.log('Found element (Ok)');
@@ -23,9 +23,13 @@ let session;
     await button.click();
     const result = await session.findElement('css selector', '.result__snippet');
     const text = await result.getText();
-    console.log(text)
     console.log('Result output (Ok)');
+    const check = text.includes('Donald Trump');
+    if (check === true) 
+    {
+      console.log('The actual results match the expected results')
+    }
   } catch (err) {
     console.log(err.stack);
-   } 
+  }
 })();
