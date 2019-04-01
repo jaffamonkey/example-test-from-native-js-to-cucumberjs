@@ -20,28 +20,27 @@ Link: https://github.com
 
 After setting up your account, click the "+" symbol in the top-right of the menu bar.
 
-![Create a github repo](./create-repo.png)
+<!-- ![Create a github repo](./create-repo.png) -->
 # Fill in repo form
 
 The defaults are ok, but remember to select to add README to add repo info.
 
-
-![Repo form](./repo-form.png)
+<!-- ![Repo form](./repo-form.png) -->
 # Create first HTML page
 
 After creating repo, click "Create New File"
 
-![Create New File](./create-new-file.png)
+<!-- ![Create New File](./create-new-file.png) -->
 # Add HTML
 
 After adding the code, click "Commit Changes" at the end of the form to save it 
 
-![Code Form](./code-form.png)
+<!-- ![Code Form](./code-form.png) -->
 # Repo
 
 Now your GitHub repo will look like this
 
-![New Repo View](./new-repo-view.png)
+<!-- ![New Repo View](./new-repo-view.png) -->
 # Test Framework
 
 In order to test, we need help from a tool that will enable our JavaScript code to control the browser.
@@ -107,7 +106,7 @@ You can add this as a step before your code goes to Netlify, to check for test f
 
 And you can use your GitHub credentials to login https://travis-ci.org/
 
-![Travis CI](./travisci.png)
+<!-- ![Travis CI](./travisci.png) -->
 # The Travis file
 
 We need to write small configuration file, so that when Travis pulls the code from your GitHub repo, it knows what to do.
@@ -135,20 +134,19 @@ script:
 
 Now log into https://app.netlify.com (you can use your GitHub account to do this)
 
-![Netlify](./netlify.png)
+<!-- ![Netlify](./netlify.png) -->
 # After build
 
 After build has completed. it will either Pass for Fail
 
-![Add Repo](./travis-success.png)
+<!-- ![Add Repo](./travis-success.png) -->
 # Activate Travis build for your repo
 
 Go to your dashboard and search for your repo
 
 Then move switch on right so it turns green - your repo will now run through and build and test every time you change your code on GitHub.
 
-![Add Repo](./travis-success.png)
-
+<!-- ![Add Repo](./travis-success.png) -->
 Add the following code to your README, and it will display the lastest Travis status for your code:
 
 ```
@@ -158,17 +156,17 @@ Add the following code to your README, and it will display the lastest Travis st
 
 Click the "New site from Git" button, then click "GutHub" button (which will create connection between netlify and GitHub)
 
-![Netlify](./netlify-github.png)
+<!-- ![Netlify](./netlify-github.png) -->
 # Create new deployment
 
 Type in your repo name into search, then click on the repo link
 
-![Netlify](./netlify-new.png)
+<!-- ![Netlify](./netlify-new.png) -->
 # Deploy The Site
 
 Leave defaults, and click "Deploy site"
 
-![Netlify](./netlify-deploy.png)
+<!-- ![Netlify](./netlify-deploy.png) -->
 # Deploy history
 
 Below is the output from the Netlify process to make you site live
