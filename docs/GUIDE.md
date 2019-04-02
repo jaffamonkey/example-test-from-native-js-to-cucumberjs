@@ -4,49 +4,33 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver.  The only either requirement is having Node installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
 
+# Create a repo on github ([Go to GitHub](https://github.com))
 
-| Create a repo on github                                                                                                                                                  |        [Go to GitHub](https://github.com)         |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
-| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar. | ![Create a github repo](./images/create-repo.png) |
+Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar.
 
-| Fill in repo form                                                           |                                                 |
-| --------------------------------------------------------------------------- | --------------------------------------------- |
-| The defaults are ok, but remember to select to add README to add repo info. | ![Create a github repo](./images/repo-form.png) |
+![Create a github repo](./images/create-repo.png)
 
+# Fill in repo form 
 
-| Create first HTML page                        |                                      |
-| --------------------------------------------- | ------------------------------------ |
-| After creating repo, click "Create New File". | ![Repo Form](./images/repo-form.png) |
+The defaults are ok, but remember to select to add README to add repo info.
 
+![Create a github repo](./images/repo-form.png)
 
+# Create first HTML page
 
-<!-- ![Create New File](./create-new-file.png) -->
+After creating repo, click "Create New File".
+
+![Repo Form](./images/create-new-file.png)
+
 # Add HTML
 
-After adding the code, click "Commit Changes" at the end of the form to save it 
+After adding the code, click "Commit Changes" at the end of the form to save it.
 
-```
-<!DOCTYPE html>
-<html>
-    <body>
-        <h1>My First Heading</h1>
-        <p>My first paragraph.</p>
-        <h3>A basic form</h3>
-        <form action="https://duckduckgo.com/">
-            <input type="text" name="q">
-            <input type="hidden" name="sites" value="github.com">
-            <button name="search" type="submit">Search github.com using DuckDuckGo</button>
-          </form>
-          <h3>A hyperlink</h3>
-          <a href="https://duckduckgo.com">Duck Duck Go</a>
-    </body>
-</html>
-```
+![Repo Form](./images/code-form.png)
 
-<!-- ![Code Form](./code-form.png) -->
 # Test Framework
 
-In order to test, we need help from a tool that will enable our JavaScript code to control the browser.
+In order to test, we need help from a tool that will enable our JavaScript code to control the browser. If you are not following this guide using a command-line Terminal, then you can leave this step for now, as they will all be included in the Travis step frther on. 
 
 So we are going to create a small framework (inside your repo) to run our test code in.
 ```
@@ -54,6 +38,7 @@ your-repo-name>cd tests
 your-repo-name/tests>npm install w3c-webdriver
 your-repo-name/tests>npm install chromedriver
 ```
+
 # The test file
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
@@ -73,9 +58,9 @@ let session;
       }
     });
     await session.go('https://elated-montalcini-28a317.netlify.com');
-    console.log('Now opening the homepage (Ok)');
+    console.log('Opening the homepage (Ok)');
     const input = await session.findElement('css selector', '[name="q"]');
-    console.log('Found field with name "q" (Ok)');
+    console.log('Found element (Ok)');
     await input.sendKeys('donald trump simulator');
     console.log('Value entered in search field (Ok)');
     const button = await session.findElement('css selector', '[name="search"]');
@@ -97,7 +82,6 @@ let session;
     console.log(err.stack);
   }
 })();
-
 ```
 # To make it easier
 
@@ -129,19 +113,13 @@ your-repo-name/tests>./node_modules/.bin/chromedriver
 your-repo-name/tests>node test.js
 ```
 
-# Travis Build Server
+# Travis Build Server [Go to TravisCI](https://travis-ci.org)
 
-Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it.
+Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. Basically all we have to do, is take the exact steps you did in the previous section, and put them into the simple Travis configuration file format.
 
-The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code.
+![Travis Config](./images/travisci.png)
 
-Basically all we have to do, is take the exact steps you did in the previous section, and put them intom the simple Travis configuration file format.
 
-You can add this as a step before your code goes to Netlify, to check for test failures.
-
-And you can use your GitHub credentials to login https://travis-ci.org/
-
-<!-- ![Travis CI](./travisci.png) -->
 # The Travis file
 
 We need to write small configuration file, so that when Travis pulls the code from your GitHub repo, it knows what to do.
@@ -169,23 +147,19 @@ before_script:
 script:
   - node test.js // run the tests
 ```
-# Netlify
-
-Now log into https://app.netlify.com (you can use your GitHub account to do this)
-
-<!-- ![Netlify](./netlify.png) -->
 # After build
 
 After build has completed. it will either Pass for Fail
 
-<!-- ![Add Repo](./travis-success.png) -->
+![Add Repo](./images/travis-success.png)
+
 # Activate Travis build for your repo
 
 Go to your dashboard and search for your repo
 
 Then move switch on right so it turns green - your repo will now run through and build and test every time you change your code on GitHub.
 
-<!-- ![Add Repo](./travis-success.png) -->
+![Add Repo](./travis-success.png)
 
 # Activate Travis build badge to your README
 Add the following code to your README, and it will display the lastest Travis status for your code:
@@ -196,21 +170,30 @@ Add the following code to your README, and it will display the lastest Travis st
 (https://travis-ci.org/jaffamonkey/replace-this-with-your-repo-name)
 ```
 
+# Netlify
+
+Now log into https://app.netlify.com (you can use your GitHub account to do this)
+
+![Netlify](./images/netlify.png)
+
 # Create new GitHub repo connection
 
 Click the "New site from Git" button, then click "GutHub" button (which will create connection between netlify and GitHub)
 
-<!-- ![Netlify](./netlify-github.png) -->
+![Netlify](./images/netlify-github.png)
+
 # Create new deployment
 
 Type in your repo name into search, then click on the repo link
 
-<!-- ![Netlify](./netlify-new.png) -->
+![Netlify](./images/netlify-new.png)
+
 # Deploy The Site
 
 Leave defaults, and click "Deploy site"
 
-<!-- ![Netlify](./netlify-deploy.png) -->
+![Netlify](./images/netlify-deploy.png)
+
 # Deploy history
 
 Below is the output from the Netlify process to make you site live
