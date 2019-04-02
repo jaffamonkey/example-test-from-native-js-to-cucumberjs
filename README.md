@@ -10,6 +10,14 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 `test` Where the website tests live
 `web` Where to basic website lives, that we will use to test and deploy
 
+## Files descriptions
+
+`.travis.yml` This the config file for deployment to Travis CI
+`netlify.toml` This the config file for deployment to Netlify cloud server
+`.gitignore` When working on code, there are files and folders that you don't want included and they are specified here.
+`web/index.html` The basic website for purpose of learning coding, testing and deploying
+`tests/test.js` The executable test that will open the basic website, fill and search form and check results.
+
 ## Requirements
 
 * NodeJS (11+)
