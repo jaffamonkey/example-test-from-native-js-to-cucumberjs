@@ -4,20 +4,31 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 ### FOR FULL GUIDE ON THIS REPO PLEASE READ `GUIDE.md` in the `docs` folder
 
+## Folder descriptions
+
+`docs` Where the guides live
+`test` Where the website tests live
+`web` Where to basic website lives, that we will use to test and deploy
+
 ## Requirements
 
 * NodeJS (11+)
 * Git
-* Mac/Linux/Windows (On Windows, use the Gitbash program that is part of the Git Windows package).
+* Mac/Linux/Windows 
 
-# Install and run tests
+I would advice using the command-line Terminal program wherever possible, for the increased learning potential
+
+On Windows, use the Gitbash terminal program that is part of the Git Windows package.
+
+
+## Install test framework components and run tests
 
 ```
-cd tests
+cd path-to-your-repo/tests
 npm install w3c-webdriver
 npm install chromedriver
 ./node_modules/.bin/chromedriver &
 node test.js
 ```
 
-
+_See full guide for creating GitHub Repo, Creating A Travis Build Job and Deploying Website To Netlify (Go Live!)_
