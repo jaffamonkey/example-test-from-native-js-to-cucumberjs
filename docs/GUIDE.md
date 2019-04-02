@@ -177,7 +177,7 @@ Add the following code to your README, and it will display the lastest Travis st
 ```
 [![Build Status]
 (https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name.svg?branch=master)]
-(https://travis-ci.org/jaffamonkey/replace-this-with-your-repo-name)
+(https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name)
 ```
 
 # Netlify
