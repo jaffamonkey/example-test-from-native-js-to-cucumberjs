@@ -31,4 +31,4 @@ npm install chromedriver
 node test.js
 ```
 
-_See full guide for creating GitHub Repo, Creating A Travis Build Job and Deploying Website To Netlify (Go Live!)_
+_See full guide for creating GitHub Repo, Creating Basic Website, Creating A Travis Build Job and Deploying Website To Netlify (Go Live!)_
