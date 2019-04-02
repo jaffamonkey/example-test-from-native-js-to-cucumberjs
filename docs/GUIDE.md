@@ -2,7 +2,7 @@
 
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
-I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver.  The only either requirement is having Node installed.
+I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver.  The only either requirement is having Node installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
 
 # Create a repo on github
 
