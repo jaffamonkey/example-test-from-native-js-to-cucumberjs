@@ -127,7 +127,7 @@ your-repo-name/tests>node test.js
 
 At this point we have been working on the default `master` branch, but in order to make sure we have a stable pipeline it is better to do work and test on a separate branch. 
 
-So now create a branch called `development`, which will be used by Travis CI
+So now create a branch called `travis-ci`, which will be used by Travis CI
 
 # Travis Build Server [Go to TravisCI](https://travis-ci.org)
 
