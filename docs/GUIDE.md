@@ -157,7 +157,7 @@ node_js:
   
 branches:
   only:
-  - development // Specifies that only the 'development' branch will be used
+  - travis-ci // Specifies that only the 'travis-ci' branch will be used
   
 before_script:
   - npm install w3c-webdriver // install w3c-webdriver to use browser from DOM level
@@ -192,7 +192,7 @@ Add the following code to your README, and it will display the lastest Travis st
 
 # CI
 
-Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `development` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up)
+Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `travis-ci` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up)
 
 # Netlify
 
