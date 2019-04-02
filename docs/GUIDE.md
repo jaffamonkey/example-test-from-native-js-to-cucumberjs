@@ -4,18 +4,21 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver.  The only either requirement is having Node installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
 
-# Create a repo on github https://github.com
 
-| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar. | ![Create a github repo](./create-repo.png) |
+| Create a repo on github                                                                                                                                                  |        [Go to GitHub](https://github.com)         |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------- |
+| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar. | ![Create a github repo](./images/create-repo.png) |
 
-# Fill in repo form
+| Fill in repo form                                                           |                                                 |
+| --------------------------------------------------------------------------- | --------------------------------------------- |
+| The defaults are ok, but remember to select to add README to add repo info. | ![Create a github repo](./images/repo-form.png) |
 
-The defaults are ok, but remember to select to add README to add repo info.
 
-<!-- ![Repo form](./repo-form.png) -->
-# Create first HTML page
+| Create first HTML page                        |                                      |
+| --------------------------------------------- | ------------------------------------ |
+| After creating repo, click "Create New File". | ![Repo Form](./images/repo-form.png) |
 
-After creating repo, click "Create New File"
+
 
 <!-- ![Create New File](./create-new-file.png) -->
 # Add HTML
