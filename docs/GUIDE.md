@@ -6,7 +6,7 @@ I have tried to use as few tools and helpers as possible to demonstrate a UI tes
 
 # Create a repo on github https://github.com
 
-| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar.| ![Create a github repo](./create-repo.png) |
+| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar. | ![Create a github repo](./create-repo.png) |
 
 # Fill in repo form
 
