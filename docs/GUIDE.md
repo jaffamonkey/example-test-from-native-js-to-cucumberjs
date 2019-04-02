@@ -43,6 +43,16 @@ your-repo-name/tests>npm install chromedriver
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
+This line will mean Chrome runs without UI (good for speed).
+
+```
+chromeOptions: {
+          args: ["headless", "disable-gpu"]
+        }
+```
+
+Omit this chunk of code, to see the test run in an actual browser
+
 ```
 var webdriver = require('w3c-webdriver');
 
@@ -83,9 +93,9 @@ let session;
   }
 })();
 ```
-# To make it easier
+# Too much too soon!
 
-The test code is mostly standard setup, though if you are new to this, it can look daunting. Don't worry! We all learn in steps, and most of this code is either standard setup or common predefined functions.
+This can look more daunting, but the test code is mostly standard setup, though if you are new to this, it can look daunting. Don't worry! We all learn in steps, and most of this code is either standard setup or common predefined functions.  What you will be glad to know, is there are many tools available to simplify the code you write tests in.
 
 ### Some examples explained
 
