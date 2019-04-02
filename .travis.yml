@@ -5,6 +5,9 @@ addons:
 language: node_js
 node_js:
   - '11'
+branches:
+  only:
+  - development
 before_script:
   - cd tests
   - npm install w3c-webdriver
@@ -13,4 +16,3 @@ before_script:
   - sleep 5
 script:
   - node test.js
-  

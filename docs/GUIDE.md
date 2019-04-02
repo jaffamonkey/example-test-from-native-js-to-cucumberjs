@@ -123,6 +123,12 @@ your-repo-name/tests>./node_modules/.bin/chromedriver
 your-repo-name/tests>node test.js
 ```
 
+# Branching
+
+At this point we have been working on the default `master` branch, but in order to make sure we have a stable pipeline it is better to do work and test on a separate branch. 
+
+So now create a branch called `development`, which will be used by Travis CI
+
 # Travis Build Server [Go to TravisCI](https://travis-ci.org)
 
 Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. Basically all we have to do, is take the exact steps you did in the previous section, and put them into the simple Travis configuration file format.
@@ -143,11 +149,15 @@ dist: trusty // Builds a mininal machine to runs tests on
 
 addons:
   chrome: stable // installs latest stable Chrome
-  
+
 language: node_js // define primary platform language
 
 node_js:
   - '11' // define primary platform language version
+  
+branches:
+  only:
+  - development // Specifies that only the 'development' branch will be used
   
 before_script:
   - npm install w3c-webdriver // install w3c-webdriver to use browser from DOM level
@@ -179,6 +189,10 @@ Add the following code to your README, and it will display the lastest Travis st
 (https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name.svg?branch=master)]
 (https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name)
 ```
+
+# CI
+
+Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `development` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up)
 
 # Netlify
 
