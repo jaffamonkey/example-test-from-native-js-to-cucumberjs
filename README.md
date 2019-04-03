@@ -29,12 +29,10 @@ I would advice using the command-line Terminal program wherever possible, for th
 On Windows, use the Gitbash terminal program that is part of the Git Windows package.
 
 
-## Install test framework components and run tests
+## Install test framework components and run website tests
 
 ```
-cd path-to-your-repo/tests
-npm install w3c-webdriver
-npm install chromedriver
+npm install
 ./node_modules/.bin/chromedriver &
 node test.js
 ```

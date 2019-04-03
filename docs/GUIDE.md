@@ -39,6 +39,27 @@ your-repo-name/tests>npm install w3c-webdriver
 your-repo-name/tests>npm install chromedriver
 ```
 
+For convenience, it is better to create a file to run installations, like below:
+
+`package.json`
+```
+{
+    "name": "starter-github-html-tests-travis-netlify",
+    "description": "starter-github-html-tests-travis-netlify",
+    "version": "1.0",
+    "author": "jaffamonkey <paullittlebury@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+    },
+    "devDependencies": {
+        "w3c-webdriver": "latest",
+        "chromedriver": "latest",
+        "express": "express"
+    }
+  }
+```
+
+Then to install the packages (ensuring you are in directory when the `package.json` is)
 # The test file
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.

@@ -9,10 +9,8 @@ branches:
   only:
   - travis-ci
 before_script:
-  - cd tests
-  - npm install w3c-webdriver
-  - npm install chromedriver
+  - npm install
   - ./node_modules/.bin/chromedriver &
   - sleep 5
 script:
-  - node test.js
+  - node tests/test.js
