@@ -43,7 +43,19 @@ your-repo-name/tests>npm install chromedriver
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
-This line will mean Chrome runs without UI (good for speed).
+## A very important note
+
+Don't try and process all the lines at once, guaranteed brain-freeze. Look at each line, and check if you can actually work out what the line is doing. If you don't know, go to the next line and so on. You will probably find that by doing this way, previous lines that were a mystery suddenly become clearer. 
+
+Things to remember:
+* It's just another language
+* You will recognise parts because of your existing general lnaguage knowledge
+* Some times its a natural language word (e.g. "try") with a loose association with the orginal meaning
+* Think of this as more of a puzzle (sometimes just mathem
+atics)
+* Some times there are parts of coding you will need to look up or be told.
+
+Asn a start, this line will mean Chrome will run the automated tests without UI (good for speed). `headless` means no browser will be visible on screen. `disable-gpu` means disable graphics acceleration for Chrome.
 
 ```
 chromeOptions: {
