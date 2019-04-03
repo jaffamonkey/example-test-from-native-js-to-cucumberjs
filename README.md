@@ -8,7 +8,9 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 `docs` Where the guides live
 `test` Where the website tests live
+`test` Where the simple API server lives
 `web` Where to basic website lives, that we will use to test and deploy
+`node_modules` Whn you run npm install, this folder is created with the packages
 
 ## Files descriptions
 
@@ -17,6 +19,7 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 `.gitignore` When working on code, there are files and folders that you don't want included and they are specified here.
 `web/index.html` The basic website for purpose of learning coding, testing and deploying
 `tests/test.js` The executable test that will open the basic website, fill and search form and check results.
+`package.json` This contain the development packages we need for the test framework
 
 ## Requirements
 
@@ -34,7 +37,7 @@ On Windows, use the Gitbash terminal program that is part of the Git Windows pac
 ```
 npm install
 ./node_modules/.bin/chromedriver &
-node test.js
+node tests/test.js
 ```
 
 _See full guide for creating GitHub Repo, Creating Basic Website, Creating A Travis Build Job and Deploying Website To Netlify (Go Live!)_
