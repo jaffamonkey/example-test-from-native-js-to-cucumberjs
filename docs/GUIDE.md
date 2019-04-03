@@ -60,6 +60,7 @@ For convenience, it is better to create a file to run installations, like below:
 ```
 
 Then to install the packages (ensuring you are in directory when the `package.json` is)
+
 # The test file
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.

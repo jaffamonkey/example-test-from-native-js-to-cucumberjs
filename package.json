@@ -8,6 +8,7 @@
     "devDependencies": {
         "w3c-webdriver": "latest",
         "chromedriver": "latest",
-        "express": "latest"
+        "express": "latest",
+        "superagent": "latest"
     }
 }
