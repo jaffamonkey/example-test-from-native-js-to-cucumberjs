@@ -22,23 +22,6 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 * `package.json` This contain the development packages we need for the test framework
 * `package-lock.json` This is created upon first install run, and records all versions installed.
 
-## Software you need your laptop
-
-On Macs you can use the ```brew``` package manager to install these (or ```npm``` on Linux or Windows)
-
-| MacOS                   | Linux ( Debian, Ubuntu, Linux Mint)   | Windows                 |
-| ----------------------- | ------------------------------------- | ----------------------- |
-| ```brew install node``` | ```sudo apt-get install nodejs npm``` | Download/Install NodeJS |
-| ```brew install git```  | ```npm install -g git```              | Download/Install Git    |
-
-* 
-* brew install git
-
-I would advise using a decent IDE to code in, like Visual Studio Code (free)/
-
-_On Windows, use the Gitbash terminal program that is part of the Git Windows package._
-
-
 ## Install test framework components and run website tests
 
 ```
