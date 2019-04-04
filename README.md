@@ -6,20 +6,20 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 ## Folder descriptions
 
-`docs` Where the guides live
-`tests` Where the website tests live
-`api` Where the simple API server lives (optional to look at)
-`web` Where to basic website lives, that we will use to test and deploy
-`node_modules` When you run npm install, this folder is created with the packages (optional to look at)
+* `docs` Where the guides live
+* `tests` Where the website tests live
+* `api` Where the simple API server lives (optional to look at)
+* `web` Where to basic website lives, that we will use to test and deploy
+* `node_modules` When you run npm install, this folder is created with the packages (optional to look at)
 
 ## Files descriptions
 
-`.travis.yml` This the config file for deployment to Travis CI
-`netlify.toml` This the config file for deployment to Netlify cloud server
-`.gitignore` When working on code, there are files and folders that you don't want included and they are specified here.
-`web/index.html` The basic website for purpose of learning coding, testing and deploying
-`tests/test.js` The executable test that will open the basic website, fill and search form and check results.
-`package.json` This contain the development packages we need for the test framework
+* `.travis.yml` This the config file for deployment to Travis CI
+* `netlify.toml` This the config file for deployment to Netlify cloud server
+* `.gitignore` When working on code, there are files and folders that you don't want included and they are specified here.
+* `web/index.html` The basic website for purpose of learning coding, testing and deploying
+* `tests/test.js` The executable test that will open the basic website, fill and search form and check results.
+* `package.json` This contain the development packages we need for the test framework
 
 ## Requirements
 
