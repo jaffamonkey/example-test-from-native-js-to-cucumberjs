@@ -17,7 +17,7 @@ I have tried to use as few tools and helpers as possible to demonstrate a UI tes
 | **Add HTML** ||
 | After adding the code, click "Commit Changes" at the end of the form to save it. | ![Repo Form](./images/code-form.png) |
 | **Set up the test Framework** ||
-|For convenience to install packages, it is better to create a file to run installations in the root of your repo, like shown here, then run `npm install`. | ![Repo Form](./images/package-json.png) |
+|For convenience to install packages, it is better to create a file `package.json` in the root of your repo, like shown here, then run `npm install`. | ![Repo Form](./images/package-json.png) |
 
 # The test file
 
