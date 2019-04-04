@@ -4,62 +4,20 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver. And code in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
 
-# Create a repo on github ([Go to GitHub](https://github.com))
 
-Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar.
 
-![Create a github repo](./images/create-repo.png)
-
-# Fill in repo form 
-
-The defaults are ok, but remember to select to add README to add repo info.
-
-![Create a github repo](./images/repo-form.png)
-
-# Create first HTML page
-
-After creating repo, click "Create New File".
-
-![Repo Form](./images/create-new-file.png)
-
-# Add HTML
-
-After adding the code, click "Commit Changes" at the end of the form to save it.
-
-![Repo Form](./images/code-form.png)
-
-# Test Framework
-
-In order to test, we need help from a tool that will enable our JavaScript code to control the browser. If you are not following this guide using a command-line Terminal, then you can leave this step for now, as they will all be included in the Travis step frther on. 
-
-So we are going to create a small framework (inside your repo) to run our test code in.
-```
-your-repo-name>cd tests
-your-repo-name/tests>npm install w3c-webdriver
-your-repo-name/tests>npm install chromedriver
-```
-
-For convenience, it is better to create a file to run installations, like below:
-
-`package.json`
-```
-{
-    "name": "starter-github-html-tests-travis-netlify",
-    "description": "starter-github-html-tests-travis-netlify",
-    "version": "1.0",
-    "author": "jaffamonkey <paullittlebury@gmail.com>",
-    "license": "MIT",
-    "dependencies": {
-    },
-    "devDependencies": {
-        "w3c-webdriver": "latest",
-        "chromedriver": "latest",
-        "express": "express"
-    }
-  }
-```
-
-Then to install the packages (ensuring you are in directory when the `package.json` is)
+|     |     |
+| --- | --- |
+| **Create a repo on github** | [Go to GitHub](https://github.com) |
+| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar. | ![Create a github repo](./images/create-repo.png) |
+| **Fill in repo form** ||
+| The defaults are ok, but remember to select to add README to add repo info. | ![Create a github repo](./images/repo-form.png) |
+| **Create first HTML page** ||
+| After creating repo, click "Create New File". | ![Repo Form](./images/create-new-file.png) |
+| **Add HTML** ||
+| After adding the code, click "Commit Changes" at the end of the form to save it. | ![Repo Form](./images/code-form.png) |
+| **Set up the test Framework** ||
+|For convenience to install packages, it is better to create a file to run installations in the root of your repo, like shown here, then run `npm install`. | ![Repo Form](./images/package-json.png) |
 
 # The test file
 
