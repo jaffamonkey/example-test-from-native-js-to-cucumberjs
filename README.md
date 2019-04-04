@@ -20,16 +20,23 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 * `web/index.html` The basic website for purpose of learning coding, testing and deploying
 * `tests/test.js` The executable test that will open the basic website, fill and search form and check results.
 * `package.json` This contain the development packages we need for the test framework
+* `package-lock.json` This is created upon first install run, and records all versions installed.
 
-## Requirements
+## Software you need your laptop
 
-* NodeJS (11+)
-* Git
-* Mac/Linux/Windows 
+On Macs you can use the ```brew``` package manager to install these (or ```npm``` on Linux or Windows)
 
-I would advice using the command-line Terminal program wherever possible, for the increased learning potential
+| MacOS                   | Linux ( Debian, Ubuntu, Linux Mint)   | Windows                 |
+| ----------------------- | ------------------------------------- | ----------------------- |
+| ```brew install node``` | ```sudo apt-get install nodejs npm``` | Download/Install NodeJS |
+| ```brew install git```  | ```npm install -g git```              | Download/Install Git    |
 
-On Windows, use the Gitbash terminal program that is part of the Git Windows package.
+* 
+* brew install git
+
+I would advise using a decent IDE to code in, like Visual Studio Code (free)/
+
+_On Windows, use the Gitbash terminal program that is part of the Git Windows package._
 
 
 ## Install test framework components and run website tests
