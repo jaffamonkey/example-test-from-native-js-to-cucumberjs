@@ -6,17 +6,20 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 ## Folder descriptions
 
-* `docs` Where the guides live
-* `test` Where the website tests live
-* `web` Where to basic website lives, that we will use to test and deploy
+`docs` Where the guides live
+`tests` Where the website tests live
+`api` Where the simple API server lives (optional to look at)
+`web` Where to basic website lives, that we will use to test and deploy
+`node_modules` When you run npm install, this folder is created with the packages (optional to look at)
 
 ## Files descriptions
 
-* `.travis.yml` This the config file for deployment to Travis CI
-* `netlify.toml` This the config file for deployment to Netlify cloud server
-* `.gitignore` When working on code, there are files and folders that you don't want included and they are specified here.
-* `web/index.html` The basic website for purpose of learning coding, testing and deploying
-* `tests/test.js` The executable test that will open the basic website, fill and search form and check results.
+`.travis.yml` This the config file for deployment to Travis CI
+`netlify.toml` This the config file for deployment to Netlify cloud server
+`.gitignore` When working on code, there are files and folders that you don't want included and they are specified here.
+`web/index.html` The basic website for purpose of learning coding, testing and deploying
+`tests/test.js` The executable test that will open the basic website, fill and search form and check results.
+`package.json` This contain the development packages we need for the test framework
 
 ## Requirements
 
@@ -29,14 +32,12 @@ I would advice using the command-line Terminal program wherever possible, for th
 On Windows, use the Gitbash terminal program that is part of the Git Windows package.
 
 
-## Install test framework components and run tests
+## Install test framework components and run website tests
 
 ```
-cd path-to-your-repo/tests
-npm install w3c-webdriver
-npm install chromedriver
+npm install
 ./node_modules/.bin/chromedriver &
-node test.js
+node tests/test.js
 ```
 
 _See full guide for creating GitHub Repo, Creating Basic Website, Creating A Travis Build Job and Deploying Website To Netlify (Go Live!)_
