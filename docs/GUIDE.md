@@ -2,7 +2,7 @@
 
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
-I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver.  The only either requirement is having Node installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
+I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver. And code in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
 
 # Create a repo on github ([Go to GitHub](https://github.com))
 
@@ -65,7 +65,19 @@ Then to install the packages (ensuring you are in directory when the `package.js
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
-This line will mean Chrome runs without UI (good for speed).
+## A very important note
+
+Don't try and process all the lines at once, guaranteed brain-freeze. Look at each line, and check if you can actually work out what the line is doing. If you don't know, go to the next line and so on. You will probably find that by doing this way, previous lines that were a mystery suddenly become clearer. 
+
+Things to remember:
+* It's just another language
+* You will recognise parts because of your existing general language knowledge
+* Some times its a natural language word (e.g. "try") with a loose association with the orginal meaning, i.e. not a way you would talk in normal conversation.
+* Think of this as more of a puzzle (sometimes just mathem
+atics)
+* Some times there are parts of coding you will need to look up or be told.
+
+Asn a start, this line will mean Chrome will run the automated tests without UI (good for speed). `headless` means no browser will be visible on screen. `disable-gpu` means disable graphics acceleration for Chrome.
 
 ```
 chromeOptions: {
@@ -214,7 +226,9 @@ Add the following code to your README, and it will display the lastest Travis st
 
 # CI
 
-Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `travis-ci` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up)
+Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `travis-ci` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up).
+
+**Strictly this would not be a deployment to live website (which I am doing here for simplicity), it would be a deployment to a test website so we can check things visually before manually deploying to live website.**
 
 # Netlify
 
