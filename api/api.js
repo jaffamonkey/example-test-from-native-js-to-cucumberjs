@@ -1,11 +1,16 @@
+// Fast minimalist web framework for Node.
 var express = require("express");
-var db = require("./db/db,js");
+
+// A dummy db file, which define Express db structure
+var db = require("./db/db");
+
+// Parses incoming request data
 var bodyParser = require("body-parser");
 
-// Set up the express app
+// Set up the express app, the basis of our API server
 const app = express();
 
-// Parse incoming requests data
+// Ensures the data is in right format to send
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -37,7 +42,9 @@ app.post('/api/v1/todos', (req, res) => {
  })
 });
 
+// Deifne what port the api server runs on, in this case the full url would be http://localhost:3000
 const PORT = 3000;
+
 
 app.listen(PORT, () => {
   console.log(`server running on port ${PORT}`)

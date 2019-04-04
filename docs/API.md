@@ -2,6 +2,8 @@ The simplest API call is retrieving a web page, which returns a status code of 2
 
 But there is a lot you can do at API level.
 
-There is a most API server code in the `api` folder, as a demontsration of both api server and test.
+There is a most API server code in the `api` folder, as a demonstration of both api server and tests for:
 
-The test is short and sweet, 
+* `GET` For example, retrieving a webpage
+* `POST` For example, sending a contact form
+
