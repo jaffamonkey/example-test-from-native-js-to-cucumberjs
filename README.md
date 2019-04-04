@@ -30,4 +30,13 @@ npm install
 node tests/test.js
 ```
 
+## What's installed
+
+* `w3c-webdriver` A "remote control" for web browsers; enable us to perform browser actions using code 
+* `chromedriver` ChromeDriver is a separate program that w3c-webdriver uses to control Chrome
+* `body-parser` This is for the API server and cleans input data
+* `express` A mininal application server for the API server
+* `superagent` Provides features for testing API's
+
+
 _See full guide for creating GitHub Repo, Creating Basic Website, Creating A Travis Build Job and Deploying Website To Netlify (Go Live!)_

@@ -1,9 +1,11 @@
 const superagent = require('superagent');
+// Generates a title of 10 characters, with random letters, each time test is run
+let randomTitle = Math.random().toString(36).substring(10);
 
   superagent.post(
     'http://localhost:3000/api/v1/todos'
   )
-  .send({ "title": "test title"})
+  .send({"title": randomTitle})
   .end(function (err, res) {
     if (err) {
       console.log(err)
