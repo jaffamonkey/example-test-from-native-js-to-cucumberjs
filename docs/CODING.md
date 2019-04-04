@@ -10,4 +10,18 @@ In order to securely and more easily clone repos from your machine, you need to 
 
 This is easy, as all you have to do is run the following line, then copy 'n paste the output into a GitHub form field.
 
-Assuming you have installed Git for Windows, open up the GitBash program which will open up CLI window.
+Open up your Terminal program, and from any directory run the command line below. Just press <RETURN> with each option to take the default options.
+
+```
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
+
+Now you need to copy the contents of the public key file. This maps to your private key file.
+
+```
+head ~/.ssh/id_rsa.pub 
+```
+
+Then copy and paste the content from screen, ready to paste
+
+Assuming you hve installed Git for Windows, open up the GitBash program which will open up CLI window.
