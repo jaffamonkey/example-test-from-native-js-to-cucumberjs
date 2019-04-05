@@ -31,9 +31,8 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 * `api/api.js` A barebones API server
 * `tests/api-test-get.js` API tests for GET API action (for example, requesting a webpage)
 * `tests/api-test-post.js` API tests for POST API action (for example, submitting a contact form)
-* `web/main.js` A barebones app server
 * `web/client.js` A barebones client app
-* `web/server.js` A barebones web server
+* `web/server.js` A barebones web app server
 
 ## Install test framework components and run website tests
 
@@ -63,8 +62,8 @@ node ./tests/browser-test.js
 
 ## What's installed
 
-* `w3c-webdriver` A "remote control" for web browsers; enable us to perform browser actions using code 
-* `chromedriver` ChromeDriver is a separate program that w3c-webdriver uses to control Chrome
+* `selenium-webdriver` A "remote control" for web browsers; enable us to perform browser actions using code 
+* `chromedriver` ChromeDriver is a separate program that Selemium Webdriver uses to control Chrome
 * `body-parser` This is for the API server and cleans input data
 * `express` A mininal application server for the API server
 * `superagent` Provides features for testing API's

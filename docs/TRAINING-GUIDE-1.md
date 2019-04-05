@@ -2,7 +2,7 @@
 
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
-I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only w3c-driver and chromedriver. And code in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
+I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only selenium-webdriver and chromedriver. And code in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed. While you can follow this guide and edit your code purely on the github, it is far better to have a code editor on your machine. You can then push your code changes from that (see `CODING.md`)
 
 
 
@@ -46,44 +46,34 @@ chromeOptions: {
 Omit this chunk of code, to see the test run in an actual browser
 
 ```
-var webdriver = require('w3c-webdriver');
+require('chromedriver');
+var webdriver = require('selenium-webdriver'),
+  By = webdriver.By,
+  until = webdriver.until;
 
-let session;
-(async () => {
-  try {
-    session = await webdriver.newSession('http://localhost:9515', {
-      desiredCapabilities: {
-        browserName: 'Chrome',
-        chromeOptions: {
-          args: ["headless", "disable-gpu"]
-        }
-      }
-    });
-    await session.go('https://elated-montalcini-28a317.netlify.com');
-    console.log('Opening the homepage (Ok)');
-    const input = await session.findElement('css selector', '[name="q"]');
-    console.log('Found element (Ok)');
-    await input.sendKeys('donald trump simulator');
-    console.log('Value entered in search field (Ok)');
-    const button = await session.findElement('css selector', '[name="search"]');
-    console.log('Found element (Ok)');
-    await button.click();
-    const result = await session.findElement('css selector', '.result__snippet');
-    const text = await result.getText();
-    console.log('Result output (Ok)');
-    const check = text.includes('Donald Trump');
-    if (check === true) 
-    {
-      console.log('The actual results match the expected results')
+driver = new webdriver
+  .Builder()
+  .usingServer()
+  .withCapabilities({
+    'browserName': 'chrome',
+    'chromeOptions': {
+      args: ["headless", "disable-gpu"]
     }
-    else
-    {
-      console.log('The actual results does not match the expected results')
-    }
-  } catch (err) {
-    console.log(err.stack);
-  }
-})();
+  }).build();
+
+driver.get('http://localhost:8081');
+
+// waiting for element to load, the fill in field
+driver.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
+
+// Locating the field that has name "search", then clicking
+driver.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
+driver.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+
+var textPromise = driver.findElement(By.css('.result__snippet')).getText();
+textPromise.then((text) => {
+  console.log(text);
+});
 ```
 # Too much too soon!
 
@@ -162,7 +152,7 @@ branches:
   - travis-ci // Specifies that only the 'travis-ci' branch will be used
   
 before_script:
-  - npm install w3c-webdriver // install w3c-webdriver to use browser from DOM level
+  - npm install selenium-webdriver // install selenium-webdriver to use browser from DOM level
   - npm install chromedriver // install chromedriver, the browser interaction service for Chrome
   - ./node_modules/.bin/chromedriver & // Run the browser interaction service
   
