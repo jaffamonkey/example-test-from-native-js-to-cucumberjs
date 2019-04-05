@@ -24,8 +24,13 @@ driver.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').
 // waiting for search results to load
 driver.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
 
-// Extracting text from the search result area of the page
-var textPromise = driver.findElement(By.css('.result__snippet')).getText();
-textPromise.then((text) => {
-  console.log(text);
+// Verifying the search results page title
+driver.getTitle().then(function (title) {
+  if (title === 'donald trump simulator site:github.com at DuckDuckGo') {
+    console.log('The title "' + title + '" is correct');
+  } else {
+    console.log('The title "' + title + '" is incorrect');
+  }
+  // Close web session
+  driver.quit();
 });
