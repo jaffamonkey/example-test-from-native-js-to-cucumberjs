@@ -1,6 +1,5 @@
 var webdriver = require('w3c-webdriver');
 
-
 // Mainly useful for development, but for the test "async" provide 
 // useful way to makde tests run smoothly, by reducing time between the steps.
 (async () => {
@@ -58,7 +57,7 @@ var webdriver = require('w3c-webdriver');
   catch (err) {
     console.log(err.stack);
   }
-  // Stop Chromedriver and Browser
+  // Closes web browser
   finally {
     session.deleteSession;
   }
