@@ -1,3 +1,4 @@
+// The first section is setting up the environment in order for us to run the test code on a browser
 require('chromedriver');
 var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
@@ -13,6 +14,7 @@ browser = new webdriver
     }
   }).build();
 
+// Browser opens for first time
 browser.get('http://localhost:8081');
 
 // waiting for element to load, the fill in field
