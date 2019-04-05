@@ -46,12 +46,13 @@ chromeOptions: {
 Omit this chunk of code, to see the test run in an actual browser
 
 ```
+// The first section is setting up the environment in order for us to run the test code on a browser
 require('chromedriver');
 var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
   until = webdriver.until;
 
-driver = new webdriver
+browser = new webdriver
   .Builder()
   .usingServer()
   .withCapabilities({
@@ -61,18 +62,27 @@ driver = new webdriver
     }
   }).build();
 
-driver.get('http://localhost:8081');
+// Browser opens for first time
+browser.get('http://localhost:8081');
 
 // waiting for element to load, the fill in field
-driver.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
+browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
 
-// Locating the field that has name "search", then clicking
-driver.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
-driver.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+// Locating the element that has name "search", then click
+browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
 
-var textPromise = driver.findElement(By.css('.result__snippet')).getText();
-textPromise.then((text) => {
-  console.log(text);
+// waiting for search results to load
+browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+
+// Verifying the search results page title
+browser.getTitle().then(function (title) {
+  if (title === 'donald trump simulator site:github.com at DuckDuckGo') {
+    console.log('The title "' + title + '" is correct');
+  } else {
+    console.log('The title "' + title + '" is incorrect');
+  }
+  // Close web session
+  browser.quit();
 });
 ```
 # Too much too soon!
