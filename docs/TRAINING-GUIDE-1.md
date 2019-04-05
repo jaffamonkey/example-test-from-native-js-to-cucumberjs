@@ -105,7 +105,17 @@ This can look more daunting, but the test code is mostly standard setup, though 
 
 # Run the tests
 
+#### Start the website environment up
+
+Open new Terminal tab
+```
+// This starts the Node web server
+node ./web/server.js
+```
+
 #### Start the chromedriver (now ready to automate browser actions)
+
+Open new Terminal tab
 ```
 your-repo-name>cd tests
 your-repo-name/tests>./node_modules/.bin/chromedriver

@@ -1,9 +1,21 @@
-The simplest API call is retrieving a web page, which returns a status code of 200 (OK).
+# API Server
 
-But there is a lot you can do at API level.
+## To start the API server
 
-There is a most API server code in the `api` folder, as a demonstration of both api server and tests for:
+Open up your Terminal Program (for Macs. it's in the `Utilities` folder), and navigate the your api folder. For example:
+```
+node api.js
+```
 
-* `GET` For example, retrieving a webpage
-* `POST` For example, sending a contact form
+## Run API tests
 
+First open new Terminal tab, navigate to your repo folder and run the two tests:
+
+```
+> node tests/api-test-get.js
+{"success":"true","message":"todos retrieved successfully","todos":[{"id":1,"title":"example"}]}
+> node tests/api-test-post.js
+{ success: 'true',
+  message: 'todo added successfully',
+  todo: { id: 2, title: '50b' } }
+```

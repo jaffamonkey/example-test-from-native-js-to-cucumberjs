@@ -16,7 +16,7 @@ var webdriver = require('w3c-webdriver');
     });
 
     // This is the point the browser first opens
-    await session.go('https://elated-montalcini-28a317.netlify.com');
+    await session.go('http://localhost:8081');
 
     // console.log is standard Javascript to output text to the screen.
     // Is this context, it's outputting confirmation message step passed ok.
