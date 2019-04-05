@@ -10,7 +10,6 @@ branches:
   - travis-ci
 before_script:
   - npm install
-  - ./node_modules/.bin/chromedriver &
   - sleep 5
 script:
-  - node tests/test.js
+  - node tests/browser-test.js
