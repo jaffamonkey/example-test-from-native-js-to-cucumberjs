@@ -6,37 +6,37 @@ var http = require('http');
 var fs = require('fs');
 var path = require('path');
 
-http.createServer(function (req, res) {
+http.createServer(function (request, response) {
 
     // If the url path is root of domain ...
-    if (req.url === "/") {
+    if (request.url === "/") {
 
         // ... open the "index.html" file ...
         fs.readFile("index.html", "UTF-8", function (err, html) {
 
             // ... then include the relevant content type in the HTML <head> section
-            res.writeHead(200, { "Content-Type": "text/html" });
-            res.end(html);
+            response.writeHead(200, { "Content-Type": "text/html" });
+            response.end(html);
         });
     }
-    // For url's that has ".png" in url, i.e. am image location
-    else if (req.url.match("\.png$")) {
+    // For url's that has ".png" in url, i.e. an image location ...
+    else if (request.url.match("\.png$")) {
 
-        // Define general images path
-        var imagePath = path.join(__dirname, 'images', req.url);
+        // ... define images path
+        var imagePath = path.join(__dirname, 'images', request.url);
         var fileStream = fs.createReadStream(imagePath);
-        res.writeHead(200, { "Content-Type": "image/png" });
-        fileStream.pipe(res);
+        response.writeHead(200, { "Content-Type": "image/png" });
+        fileStream.pipe(response);
     }
 
-    else if (req.url == '/data') { //check the URL of the current request
-        res.writeHead(200, { 'Content-Type': 'application/json' });
-        res.write(JSON.stringify({ message: "Hello World" }));
-        res.end();
+    else if (request.url == '/data') { //check the URL of the current request
+        response.writeHead(200, { 'Content-Type': 'application/json' });
+        response.write(JSON.stringify({ message: "Hello World" }));
+        response.end();
     }
     else {
-        res.writeHead(404, { "Content-Type": "text/html" });
-        res.end("No Page Found");
+        response.writeHead(404, { "Content-Type": "text/html" });
+        response.end("No Page Found");
     }
 
 }).listen(8081);
