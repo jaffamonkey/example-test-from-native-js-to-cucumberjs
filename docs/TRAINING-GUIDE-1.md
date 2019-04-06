@@ -94,14 +94,6 @@ browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate')
 browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
 ```
 
-##### Find the element on web page with tag "a", and give it the name "Ã«lement"
-
-`const element = await session.findElement('css selector', 'a');`
-
-##### When element has been found, click it
-
-`await element.click();`
-
 # Run the tests
 
 #### Start the website environment up
