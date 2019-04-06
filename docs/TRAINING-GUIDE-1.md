@@ -2,18 +2,36 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only selenium-webdriver and chromedriver. And coding will be in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed.
 
-|     |     |
-| --- | --- |
-| **Create a repo on github** | [Go to GitHub](https://github.com) |
-| Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar. | ![Create a github repo](./images/create-repo.png) |
-| **Fill in repo form** ||
-| The defaults are ok, but remember to select to add README to add repo info. | ![Create a github repo](./images/repo-form.png) |
-| **Create first HTML page** ||
-| After creating repo, click "Create New File". | ![Repo Form](./images/create-new-file.png) |
-| **Add HTML** ||
-| After adding the code, click "Commit Changes" at the end of the form to save it. | ![Repo Form](./images/code-form.png) |
-| **Set up the test Framework** ||
-|For convenience to install packages, it is better to create a file `package.json` in the root of your repo, like shown here, then run `npm install`. | ![Repo Form](./images/package-json.png) |
+# Create a repo on github
+[Go to GitHub](https://github.com)
+
+Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar.
+
+![Create a github repo](./images/create-repo.png)
+
+## Fill in repo form
+
+The defaults are ok, but remember to select to add README to add repo info.
+
+![Create a github repo](./images/repo-form.png)
+
+## Create first HTML page
+
+After creating repo, click "Create New File".
+
+![Repo Form](./images/create-new-file.png)
+
+## Add HTML
+
+After adding the code, click "Commit Changes" at the end of the form to save it.
+
+![Repo Form](./images/code-form.png)
+
+# Set up the testing framework
+
+For convenience to install packages, it is better to create a file `package.json` in the root of your repo, like shown here, then run `npm install`.
+
+![Repo Form](./images/package-json.png) |
 
 # The test file
 
