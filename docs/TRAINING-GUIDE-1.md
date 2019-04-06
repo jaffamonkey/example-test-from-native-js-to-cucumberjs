@@ -1,6 +1,6 @@
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
-I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only selenium-webdriver and chromedriver. And code in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed.
+I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only selenium-webdriver and chromedriver. And coding will be in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed.
 
 |     |     |
 | --- | --- |
