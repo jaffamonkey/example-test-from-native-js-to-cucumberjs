@@ -23,19 +23,7 @@ I have tried to use as few tools and helpers as possible to demonstrate a UI tes
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
-## A very important note
-
-Don't try and process all the lines at once, guaranteed brain-freeze. Look at each line, and check if you can actually work out what the line is doing. If you don't know, go to the next line and so on. You will probably find that by doing this way, previous lines that were a mystery suddenly become clearer. 
-
-Things to remember:
-* It's just another language
-* You will recognise parts because of your existing general language knowledge
-* Some times its a natural language word (e.g. "try") with a loose association with the orginal meaning, i.e. not a way you would talk in normal conversation.
-* Think of this as more of a puzzle (sometimes just mathem
-atics)
-* Some times there are parts of coding you will need to look up or be told.
-
-Asn a start, this line will mean Chrome will run the automated tests without UI (good for speed). `headless` means no browser will be visible on screen. `disable-gpu` means disable graphics acceleration for Chrome.
+As a start, this line will mean Chrome will run the automated tests without UI (good for speed). `headless` means no browser will be visible on screen. `disable-gpu` means disable graphics acceleration for Chrome.
 
 ```
 chromeOptions: {
@@ -91,9 +79,22 @@ This can look more daunting, but the test code is mostly standard setup, though 
 
 ### Some examples explained
 
-##### Open up url and wait for it to load
-
-`await session.go('http://your-netlify-web-address');`
+**Open up url**
+```
+browser.get('http://localhost:8081');
+```
+**Wait for field to be visible, then fill in field with a value***
+```
+browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
+```
+**Locating the element that has name "search", then click**
+```
+browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
+```
+**Wait for search results to load**
+```
+browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+```
 
 ##### Find the element on web page with tag "a", and give it the name "Ã«lement"
 
@@ -131,7 +132,8 @@ At this point we have been working on the default `master` branch, but in order 
 
 So now create a branch called `travis-ci`, which will be used by Travis CI
 
-# Travis Build Server [Go to TravisCI](https://travis-ci.org)
+# Travis Build Server
+[Go to TravisCI](https://travis-ci.org)
 
 Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. Basically all we have to do, is take the exact steps you did in the previous section, and put them into the simple Travis configuration file format.
 

@@ -10,6 +10,6 @@ branches:
   - travis-ci
 before_script:
   - npm install
-  - sleep 5
+  - node ./web/server.js &
 script:
   - node tests/browser-test.js
