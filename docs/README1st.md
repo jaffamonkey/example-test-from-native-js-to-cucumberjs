@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify.svg?branch=master)](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify)
-
 _Part of the "zero to vanilla web developer and test engineer" workshop (zero, as in zero prior knowledge)_
 
 **FOR FULL GUIDE ON THIS REPO PLEASE READ `TRAINING-GUIDE-1.md` in the `docs` folder (`TRAINING-GUIDE-2.md` is TBD)**
