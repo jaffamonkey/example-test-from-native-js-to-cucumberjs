@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify.svg?branch=travis-ci)](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify)
+
 **Go to the `docs` folder for the `TRAINING-GUIDE-1.md`, and other guides.**
 
 #### A very important thing to remember when looking at code ...
