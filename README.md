@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/jaffamonkey/starter-github-html-tests-travis-netlify.svg?token=r2G3BaxqddAcRBHK61uA&branch=master)
+![Build Status](https://travis-ci.com/jaffamonkey/starter-github-html-tests-travis-netlify.svg?token=r2G3BaxqddAcRBHK61uA&branch=master)
 
 **Go to the `docs` folder for the `TRAINING-GUIDE-1.md`, and other guides.**
 
