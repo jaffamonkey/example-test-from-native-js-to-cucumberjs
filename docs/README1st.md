@@ -12,6 +12,14 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 * `web` Where to basic website lives, that we will use to test and deploy **(Training Guides 1 & 2)**
 * `node_modules` When you run npm install, this folder is created with the packages (optional to look at)
 
+## Guides in `docs` folder
+
+* `docs/RUN-TESTS.md` Follow this if you just want to run the tests.
+* `docs/SYSTEM-REQUIREMENTS.md` This has the software you will need on your machine, before starting.
+* `docs/TRAINING-GUIDE-1.md` The training guide
+* `docs/TRAINING-GUIDE-2.md` The training guide part 2 (TBD)
+* `docs/GITHUB.md` A guide specifically for GitHub features (TBD)
+
 ## File descriptions
 
 **(Training Guides 1 & 2)**
@@ -22,7 +30,7 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 * `web/index.html` The basic website for purpose of learning coding, testing and deploying\
 * `package-lock.json` This is created upon first install run, and records all versions installed.
 * `package.json` This contain the development packages we need for the test framework
-*  `tests/browser-test.js` The executable test that will open the basic website, fill and search form and check results.
+* `tests/browser-test.js` The executable test that will open the basic website, fill and search form and check results.
 
 #### Additional file descriptions
 
@@ -32,33 +40,7 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 * `tests/api-test-get.js` API tests for GET API action (for example, requesting a webpage)
 * `tests/api-test-post.js` API tests for POST API action (for example, submitting a contact form)
 * `web/client.js` A barebones web app
-* `web/server.js` A barebones http server
-
-## Install test framework components and run website tests
-
- **(Training Guide 1)**
-
-Open up your Terminal Program (for Macs. it's in the `Utilities` folder), and navigate to your repo folder. For example:
-```
-cd /User/myname/projects/repo-name
-```
-Then install the packages listed in Dependencies section of the `package.json` file.
-```
-npm install
-```
-Run Chromedriver (ready for browser testing)
-./node_modules/.bin/chromedriver
-```
-Open new Terminal tab
-```
-// This starts the Node web server
-node ./web/server.js
-```
-Open new Terminal tab
-```
-// This runs the browser test
-node ./tests/browser-test.js
-```
+* `web/server.js` A barebones http server 
 
 ## What's installed
 
