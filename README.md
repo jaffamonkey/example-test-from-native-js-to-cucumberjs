@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify.svg?branch=travis-ci)](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify)
+[![Build Status](https://travis-ci.org/jaffamonkey/starter-github-html-tests-travis-netlify.svg?branch=travis-ci)](https://travis-ci.com/jaffamonkey/starter-github-html-tests-travis-netlify)
 
 **Go to the `docs` folder for the `TRAINING-GUIDE-1.md`, and other guides.**
 
