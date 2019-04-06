@@ -1,7 +1,4 @@
 // HTTP Module for Creating Server and Serving Static Files Using Node.js
-// Static Files: HTML, CSS, JS, Images
-// Get Complete Source Code from Pabbly.com
-
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
@@ -12,7 +9,7 @@ http.createServer(function (request, response) {
     if (request.url === "/") {
 
         // ... open the "index.html" file ...
-        fs.readFile("index.html", "UTF-8", function (err, html) {
+        fs.readFile("web/index.html", "UTF-8", function (err, html) {
 
             // ... then include the relevant content type in the HTML <head> section
             response.writeHead(200, { "Content-Type": "text/html" });
