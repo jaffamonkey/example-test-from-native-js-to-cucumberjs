@@ -79,9 +79,22 @@ This can look more daunting, but the test code is mostly standard setup, though 
 
 ### Some examples explained
 
-##### Open up url and wait for it to load
-
-`await session.go('http://your-netlify-web-address');`
+**Open up url**
+```
+browser.get('http://localhost:8081');
+```
+**Wait for field to be visible, then fill in field with a value***
+```
+browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
+```
+**Locating the element that has name "search", then click**
+```
+browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
+```
+**Wait for search results to load**
+```
+browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+```
 
 ##### Find the element on web page with tag "a", and give it the name "Ã«lement"
 
@@ -119,7 +132,8 @@ At this point we have been working on the default `master` branch, but in order 
 
 So now create a branch called `travis-ci`, which will be used by Travis CI
 
-# Travis Build Server [Go to TravisCI](https://travis-ci.org)
+# Travis Build Server
+[Go to TravisCI](https://travis-ci.org)
 
 Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. Basically all we have to do, is take the exact steps you did in the previous section, and put them into the simple Travis configuration file format.
 
