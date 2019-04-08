@@ -13,7 +13,6 @@ describe('Simple website example', () => {
        })
       .end()
       .then(function(text) {
-      console.log(text);
       expect(text).toContain('Donald Trump');
       })
       .catch(function(error) {
