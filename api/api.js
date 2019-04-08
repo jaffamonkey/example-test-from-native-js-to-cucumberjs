@@ -42,8 +42,8 @@ app.post('/api/v1/todos', (req, res) => {
  })
 });
 
-// Define what port the api server runs on, in this case the full url would be http://localhost:3000
-const PORT = 3000;
+// Define what port the api server runs on, in this case the full url would be http://localhost:3001
+const PORT = 3001;
 
 
 app.listen(PORT, () => {

@@ -41,10 +41,10 @@ node ./web/server.js
 ```
 #### Start test runniung
 ```
-node ./tests/browser-test-nightwatch.js
+node ./tests/alternatives/browser-test-nightwatch.js
 ```
 
-## Nightwatch testing
+## Jest/Nightmare testing
 
 A little more adventurous, but cleaner more readbale code - a combination of Jest and Nightmare, and requires only one command to start running the actual test.
 
@@ -55,7 +55,7 @@ node ./web/server.js
 ```
 #### Start test runniung
 ```
-./node_modules/.bin/jest ./tests/browser-test-nightmare-jest.js
+./node_modules/.bin/jest ./tests/alternatives/browser-test-nightmare-jest.js
 
 ```
 
@@ -69,10 +69,6 @@ node ./api/api.js
 ```
 #### Run API tests
 ```
-> node tests/api-test-get.js
-{"success":"true","message":"todos retrieved successfully","todos":[{"id":1,"title":"example"}]}
-> node tests/api-test-post.js
-{ success: 'true',
-  message: 'todo added successfully',
-  todo: { id: 2, title: '50b' } }
+node tests/api-test.js
+
 ```

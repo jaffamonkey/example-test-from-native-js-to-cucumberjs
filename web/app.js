@@ -25,4 +25,4 @@ server.listen(8082, () => {
 // The output is below
 // % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 // Dload  Upload   Total   Spent    Left  Speed
-// 100    18  100    11  100     7   1571   1000 --:--:-- --:--:-- --:--:--  3000�Hello�
+// 100    18  100    11  100     7   1571   1000 --:--:-- --:--:-- --:--:--  3001�Hello�
