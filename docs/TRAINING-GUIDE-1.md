@@ -2,6 +2,8 @@ _Part of the "zero to vanilla web developer and test engineer" workshop (zero, a
 
 I have tried to use as few tools and helpers as possible to demonstrate a UI testing framework using only selenium-webdriver and chromedriver. And coding will be in JavaScript, though what follows can be done in other programming languages. The only either requirement is having Node and Git installed.
 
+The assumption is you have set up accounts on Github - you can use you GitHub credentials to login to both Travis-CI and Netlify when the time comes.
+
 # Create a repo on github
 [Go to GitHub](https://github.com)
 
@@ -141,7 +143,11 @@ So now create a branch called `travis-ci`, which will be used by Travis CI
 # Travis Build Server
 [Go to TravisCI](https://travis-ci.org)
 
-Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. Basically all we have to do, is take the exact steps you did in the previous section, and put them into the simple Travis configuration file format.
+Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. 
+
+The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. 
+
+Basically all we have to do, is take the exact steps you did in the previous section, and put them into the simple Travis configuration file format.
 
 ![Travis Config](./images/travisci.png)
 
