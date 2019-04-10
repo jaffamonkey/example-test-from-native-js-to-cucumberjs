@@ -75,8 +75,8 @@ browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').send
 // Locating the element that has name "search", then click
 browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
 
-// waiting for search results to load
-browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+// Look for an expected search results link
+browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 10000, 'Could not locate');
 
 // Verifying the search results page title
 browser.getTitle().then(function (title) {
