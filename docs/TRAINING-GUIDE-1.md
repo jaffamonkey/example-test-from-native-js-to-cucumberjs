@@ -35,7 +35,15 @@ After adding the code, click "Commit Changes" at the end of the form to save it.
 
 ## What to test?
 
-On software development projects, work is driven by what the client has asked for.  This is a continual process that never stops, and it's important the tests reflect this. 
+On software development projects, testing work is driven by what the client has asked for.  
+
+This is a continual process that never stops, and it's important the tests reflect this. 
+
+However this not not mean testers do not manually test - on the contrary, due to the nature of UI test automation, work is constantly validated.
+
+In further training I will go into the other sides of test automation (such as load and security testing) in future training guides.
+
+But also it's important to remember to think creatively, and develop other useful tests (this is where developers can help you out, and will be more than happy to!).
 
 ## Set up the testing framework
 
