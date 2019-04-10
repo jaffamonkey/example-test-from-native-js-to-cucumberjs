@@ -4,7 +4,9 @@ I have tried to use as few tools and helpers as possible to demonstrate a UI tes
 
 The assumption is you have set up accounts on Github - you can use you GitHub credentials to login to both Travis-CI and Netlify when the time comes.
 
-# Create a repo on github
+# GitHub
+
+## Create a repo on github
 [Go to GitHub](https://github.com)
 
 Github is a service where you can keep your code, and make it available to others. After setting up your account, click the "+" symbol in the top-right of the menu bar.
@@ -29,13 +31,19 @@ After adding the code, click "Commit Changes" at the end of the form to save it.
 
 ![Repo Form](./images/code-form.png)
 
-# Set up the testing framework
+# Testing
+
+## What to test?
+
+On software development projects, work is driven by what the client has asked for.  This is a continual process that never stops, and it's important the tests reflect this. 
+
+## Set up the testing framework
 
 For convenience to install packages, it is better to create a file `package.json` in the root of your repo, like shown here, then run `npm install`.
 
 ![Repo Form](./images/package-json.png) |
 
-# The test file
+## The test file
 
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
@@ -75,8 +83,8 @@ browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').send
 // Locating the element that has name "search", then click
 browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
 
-// waiting for search results to load
-browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
+// Look for an expected search results link
+browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 10000, 'Could not locate');
 
 // Verifying the search results page title
 browser.getTitle().then(function (title) {
@@ -89,7 +97,7 @@ browser.getTitle().then(function (title) {
   browser.quit();
 });
 ```
-# Too much too soon!
+## Too much too soon!
 
 This can look more daunting, but the test code is mostly standard setup, though if you are new to this, it can look daunting. Don't worry! We all learn in steps, and most of this code is either standard setup or common predefined functions.  What you will be glad to know, is there are many tools available to simplify the code you write tests in.
 
@@ -112,7 +120,7 @@ browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate')
 browser.wait(until.elementLocated(By.css('.result__snippet')), 10000, 'Could not locate');
 ```
 
-# Run the tests
+## Run the tests
 
 #### Start the website environment up
 
@@ -134,13 +142,14 @@ your-repo-name/tests>./node_modules/.bin/chromedriver
 your-repo-name/tests>node test.js
 ```
 
-# Branching
+## Branching
 
 At this point we have been working on the default `master` branch, but in order to make sure we have a stable pipeline it is better to do work and test on a separate branch. 
 
 So now create a branch called `travis-ci`, which will be used by Travis CI
 
 # Travis Build Server
+
 [Go to TravisCI](https://travis-ci.org)
 
 Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. 
@@ -152,7 +161,7 @@ Basically all we have to do, is take the exact steps you did in the previous sec
 ![Travis Config](./images/travisci.png)
 
 
-# The Travis file
+## The Travis file
 
 We need to write small configuration file, so that when Travis pulls the code from your GitHub repo, it knows what to do.
 
@@ -183,13 +192,13 @@ before_script:
 script:
   - node test.js // run the tests
 ```
-# After build
+## After build
 
 After build has completed. it will either Pass for Fail
 
 ![Add Repo](./images/travis-success.png)
 
-# Activate Travis build for your repo
+## Activate Travis build for your repo
 
 Go to your dashboard and search for your repo
 
@@ -197,7 +206,7 @@ Then move switch on right so it turns green - your repo will now run through and
 
 ![Add Repo](./travis-success.png)
 
-# Activate Travis build badge to your README
+## Activate Travis build badge to your README
 Add the following code to your README, and it will display the lastest Travis status for your code:
 
 ```
@@ -206,37 +215,37 @@ Add the following code to your README, and it will display the lastest Travis st
 (https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name)
 ```
 
-# CI
+# Deployment
 
 Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `travis-ci` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up).
 
 **Strictly this would not be a deployment to live website (which I am doing here for simplicity), it would be a deployment to a test website so we can check things visually before manually deploying to live website.**
 
-# Netlify
+## Netlify
 
 Now log into https://app.netlify.com (you can use your GitHub account to do this)
 
 ![Netlify](./images/netlify.png)
 
-# Create new GitHub repo connection
+## Create new GitHub repo connection
 
 Click the "New site from Git" button, then click "GutHub" button (which will create connection between netlify and GitHub)
 
 ![Netlify](./images/netlify-github.png)
 
-# Create new deployment
+## Create new deployment
 
 Type in your repo name into search, then click on the repo link
 
 ![Netlify](./images/netlify-new.png)
 
-# Deploy The Site
+## Deploy The Site
 
 Leave defaults, and click "Deploy site"
 
 ![Netlify](./images/netlify-deploy.png)
 
-# Deploy history
+## Deploy history
 
 Below is the output from the Netlify process to make you site live
 
