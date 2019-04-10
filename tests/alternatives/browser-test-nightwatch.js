@@ -1,7 +1,5 @@
 const { createSession, closeSession, startWebDriver, stopWebDriver, client } = require('nightwatch-api');
 
-// Using async means not having to specify a step to wait for elements to load
-
 async function setup(options) {
   await startWebDriver(options);
   await createSession();

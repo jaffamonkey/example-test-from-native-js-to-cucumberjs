@@ -48,14 +48,13 @@ node ./tests/alternatives/browser-test-nightwatch.js
 
 A little more adventurous, but cleaner more readbale code - a combination of Jest and Nightmare, and requires only one command to start running the actual test.
 
-
 #### Start the web server (if not already running)
 ```
 node ./web/server.js
 ```
 #### Start test runniung
 ```
-./node_modules/.bin/jest ./tests/alternatives/browser-test-nightmare-jest.js
+./node_modules/.bin/jest
 
 ```
 

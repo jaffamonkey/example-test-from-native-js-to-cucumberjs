@@ -8,13 +8,13 @@
         "body-parser": "^1.18.3",
         "chromedriver": "latest",
         "express": "latest",
-        "superagent": "latest",
-        "selenium-webdriver": "^3.5.0",
         "geckodriver": "^1.16.1",
         "jest": "latest",
         "nightmare": "^2.9.1",
         "nightwatch": "^1.0.19",
-        "nightwatch-api": "latest"
+        "nightwatch-api": "latest",
+        "selenium-webdriver": "^3.5.0",
+        "superagent": "latest"
     },
     "scripts": {
         "test": "node ./tests/browser-test-nightwatch.js",
@@ -24,7 +24,7 @@
     "jest": {
         "verbose": true,
         "testMatch": [
-            "**/tests/browser-test-nightmare-jest.js"
+            "**/tests/alternatives/browser-test-nightmare-jest.js"
         ]
     }
 }
