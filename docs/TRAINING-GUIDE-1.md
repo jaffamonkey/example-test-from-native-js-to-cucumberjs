@@ -29,6 +29,12 @@ After adding the code, click "Commit Changes" at the end of the form to save it.
 
 ![Repo Form](./images/code-form.png)
 
+# Testing
+
+## What to test?
+
+On software development projects, work is driven by what the client has asked for.  This is a continual process that never stops, and it's important the tests reflect this. 
+
 # Set up the testing framework
 
 For convenience to install packages, it is better to create a file `package.json` in the root of your repo, like shown here, then run `npm install`.
