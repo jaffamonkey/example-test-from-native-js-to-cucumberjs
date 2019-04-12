@@ -4,7 +4,9 @@ I have tried to use as few tools and helpers as possible to demonstrate a UI tes
 
 The assumption is you have set up accounts on Github - you can use you GitHub credentials to login to both Travis-CI and Netlify when the time comes.
 
-# GitHub
+GitHub
+====== 
+ 
 
 ## Create a repo on github
 [Go to GitHub](https://github.com)
@@ -19,6 +21,9 @@ The defaults are ok, but remember to select to add README to add repo info.
 
 ![Create a github repo](./images/repo-form.png)
 
+Webpage
+=======
+
 ## Create first HTML page
 
 After creating repo, click "Create New File".
@@ -31,7 +36,8 @@ After adding the code, click "Commit Changes" at the end of the form to save it.
 
 ![Repo Form](./images/code-form.png)
 
-# Testing
+Testing
+=======
 
 ## What to test?
 
@@ -156,7 +162,8 @@ At this point we have been working on the default `master` branch, but in order 
 
 So now create a branch called `travis-ci`, which will be used by Travis CI
 
-# Travis Build Server
+Travis Build Server
+===================
 
 [Go to TravisCI](https://travis-ci.org)
 
@@ -177,7 +184,6 @@ The file is very simple for us, so create new file in your repo called `.travis.
 
 ```
 sudo: required // Some installation actions require administrator-level access
-
 dist: trusty // Builds a mininal machine to runs tests on
 
 addons:
@@ -223,7 +229,8 @@ Add the following code to your README, and it will display the lastest Travis st
 (https://travis-ci.org/replace-this-with-your-github-userid/replace-this-with-your-repo-name)
 ```
 
-# Deployment
+Deployment
+=======
 
 Now we know out build works on the build server, it's time to deploy to Netlify, using our `master`, so now we need to do a Pull Request from the `travis-ci` branch, which when merged will trigger a deploy to Netlify (we are now going to set that up).
 

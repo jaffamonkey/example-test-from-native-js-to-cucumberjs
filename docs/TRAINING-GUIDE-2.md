@@ -22,7 +22,7 @@ node ./web/server.js
 
 ### To run the application server
 ```
-node ./web/main.js
+node ./web/app.js
 ```
 
 ## Data
