@@ -25,9 +25,9 @@ async function run() {
     await setup({ env: process.env.NIGHTWATCH_ENV || 'chromeHeadless' });
     await run();
   } catch (err) {
-    console.log(err.stack);
-    process.exitCode = 1;
+    throw new Error(err);
   } finally {
+    process.exitCode = 1;
     await shutdown();
   }
 })();

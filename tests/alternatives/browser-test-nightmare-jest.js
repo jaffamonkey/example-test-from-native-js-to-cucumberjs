@@ -1,6 +1,7 @@
 /* global describe, test, expect */
 const Nightmare = require('nightmare')
 const nightmare = Nightmare({ show: true })
+let document;
 
 describe('Simple website example', () => {
   test('test the search', async function () {
@@ -14,7 +15,7 @@ describe('Simple website example', () => {
         expect(result).toContain('Donald Trump');
       })
       .catch(function (error) {
-        console.error('Search failed:', error)
+        throw new error('Search failed:', error)
       })
   });
 });

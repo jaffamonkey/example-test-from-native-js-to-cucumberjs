@@ -3,7 +3,7 @@ var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
   until = webdriver.until;
 
-browser = new webdriver
+const browser = new webdriver
   .Builder()
   .usingServer()
   .withCapabilities({

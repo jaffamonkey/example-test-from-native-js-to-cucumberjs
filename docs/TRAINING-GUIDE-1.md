@@ -51,6 +51,8 @@ In further training I will go into the other sides of test automation (such as l
 
 But also it's important to remember to think creatively, and develop other useful tests (this is where developers can help you out, and will be more than happy to!).
 
+What many testers forget, is that most developers welcome dialogue with testers, as they know how helpful they can be.
+
 ## Set up the testing framework
 
 For convenience to install packages, it is better to create a file `package.json` in the root of your repo, like shown here, then run `npm install`.
@@ -100,15 +102,8 @@ browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate')
 // Look for an expected search results link
 browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 10000, 'Could not locate');
 
-// Verifying the search results page title
-browser.getTitle().then(function (title) {
-  if (title === 'donald trump simulator site:github.com at DuckDuckGo') {
-    console.log('The title "' + title + '" is correct');
-  } else {
-    console.log('The title "' + title + '" is incorrect');
-  }
-  // Close web session
-  browser.quit();
+// Close web session
+browser.quit();
 });
 ```
 ## Too much too soon!
