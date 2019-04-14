@@ -162,6 +162,10 @@ Travis Build Server
 
 [Go to TravisCI](https://travis-ci.org)
 
+A build server (also called a continuous integration server (CI server)), is a centralized, stable and reliable environment for building software.
+
+Developers on projects use the build server all the time, as it's the place that their code is built and tested.
+
 Now we have the code, we need the run the tests each time the code changes, to make sure our changes don't break it. 
 
 The tests we currently start manually, but using a build server service, like Travis, these can be run automatically every time you change your code. 
