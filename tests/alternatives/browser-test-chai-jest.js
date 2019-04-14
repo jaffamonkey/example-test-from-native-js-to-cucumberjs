@@ -8,8 +8,6 @@ var chai = require('chai');
 var chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 
-let it, describe;
-
 var browser = new webdriver
     .Builder()
     .usingServer()
@@ -40,6 +38,9 @@ describe('Basic Tests', () => {
 
                 // Final check on the condition that "Donald Trump" is in the result of what is extracted from previous line.
                 .to.eventually.contain('Donald Trump');
-        });
+        })
+        .catch(function (error) {
+          throw new Error('Search failed:', error)
+        })
     });
 });

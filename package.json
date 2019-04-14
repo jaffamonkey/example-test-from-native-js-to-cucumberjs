@@ -34,7 +34,7 @@
     "jest": {
         "verbose": true,
         "testMatch": [
-            "**/tests/alternatives/browser-test-chai.js"
+            "**/tests/alternatives/*jest.js"
         ]
     }
 }

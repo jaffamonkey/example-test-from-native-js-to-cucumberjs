@@ -8,7 +8,7 @@ superagent
   .send({ "title": randomTitle }) // sends data in JSON format
   .end((err, res) => {
     assert.ifError(err);
-    assert.equal(res.status, 201);
+    assert.equal(res.status, 201); 
     assert.equal(randomTitle, res.body.todo.title)
   });
 
@@ -18,4 +18,5 @@ superagent
     assert.ifError(err);
     assert.equal(res.status, 200);
   });
+  
   
