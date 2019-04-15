@@ -69,21 +69,16 @@ Create a new file in 'tests' folder called `test.js`. When this code is run, it 
 As a start, this line will mean Chrome will run the automated tests without UI (good for speed). `headless` means no browser will be visible on screen. `disable-gpu` means disable graphics acceleration for Chrome.
 
 ```
-chromeOptions: {
-          args: ["headless", "disable-gpu"]
-        }
-```
-
-Omit this chunk of code, to see the test run in an actual browser
-
-```
-// The first section is setting up the environment in order for us to run the test code on a browser
+// Include chromedriver
 require('chromedriver');
+
+// The easiest way to look at this, is it's creating an object that's webdriver.
 var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
   until = webdriver.until;
 
-browser = new webdriver
+// This is creating an object that is the browser
+const browser = new webdriver
   .Builder()
   .usingServer()
   .withCapabilities({
@@ -93,21 +88,32 @@ browser = new webdriver
     }
   }).build();
 
-// Browser opens for first time
-browser.get('http://localhost:8081');
 
-// waiting for element to load, the fill in field
-browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
+try {
+  // This line is telling the browser to open a url.
+  browser.get('http://localhost:8081');
 
-// Locating the element that has name "search", then click
-browser.wait(until.elementLocated(By.name('search')), 10000, 'Could not locate').click();
+  // Now the search field is filled in with our search terms, after the field becomes visible (allowing for page load time).
+  browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('donald trump simulator');
 
-// Look for an expected search results link
-browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 10000, 'Could not locate');
+  // Now we click the search button, after the button becomes visible.
+  browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate the search button').click();
 
-// Close web session
-browser.quit();
-});
+  // This looks for a link text that includes "Trumpklon", which is the expected result.
+  browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
+
+  // Now checking that the page title is what is expected.
+  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title').then(() => {
+
+    // Output success message to screen. For this to happens if the previous steps have all run successfully.
+    console.log('Browser test passed!');
+  })
+}
+finally {
+
+  // Close all of the open browser windows, then stop chromedriver.
+  browser.quit();
+}
 ```
 ## Too much too soon!
 
