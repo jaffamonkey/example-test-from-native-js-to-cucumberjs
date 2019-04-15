@@ -1,12 +1,11 @@
 const request = require("request");
 const assert = require('assert');
+let randomTitle = Math.random().toString(36).substring(10);
 
 const get_options = {
   url: 'http://localhost:3001/api/v1/todos',
   method: 'GET'
 };
-
-let randomTitle = Math.random().toString(36).substring(10);
 
 const post_options = {
   url: 'http://localhost:3001/api/v1/todos',

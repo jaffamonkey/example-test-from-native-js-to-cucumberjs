@@ -4,9 +4,12 @@ I have tried to use as few tools and helpers as possible to demonstrate a UI tes
 
 The assumption is you have set up accounts on Github - you can use you GitHub credentials to login to both Travis-CI and Netlify when the time comes.
 
+While it will be important to understand running commands from a Terminal, for this training guide, using the web services will be sufficient.
+
 GitHub
 ====== 
  
+GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
 ## Create a repo on github
 [Go to GitHub](https://github.com)
@@ -157,6 +160,11 @@ At this point we have been working on the default `master` branch, but in order 
 
 So now create a branch called `travis-ci`, which will be used by Travis CI
 
+* Go to your new repository
+* Click the drop down at the top of the file list that says branch: master.
+* Type a branch name, readme-edits, into the new branch text box.
+* Select the blue Create branch box or hit “Enter” on your keyboard.
+
 Travis Build Server
 ===================
 
@@ -205,6 +213,9 @@ before_script:
 script:
   - node test.js // run the tests
 ```
+
+After these steps are all in your code, and committed, a build process will automatically start on TravisCI
+
 ## After build
 
 After build has completed. it will either Pass for Fail
