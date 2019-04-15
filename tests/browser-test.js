@@ -1,4 +1,4 @@
-// Barebones UI automation using selenium webdriver and JabvaScript
+// Include chromedriver
 require('chromedriver');
 
 // The easiest way to look at this, is it's creating an object that's webdriver.
@@ -17,20 +17,29 @@ const browser = new webdriver
     }
   }).build();
 
-// This line is telling the browser to open a url.
-browser.get('http://localhost:8081');
 
-// Now the search field is filled in with our search terms, after the field becomes visible (allowing for page load time).
-browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate').sendKeys('donald trump simulator');
+try {
+  // This line is telling the browser to open a url.
+  browser.get('http://localhost:8081');
 
-// Now we click the search button, after the button becomes visible.
-browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate').click();
+  // Now the search field is filled in with our search terms, after the field becomes visible (allowing for page load time).
+  browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('donald trump simulator');
 
-// This looks for a link text that includes "Trumpklon", which is the expected result.
-browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate');
+  // Now we click the search button, after the button becomes visible.
+  browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate the search button').click();
 
-// Now checking that the page title is what is expected.
-browser.wait(until.titleIs('donald trump simulator site:github.com at DucDuckGo'), 3000, 'Could not locate');
+  // This looks for a link text that includes "Trumpklon", which is the expected result.
+  browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
 
-// This command shuts down the browser at the end of the test
-browser.quit();
+  // Now checking that the page title is what is expected.
+  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title').then(() => {
+
+    // Output success message to screen. For this to happens if the previous steps have all run successfully.
+    console.log('Browser test passed!');
+  })
+}
+finally {
+
+  // Close all of the open browser windows, then stop chromedriver.
+  browser.quit();
+}
