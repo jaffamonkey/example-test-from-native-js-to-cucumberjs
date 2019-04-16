@@ -17,7 +17,6 @@ const browser = new webdriver
     }
   }).build();
 
-
 try {
   // This line is telling the browser to open a url.
   browser.get('http://localhost:8081');
@@ -32,8 +31,7 @@ try {
   browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
 
   // Now checking that the page title is what is expected.
-  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckgDuckGo'), 3000, 'Could not locate correct title').then(() => {
-  })
+  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckgDuckGo'), 3000, 'Could not locate correct title')
 }
 finally {
 

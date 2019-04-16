@@ -11,7 +11,9 @@ async function shutdown() {
   process.exit();
 }
 
-async function run() {
+async function runtest() {
+
+  // "client" is the browser object
   await client
     .url('http://localhost:8081')
     .setValue('input[name="q"]', 'donald trump simulator')
@@ -22,11 +24,20 @@ async function run() {
 
 (async function () {
   try {
+    // This line runs the setup function at the top, passing options to the nightwatch.conf.js, which starts webdriver
     await setup({ env: process.env.NIGHTWATCH_ENV || 'chromeHeadless' });
-    await run();
-  } catch (err) {
+
+    // The line run the runtest function above
+    await runtest();
+  } 
+  
+  // If an error occurs, then this "traps" the error, so you can conteol the output.
+  catch (err) {
     throw new Error(err);
-  } finally {
+  } 
+  
+  // Close all of the open browser windows, then stop chromedriver.
+  finally {
     process.exitCode = 1;
     await shutdown();
   }

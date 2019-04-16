@@ -29,7 +29,7 @@ Webpage
 
 ## Create first HTML page
 
-After creating repo, click "Create New File".
+After creating repo, click "Create New File" and enter filename `index.html`
 
 ![Repo Form](./images/create-new-file.png)
 
@@ -38,6 +38,8 @@ After creating repo, click "Create New File".
 After adding the code, click "Commit Changes" at the end of the form to save it.
 
 ![Repo Form](./images/code-form.png)
+
+Now we have a basic web page to test on!
 
 Testing
 =======
