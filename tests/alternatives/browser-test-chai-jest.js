@@ -1,5 +1,6 @@
 /* global it */
 /* eslint-env browser */
+// Initialise the webdriver browser driver (for Chrome)
 require('chromedriver');
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,

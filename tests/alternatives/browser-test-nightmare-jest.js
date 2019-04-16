@@ -1,8 +1,8 @@
 /* global describe, test, expect */
-const Nightmare = require('nightmare')
-const nightmare = Nightmare({ show: true })
+const Nightmare = require('nightmare');
+const nightmare = Nightmare({ show: true });
 
-describe('Simple website example', () => {
+describe('Simple website example', function () {
   test('test the search', () => {
     nightmare
       .goto('http://localhost:8081')
@@ -10,10 +10,10 @@ describe('Simple website example', () => {
       .click('#searchButton')
       .evaluate(() => { return document.querySelector('.results--main').innerText })
       .end()
-      .then(function (result) {
-        expect(result).toContain('Donald Trump');
+      .then((result) => {
+        expect(result).toContain('TrumpKlon');
       })
-      .catch(function (error) {
+      .catch((error) => {
         throw new Error('Search failed:', error)
       })
   });

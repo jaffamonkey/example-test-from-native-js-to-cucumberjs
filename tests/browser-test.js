@@ -1,4 +1,4 @@
-// Include chromedriver
+// Initialise the webdriver browser driver (for Chrome)
 require('chromedriver');
 
 // The easiest way to look at this, is it's creating an object that's webdriver.
@@ -32,6 +32,7 @@ try {
 
   // Now checking that the page title is what is expected.
   browser.wait(until.titleIs('donald trump simulator site:github.com at DuckgDuckGo'), 3000, 'Could not locate correct title')
+  
 }
 finally {
 
