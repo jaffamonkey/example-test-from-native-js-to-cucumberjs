@@ -14,10 +14,6 @@ npm install
 
 Open a new tab in your Terminal program, for each command
 
-#### Start Chromedriver (ready for browser testing)
-```
-./node_modules/.bin/chromedriver
-```
 #### Start the web server
 ```
 node ./web/server.js
