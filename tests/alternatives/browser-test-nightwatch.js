@@ -19,7 +19,7 @@ async function runtest() {
     .setValue('input[name="q"]', 'donald trump simulator')
     .click('#searchButton')
     .assert.title('donald trump simulator site:github.com at DuckDuckGo')
-    .assert.containsText('.results--main', 'Donald Trump');
+    .assert.containsText('div.results--main', 'Donald Trump');
 }
 
 (async function () {
