@@ -7,9 +7,6 @@ var webdriver = require('selenium-webdriver'),
 
 // Chai packages give us more flexibility with how to check on various areas of the page
 var chai = require('chai');
-var chaiAsPromised = require('chai-as-promised');
-var describe = require('jest')
-chai.use(chaiAsPromised);
 
 var browser = new webdriver
     .Builder()
@@ -40,7 +37,7 @@ describe('Basic Tests', () => {
                 .expect(browser.findElement(By.className('result__snippet')).getAttribute('innerHTML'))
 
                 // Final check on the condition that "Donald Trump" is in the result of what is extracted from previous line.
-                .to.eventually.contain('Donald Trump');
+                .to.contain('Donald Trump');
         })
             .catch(function (error) {
                 throw new Error('Search failed:', error)
