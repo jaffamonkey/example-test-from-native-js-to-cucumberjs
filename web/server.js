@@ -16,16 +16,7 @@ http.createServer(function (request, response) {
             response.end(html);
         });
     }
-    else if (request.url === "/angular") {
 
-        // ... open the "index.html" file ...
-        fs.readFile("web/angular/index.html", "UTF-8", function (err, html) {
-
-            // ... then include the relevant content type in the HTML <head> section
-            response.writeHead(200, { "Content-Type": "text/html" });
-            response.end(html);
-        });
-    }
     // For url's that has ".png" in url, i.e. an image location ...
     else if (request.url.match("\.png$")) {
 
@@ -35,7 +26,6 @@ http.createServer(function (request, response) {
         response.writeHead(200, { "Content-Type": "image/png" });
         fileStream.pipe(response);
     }
-
     else if (request.url == '/data') { //check the URL of the current request
         response.writeHead(200, { 'Content-Type': 'application/json' });
         response.write(JSON.stringify({ message: "Hello World" }));
