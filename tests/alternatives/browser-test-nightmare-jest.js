@@ -2,7 +2,7 @@
 const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: true });
 
-describe('Simple website example', function () {
+describe('Simple website example', () => {
   test('test the search', () => {
     nightmare
       .goto('http://localhost:8081')

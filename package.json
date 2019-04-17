@@ -18,6 +18,7 @@
         "nightmare": "^2.9.1",
         "nightwatch": "^1.0.19",
         "nightwatch-api": "latest",
+        "protractor": "latest",
         "selenium-standalone": "^6.16.0",
         "selenium-webdriver": "^3.5.0",
         "superagent": "latest"
