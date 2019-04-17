@@ -6,14 +6,12 @@ describe('Simple website example', () => {
   test('check page title', () => {
     nightmare
       .goto('http://localhost:8081')
-      .evaluate(() => { return document.title });
-      var title = yield nightmare.goto(fixture('evaluation')).title()
-      title.should.eql('Evaluation')
+      .evaluate(() => { return document.title })
       .then((pageTitle) => {
         expect(pageTitle).toContain('donald trump simulator site:github.com at DuckgDuckGo');
       })
       .catch((error) => {
-        throw new Error('Getting page title failed:', error)
+        throw new Error('Getting page failed:', error)
       })
   })
 
