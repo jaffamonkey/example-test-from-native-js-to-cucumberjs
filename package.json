@@ -28,7 +28,7 @@
         "test:superagent": "node ./tests/alternatives/api-test-superagent.js",
         "test:nightmare": "./node_modules/.bin/jest",
         "test:nightwatch": "node ./tests/alternatives/browser-test-nightwatch.js",
-        "test:chai": "node ./tests/alternatives/browser-test-chai-jest.js",
+        "test:chai": "./node_modules/.bin/jest",
         "test:cucumberjs": "./node_modules/.bin/cucumber-js ./tests/adventurous/cucumberjs/",
         "test": "node ./tests/browser-test.js",
         "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"

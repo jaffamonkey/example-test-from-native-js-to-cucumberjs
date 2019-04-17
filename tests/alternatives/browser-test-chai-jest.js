@@ -1,4 +1,3 @@
-/* global it */
 /* eslint-env browser */
 // Initialise the webdriver browser driver (for Chrome)
 require('chromedriver');
@@ -21,7 +20,7 @@ var browser = new webdriver
 
 describe('Basic Tests', () => {
 
-    it('Check the search results page', () => {
+    test('Check the search results page', () => {
         browser.get('http://localhost:8081');
         browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate search field').sendKeys('donald trump simulator');
         browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate search button').click();

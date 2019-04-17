@@ -11,5 +11,6 @@ describe('Protractor Demo App', function () {
     searchField.sendKeys('donald trump simulator');
     searchButton.click();
     expect(firstResult.getText()).toContain('TrumpKlon');
+    expect(browser.getTitle()).toEqual('donald trump simulator site:github.com at DuckDuckGo');
   });
 });

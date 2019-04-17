@@ -8,11 +8,17 @@ In this guide we will mostly be using `chromedriver` which the webdriver browser
 
 The flow is `webdriver.js` (which you test code will be using) will communicate instructions to `selenium-server` which will in turn implement these instructions on a real browser using `chromedriver` (the webdriver browser driver).
 
+The other layer is `jasmine`, a behavior-driven development framework for testing JavaScript code (included in the Protractor package).
+
 # Setup
 
-Create a new GitHub repo and clone to your laptop to work on
+## Create repo
 
-Use npm to install Protractor:
+Create a new GitHub repo and clone to your laptop to work on.
+
+## Protractor
+
+From the repo folder, use npm to install Protractor:
 ```
 npm install protractor
 ```
@@ -20,21 +26,22 @@ This will install two command line tools, protractor and webdriver-manager.
 
 A `package-lock.json` is also generated, along with the `node_modules` folder.
 
-Try running protractor --version to make sure it's working.
+Check the version, which is also a check to see if its working:
+```
+protractor --version to make sure it's working.
+```
+## webdriver-manager
 
 The webdriver-manager is a helper tool to easily get an instance of a Selenium Server running. 
 
 Use it to download the necessary binaries with:
-
 ```
 ./node_modules/.bin/webdriver-manager update
 ```
-
-Now start up a server with:
+Now start up selenium server with:
 ```
 ./node_modules/.bin/webdriver-manager start
 ```
-
 This will start up a Selenium Server and will output a bunch of info logs. Your Protractor test will send requests to this server to control a local browser. 
 
 Leave this server running throughout the tutorial. You can see information about the status of the server at http://localhost:4444/wd/hub.
