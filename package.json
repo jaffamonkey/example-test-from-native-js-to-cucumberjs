@@ -21,22 +21,31 @@
         "protractor": "latest",
         "selenium-standalone": "^6.16.0",
         "selenium-webdriver": "^3.5.0",
-        "superagent": "latest"
+        "superagent": "latest",
+        "webdriverio": "^4.14.1"
     },
     "scripts": {
-        "test:api": "node ./tests/api-test.js",
-        "test:superagent": "node ./tests/alternatives/api-test-superagent.js",
+        "test:api": "node ./tests/API/api-test.js",
+        "test:superagent": "node ./tests/API/api-test-superagent.js",
+        
         "test:nightmare": "./node_modules/.bin/jest",
-        "test:nightwatch": "node ./tests/alternatives/browser-test-nightwatch.js",
         "test:chai": "./node_modules/.bin/jest",
+
+        "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js",
+        "test:javascript": "node ./tests/UI/webdriver-javascript.js",
+        "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
+        "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
+
+        "test:protractor": "./node_modules/.bin/protractor ./tests/adventurous/protractor/",
         "test:cucumberjs": "./node_modules/.bin/cucumber-js ./tests/adventurous/cucumberjs/",
-        "test": "node ./tests/browser-test.js",
+        "test:mocha": "./node_modules/.bin/wdio --spec ./tests/adventurous/mocha-webdriverio-selenium.js",
         "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
+
     },
     "jest": {
         "verbose": true,
         "testMatch": [
-            "**/tests/alternatives/*jest.js"
+            "**/tests/UI/*jest.js"
         ]
     }
 }

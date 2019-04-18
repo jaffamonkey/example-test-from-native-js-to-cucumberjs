@@ -18,52 +18,28 @@ Open a new tab in your Terminal program, for each command
 ```
 node ./web/server.js
 ```
-#### Start test runniung
-```
-node ./tests/browser-test.js
-```
-
-## Nightwatch testing
-
-Open a new tab in your Terminal program, for each command.
-
-The same tests as above, but demonstrating the value of using a package to make the code mre readable and easier to maintain. In this case, using nightwatch-api.
-
-There is no need to start up chromedriver, because nightwatch does this a test runtime.
-
-#### Start the web server (if not already running
-```
-node ./web/server.js
-```
-#### Start test runniung
-```
-node ./tests/alternatives/browser-test-nightwatch.js
-```
-
-## Jest/Nightmare testing
-
-A little more adventurous, but cleaner more readbale code - a combination of Jest and Nightmare, and requires only one command to start running the actual test.
-
-#### Start the web server (if not already running)
-```
-node ./web/server.js
-```
-#### Start test runniung
-```
-./node_modules/.bin/jest
-
-```
-
-## API testing
-
-Open a new tab in your Terminal program, for each command
 
 #### Start the API server
 ```
 node ./api/api.js
 ```
-#### Run API tests
-```
-node tests/api-test.js
 
-```
+#### Start test running
+
+For convenience, there are small npm scripts to help
+
+`npm run test:api` - command run: `node ./tests/API/api-test.js`
+`npm run test:superagent` - command run: `node ./tests/API/api-test-superagent.js`
+        
+`npm run test:nightmare` - command run: `./node_modules/.bin/jest`
+`npm run test:chai` - command run: `./node_modules/.bin/jest`
+
+`npm run test:nightwatch` - command run: `node ./tests/UI/browser-test-nightwatch.js`
+`npm run test:javascript` - command run: `node ./tests/UI/webdriver-javascript.js`
+`npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
+`npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
+
+`npm run test:protractor` - command run: `./node_modules/.bin/protractor ./tests/adventurous/protractor/`
+`npm run test:cucumberjs` - command run: `./node_modules/.bin/cucumber-js ./tests/adventurous/cucumberjs/`
+`npm run test:mocha` - command run: `./node_modules/.bin/wdio --spec ./tests/adventurous/mocha-webdriverio-selenium.js`
+`npm run lint` - command run: `./node_modules/.bin/eslint ./tests/**/**/*.js`

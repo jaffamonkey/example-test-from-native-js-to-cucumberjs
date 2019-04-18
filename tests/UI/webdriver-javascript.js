@@ -27,14 +27,15 @@ try {
   // Now we click the search button, after the button becomes visible.
   browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate the search button').click();
 
+  // Now checking that the page title is what is expected.
+  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title')
+
   // This looks for a link text that includes "Trumpklon", which is the expected result.
   browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
 
-  // Now checking that the page title is what is expected.
-  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckgDuckGo'), 3000, 'Could not locate correct title')
-  
 }
 finally {
+  console.log('A final step that tells us all the test steps passed')
 
   // Close all of the open browser windows, then stop chromedriver.
   browser.quit();
