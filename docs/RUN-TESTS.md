@@ -39,7 +39,6 @@ For convenience, there are small npm scripts to help
 `npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
 `npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
 
-`npm run test:protractor` - command run: `./node_modules/.bin/protractor ./tests/adventurous/protractor/`
-`npm run test:cucumberjs` - command run: `./node_modules/.bin/cucumber-js ./tests/adventurous/cucumberjs/`
-`npm run test:mocha` - command run: `./node_modules/.bin/wdio --spec ./tests/adventurous/mocha-webdriverio-selenium.js`
+`npm run test:protractor` - command run: `./node_modules/.bin/protractor ./tests/protractor-webdriver.js`
+`npm run test:cucumberjs` - command run: `./node_modules/.bin/cucumber-js ./tests/UI/*.feature`
 `npm run lint` - command run: `./node_modules/.bin/eslint ./tests/**/**/*.js`

@@ -8,7 +8,6 @@
     "assert": "^1.4.1",
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
-    "chai-as-promised": "^7.1.1",
     "chromedriver": "^2.46.0",
     "cucumber": "^5.1.0",
     "eslint": "latest",
@@ -23,6 +22,9 @@
     "selenium-standalone": "^6.16.0",
     "selenium-webdriver": "^3.5.0",
     "superagent": "latest",
+    "wdio-mocha-framework": "^0.6.4",
+    "wdio-selenium-standalone-service": "0.0.12",
+    "wdio-spec-reporter": "^0.1.5",
     "webdriverio": "^4.14.1"
   },
   "scripts": {
@@ -30,19 +32,24 @@
     "test:superagent": "node ./tests/API/api-test-superagent.js",
     "test:nightmare": "./node_modules/.bin/jest",
     "test:chai": "./node_modules/.bin/jest",
-    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js",
+    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatch.conf.js",
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
     "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
-    "test:protractor": "./node_modules/.bin/protractor ./tests/adventurous/protractor/",
-    "test:cucumberjs": "./node_modules/.bin/cucumber-js ./tests/adventurous/cucumberjs/",
-    "test:mocha": "./node_modules/.bin/wdio --spec ./tests/adventurous/mocha-webdriverio-selenium.js",
+    "test:protractor": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/wdio.conf.js",
+    "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature",
+    "test:mocha": "./node_modules/.bin/wdio --spec ./tests/adventurous/mocha-webdriverio-selenium/test.js",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
   },
   "jest": {
     "verbose": true,
+    "preset": "jest-puppeteer",
     "testMatch": [
       "**/tests/UI/*jest.js"
     ]
+  },
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "jest-puppeteer": "^4.1.1"
   }
 }
