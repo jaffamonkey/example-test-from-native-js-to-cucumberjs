@@ -1,16 +1,21 @@
 describe('Protractor Demo App', function () {
-  var searchButton = element(by.model('message.searchPrompt'));
-  var searchField = element(by.css('.btn-primary'));
-  var firstResult = element(by.css('.result__snippet'));
+  var submitButton = element(by.css('.btn-primary'));
+  var firstName = element(by.name('data[firstName]'));
+  var lastName = element(by.name('data[lastName]'));
+  var email = element(by.name('data[email]'));
+  var phone = element(by.name('data[phone]'));
+  var successMessage = element(by.css('alert'));
 
   beforeEach(() => {
-    browser.get('http://localhost:8081/angular');
+    browser.get('https://formio.github.io/angular-demo/#/');
   });
 
   it('should give a valid search result', () => {
-    searchField.sendKeys('donald trump simulator');
-    searchButton.click();
-    expect(firstResult.getText()).toContain('TrumpKlon');
-    expect(browser.getTitle()).toEqual('donald trump simulator site:github.com at DuckDuckGo');
+    firstName.sendKeys('Simon');
+    lastName.sendKeys('Says');
+    email.sendKeys('simon.says@says.com');
+    phone.sendKeys('07745 443221');
+    submitButton.click();
+    expect(successMessage).toContain('Submission Complete.');
   });
 });

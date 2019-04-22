@@ -36,7 +36,7 @@ describe('Basic Tests', () => {
                 .to.contain('Donald Trump');
         })
             .catch(function (error) {
-                throw new Error('Search failed:', error)
+                throw new('Search failed:', error)
             })
     });
 });

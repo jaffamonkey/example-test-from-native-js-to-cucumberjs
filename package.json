@@ -14,11 +14,13 @@
     "express": "latest",
     "geckodriver": "^1.16.1",
     "jest": "latest",
+    "jest-puppeteer": "^4.1.1",
     "nightmare": "^2.9.1",
     "nightwatch": "^1.0.19",
     "nightwatch-api": "latest",
     "protractor": "latest",
     "puppeteer": "latest",
+    "request": "latest",
     "selenium-standalone": "^6.16.0",
     "selenium-webdriver": "^3.5.0",
     "superagent": "latest",
@@ -29,16 +31,15 @@
   },
   "scripts": {
     "test:api": "node ./tests/API/api-test.js",
-    "test:superagent": "node ./tests/API/api-test-superagent.js",
+    "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
     "test:nightmare": "./node_modules/.bin/jest",
     "test:chai": "./node_modules/.bin/jest",
     "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatch.conf.js",
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
     "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
-    "test:protractor": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/wdio.conf.js",
+    "test:protractor": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/protractor.conf.js",
     "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature",
-    "test:mocha": "./node_modules/.bin/wdio --spec ./tests/adventurous/mocha-webdriverio-selenium/test.js",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
   },
   "jest": {
@@ -49,7 +50,6 @@
     ]
   },
   "devDependencies": {
-    "jest": "^24.7.1",
-    "jest-puppeteer": "^4.1.1"
+
   }
 }

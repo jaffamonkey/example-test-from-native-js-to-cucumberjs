@@ -31,7 +31,7 @@ try {
   browser.wait(until.titleIs('donald trump simulator site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title')
 
   // This looks for a link text that includes "Trumpklon", which is the expected result.
-  browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
+  browser.findElement.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
 
 }
 finally {

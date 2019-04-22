@@ -25,9 +25,9 @@ describe('Simple website example', () => {
       .then((result) => {
         expect(result).toContain('TrumpKlon');
       })
-      .catch((error) => {
-        throw new Error('Search failed:', error)
-      })
+      // .catch((error) => {
+      //   throw new Error('Search failed:', error)
+      // })
   });
 });
 
