@@ -16,7 +16,7 @@ const post_options = {
 // You can run this from the command line, just copy and paste! it's the equivalent of the test below
 // Curl is a program that transfers data
 // curl -d '{"title": "randomTitle"}' -H 'Content-Type: application/json' -v http://localhost:3001/api/v1/todos
-request(post_options.end(err, res), () => {
+request(post_options, (err, res) => {
   assert.ifError(err);
   assert.equal(res.statusCode, 201);
   console.log(res.body);

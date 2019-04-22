@@ -28,15 +28,12 @@ describe('Basic Tests', () => {
         browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate link');
         browser.getTitle().then(function (title) {
             expect(title).to.equal('donald trump simulator site:github.com at DuckDuckGo');
-            
-            // What this line does is find the first element with class "result_snippet" (the first search result)
-            expect(browser.findElement(By.className('result__snippet')).getAttribute('innerHTML'))
+        });
+        // What this line does is find the first element with class "result_snippet" (the first search result)
+        browser.findElement(By.className('results--main')).getAttribute('innerHTML').then(function (text) {
 
-                // then checks that phrase "Donald Trump" is in the text.
-                .to.contain('Donald Trump');
+            // then checks that phrase "Donald Trump" is in the text.
+            expect(text).to.contain('TrumpKlon');
         })
-            .catch(function (error) {
-                throw new('Search failed:', error)
-            })
     });
 });

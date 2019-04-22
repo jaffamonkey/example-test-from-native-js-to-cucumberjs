@@ -4,7 +4,6 @@ describe('Protractor Demo App', function () {
   var lastName = element(by.name('data[lastName]'));
   var email = element(by.name('data[email]'));
   var phone = element(by.name('data[phone]'));
-  var successMessage = element(by.css('alert'));
 
   beforeEach(() => {
     browser.get('https://formio.github.io/angular-demo/#/');
@@ -16,6 +15,7 @@ describe('Protractor Demo App', function () {
     email.sendKeys('simon.says@says.com');
     phone.sendKeys('07745 443221');
     submitButton.click();
+    var successMessage = element(by.css('.alert'));
     expect(successMessage).toContain('Submission Complete.');
   });
 });

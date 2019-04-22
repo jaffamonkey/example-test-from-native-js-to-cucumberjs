@@ -17,13 +17,18 @@ Promise.resolve()
 		const browser = webdriverio.remote({
 			desiredCapabilities: {
 				browserName: 'chrome',
-				chromeOptions: { args: ['--headless'] }
+				chromeOptions: { }
 			},
-			logLevel: 'verbose'
+			// logLevel: 'verbose'
 		});
 		await browser.init();
 		await browser.url('http://localhost:8081/');
+		const searchfield = browser.element('input[name="q"]');
+		searchfield.addValue('donald trump simulator');
+		const searchbutton = browser.element('#searchButton');
+		await searchbutton.click();
 		const title = await browser.getTitle();
+		console.log(title);
 		assert.equal((/donald trump simulator site:github.com at DuckDuckGo/i).test(title), true);
 		await browser.end();
 		killProcesses();
