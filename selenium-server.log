@@ -1,0 +1,21 @@
+23:50:03.927 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+23:50:03.985 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-04-25 23:50:04.023:INFO::main: Logging initialized @253ms to org.seleniumhq.jetty9.util.log.StdErrLog
+23:50:04.208 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+23:50:04.282 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+23:50:04.452 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptSslCerts": true,
+  "browserName": "firefox",
+  "name": "Webdriver Nightwatch"
+}
+23:50:04.454 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.firefox.GeckoDriverService)
+1556229005051	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "-marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile.TmD34arOj37o"
+1556229005635	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: mozillaAddons
+1556229005635	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: resource://pdf.js/
+1556229005635	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid extension permission: about:reader*
+1556229007121	Marionette	INFO	Listening on port 37581
+23:50:07.272 INFO [ProtocolHandshake.createSession] - Detected dialect: W3C
+23:50:07.304 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 9661eee8-34bf-43d3-99b6-634b33d07a08 (org.openqa.selenium.firefox.GeckoDriverService)
+1556229009274	Marionette	INFO	Stopped listening on port 37581
+[Parent 8487, Gecko_IOThread] WARNING: pipe error (79): Connection reset by peer: file /build/firefox-6m4fHv/firefox-66.0.3+build1/ipc/chromium/src/chrome/common/ipc_channel_posix.cc, line 357
+23:50:09.775 INFO [ActiveSessions$1.onStop] - Removing session 9661eee8-34bf-43d3-99b6-634b33d07a08 (org.openqa.selenium.firefox.GeckoDriverService)

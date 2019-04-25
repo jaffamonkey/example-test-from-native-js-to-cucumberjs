@@ -34,11 +34,12 @@ For convenience, there are small npm scripts to help
 `npm run test:nightmare` - command run: `./node_modules/.bin/jest`
 `npm run test:chai` - command run: `./node_modules/.bin/jest`
 
-`npm run test:nightwatchapi` - command run: `node ./tests/UI/browser-test-nightwatch.js --config ./conf/nightwatch.conf.js`
+`npm run test:nightwatchapi` - command run: `node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatchapi.conf.js`
+`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js`
 `npm run test:javascript` - command run: `node ./tests/UI/webdriver-javascript.js`
 `npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
 `npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
 
-`npm run test:protractor` - command run: `./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/wdio.conf.js`
+`npm run test:protractor` - command run: `./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/protractor.conf.js`
 `npm run test:cucumberjs` - command run: `./node_modules/.bin/cucumber-js -r tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature`
 `npm run lint` - command run: `./node_modules/.bin/eslint ./tests/**/**/*.js`
