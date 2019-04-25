@@ -1,4 +1,4 @@
-module.exports = { // addapted from: https://git.io/vodU0
+module.exports = { 
   '@tags': ['donaldtrump'],
   'Simple website example': function(browser) {
     browser
