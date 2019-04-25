@@ -43,7 +43,7 @@
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
     "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
-    "test:protractor": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/protractor.conf.js",
+    "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
     "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
   },
