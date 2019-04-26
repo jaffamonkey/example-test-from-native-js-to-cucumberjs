@@ -10,7 +10,6 @@
     "eslint": "latest",
     "geckodriver": "^1.16.1",
     "nightwatch": "^1.0.19",
-    "nightwatch-api": "latest",
     "protractor": "latest",
     "selenium-download": "^2.0.7",
     "selenium-server": "^3.8.1",
@@ -18,7 +17,7 @@
     "selenium-webdriver": "^3.5.0"
   },
   "scripts": {
-    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatchapi.conf.js",
+    "update-webdriver-manager": "./node_modules/.bin/webdriver-manager update",
     "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js",
     "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js"
   }
