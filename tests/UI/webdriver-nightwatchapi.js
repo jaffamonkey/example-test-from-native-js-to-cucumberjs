@@ -6,9 +6,9 @@ const {
   client
 } = require('nightwatch-api');
 
-async function setup(env = 'chrome') {
-  await startWebDriver({ env });
-  await createSession({ env });
+async function setup(env = 'chrome', configFile = './conf/nightwatch.conf.js') {
+  await startWebDriver({ env, configFile });
+  await createSession({ env, configFile });
 }
 
 async function shutdown() {

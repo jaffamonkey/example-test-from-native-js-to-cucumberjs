@@ -38,7 +38,7 @@
     "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
     "test:nightmare": "./node_modules/.bin/jest",
     "test:chai": "./node_modules/.bin/jest",
-    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatchapi.conf.js",
+    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js -e local",
     "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js",
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
     "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
