@@ -1,11 +1,15 @@
 const until = require('protractor');
 
 describe('Protractor Demo App', function () {
+
+  // establish key variables - this could also be outside this file, in a page object
   var submitButton = element(by.css('.btn-primary'));
   var firstName = element(by.name('data[firstName]'));
   var lastName = element(by.name('data[lastName]'));
   var email = element(by.name('data[email]'));
   var phone = element(by.name('data[phoneNumber]'));
+
+  // we are using a Protractor library function ExpectedConditions
   var EC = protractor.ExpectedConditions;
 
   it('should give a valid search result', () => {

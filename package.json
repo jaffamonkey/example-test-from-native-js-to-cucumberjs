@@ -15,7 +15,7 @@
     "selenium-download": "^2.0.7",
     "selenium-server": "^3.8.1",
     "selenium-standalone": "^6.16.0",
-    "selenium-webdriver": "^3.5.0"
+    "selenium-webdriver": "^3.5.0",
   },
   "scripts": {
     "update-webdriver-manager": "./node_modules/.bin/webdriver-manager update",
