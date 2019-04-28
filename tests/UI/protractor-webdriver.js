@@ -9,7 +9,7 @@ describe('Protractor Demo App', function () {
   var email = element(by.name('data[email]'));
   var phone = element(by.name('data[phoneNumber]'));
 
-  // we are using a Protractor library function ExpectedConditions
+  // we are using a proatctor library function ExpectedConditions
   var EC = protractor.ExpectedConditions;
 
   it('should give a valid search result', () => {
