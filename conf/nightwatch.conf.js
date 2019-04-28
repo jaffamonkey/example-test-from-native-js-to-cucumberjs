@@ -49,7 +49,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          args: ['headless', 'disable-gpu']
+          args: []
         },
         "javascriptEnabled": true,
         "acceptSslCerts": true
