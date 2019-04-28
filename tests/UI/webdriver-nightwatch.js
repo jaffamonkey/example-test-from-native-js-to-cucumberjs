@@ -1,4 +1,4 @@
-module.exports = { 
+module.exports = {
   '@tags': ['donaldtrump'],
   'Simple website example': function(browser) {
     browser

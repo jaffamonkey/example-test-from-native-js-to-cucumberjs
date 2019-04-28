@@ -1,4 +1,5 @@
 const until = require('protractor');
+var angularHomepage = require('./pages/AngularHomepage');
 
 describe('Protractor Demo App', function () {
 
@@ -13,7 +14,8 @@ describe('Protractor Demo App', function () {
   var EC = protractor.ExpectedConditions;
 
   it('should give a valid search result', () => {
-    browser.get('https://formio.github.io/angular-demo/#/');
+    angularHomepage.openhomepage();
+    // browser.get('https://formio.github.io/angular-demo/#/');
     browser.wait(EC.presenceOf($('.formio-component-textfield')), 5000, 'Element taking too long to appear in the DOM');
     firstName.sendKeys('Simon');
     lastName.sendKeys('Says');

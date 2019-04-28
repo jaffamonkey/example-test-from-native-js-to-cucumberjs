@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="1"
+            failures="0"
+            tests="1">
+
+  <testsuite name="webdriver-nightwatch"
+    errors="1" failures="0" hostname="" id="" package="webdriver-nightwatch" skipped="0"
+    tests="1" time="0.004000" timestamp="">
+  
+    <testcase name="Simple website example" classname="webdriver-nightwatch" time="0.004000" assertions="0">
+    </testcase>
+  
+
+  
+
+  
+  </testsuite>
+</testsuites>

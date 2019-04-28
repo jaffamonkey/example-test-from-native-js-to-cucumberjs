@@ -7,7 +7,8 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
   "src_folders": [
     "test/e2e"     // we use '/test' as the name of our test directory by default. So 'test/e2e' for 'e2e'.
   ],
-  "output_folder": "./node_modules/nightwatch/reports", // reports (test outcome) output by Nightwatch
+  "page_objects_path": ["./tests/UI/pages"],
+  "output_folder": "./tests/reports",
   "selenium": {
     "start_process": true,
     "server_path": seleniumServer.path,
@@ -24,11 +25,11 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
       "launch_url": "http://localhost:8081",
       "selenium_port": 4444,
       "selenium_host": "127.0.0.1",
-      "silent": true,
+      "silent": false,
       "screenshots": {
         "enabled": true, // save screenshots taken here
         "path": SCREENSHOT_PATH
-      }, 
+      },
       "globals": {
         "waitForConditionTimeout": 10000    // wait for content on the page before continuing
       }
