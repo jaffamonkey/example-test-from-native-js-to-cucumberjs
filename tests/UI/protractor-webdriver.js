@@ -1,4 +1,3 @@
-const until = require('protractor');
 var angularHomepage = require('./pages/AngularHomepage');
 
 describe('Protractor Demo App', function () {
