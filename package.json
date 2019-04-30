@@ -5,23 +5,56 @@
   "author": "jaffamonkey <paullittlebury@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "assert": "^1.4.1",
+    "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chromedriver": "^2.46.0",
+    "cucumber": "^5.1.0",
     "eslint": "latest",
+    "express": "latest",
     "geckodriver": "^1.16.1",
-    "jasmine-json-test-reporter": "^1.0.0-beta",
+    "jest": "latest",
+    "jest-puppeteer": "^4.1.1",
+    "nightmare": "^2.9.1",
     "nightwatch": "^1.0.19",
     "nightwatch-api": "latest",
     "protractor": "latest",
+    "puppeteer": "latest",
+    "request": "latest",
+    "mime-types": "^2.1.13",
+    "nodemon": "^1.11.0",
     "selenium-download": "^2.0.7",
     "selenium-server": "^3.8.1",
     "selenium-standalone": "^6.16.0",
-    "selenium-webdriver": "^3.5.0"
+    "selenium-webdriver": "^3.5.0",
+    "superagent": "latest",
+    "wdio-mocha-framework": "^0.6.4",
+    "wdio-selenium-standalone-service": "0.0.12",
+    "wdio-spec-reporter": "^0.1.5",
+    "webdriverio": "^4.14.1"
   },
   "scripts": {
-    "update-webdriver-manager": "./node_modules/.bin/webdriver-manager update",
-    "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js -e local",
-    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js -e local",
-    "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js"
+    "test:api": "node ./tests/API/api-test.js",
+    "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
+    "test:nightmare": "./node_modules/.bin/jest",
+    "test:chai": "./node_modules/.bin/jest",
+    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatchapi.conf.js",
+    "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js",
+    "test:javascript": "node ./tests/UI/webdriver-javascript.js",
+    "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
+    "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
+    "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
+    "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature",
+    "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
+  },
+  "jest": {
+    "verbose": true,
+    "preset": "jest-puppeteer",
+    "testMatch": [
+      "**/tests/UI/*jest.js"
+    ]
+  },
+  "devDependencies": {
+
   }
 }
