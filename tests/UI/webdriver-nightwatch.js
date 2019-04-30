@@ -1,6 +1,6 @@
-module.exports = { 
+module.exports = {
   '@tags': ['donaldtrump'],
-  'Simple website example': function(browser) {
+  'Simple website example': function (browser) {
     browser
       .url('http://localhost:8081')
       .waitForElementVisible('body')
@@ -10,4 +10,5 @@ module.exports = {
       .assert.containsText('div.results--main', 'TrumpKlon')
       .end();
   }
+
 };
