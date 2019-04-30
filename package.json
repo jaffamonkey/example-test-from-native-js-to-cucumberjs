@@ -34,6 +34,8 @@
     "webdriverio": "^4.14.1"
   },
   "scripts": {
+    "startapi": "node ./api/api.js &",
+    "startweb": "node ./web/server.js &",
     "test:api": "node ./tests/API/api-test.js",
     "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
     "test:nightmare": "./node_modules/.bin/jest",
