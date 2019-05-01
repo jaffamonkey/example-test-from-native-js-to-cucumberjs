@@ -24,22 +24,22 @@ app.get('/api/v1/todos', (req, res) => {
 });
 
 app.post('/api/v1/todos', (req, res) => {
-  if(!req.body.title) {
+  if (!req.body.title) {
     return res.status(400).send({
       success: 'false',
       message: 'title is required'
     });
   }
- const todo = {
-   id: db.length + 1,
-   title: req.body.title,
- }
- db.push(todo);
- return res.status(201).send({
-   success: 'true',
-   message: 'todo added successfully',
-   todo
- })
+  const todo = {
+    id: db.length + 1,
+    title: req.body.title,
+  }
+  db.push(todo);
+  return res.status(201).send({
+    success: 'true',
+    message: 'todo added successfully',
+    todo
+  })
 });
 
 // Define what port the api server runs on, in this case the full url would be http://localhost:3001

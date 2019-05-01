@@ -28,7 +28,7 @@ async function run() {
     .assert.containsText('div.results--main', 'TrumpKlon');
 }
 
-(async function() {
+(async function () {
   try {
     await setup('chrome');
     await run();

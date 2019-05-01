@@ -1,6 +1,5 @@
 /* global element, expect, by, protractor, browser, $*/
 var Utility = function () {
-
   var EC = protractor.ExpectedConditions;
 
   this.waitForElement = async (el) => {
