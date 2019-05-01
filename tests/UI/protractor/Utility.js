@@ -1,18 +1,17 @@
-
 var Utility = function () {
 
   var EC = protractor.ExpectedConditions;
 
-  this.waitForElement = async function (el) {
+  this.waitForElement = async (el) => {
     await browser.wait(EC.presenceOf($(el)), 5000, 'Element taking too long to appear in the DOM');
   };
 
-  this.randomAlphaCharsWord = function (numChars) {
+  this.randomAlphaCharsWord = (numChars) => {
     let text = Math.random().toString(36).substring(numChars);
     return text;
   };
 
-  this.randomEmail = function (numChars) {
+  this.randomEmail = (numChars) => {
     var allowedChars = "abcdefghiklmnopqrstuvwxyz";
     var randomstring = '';
     for (var i = 0; i < numChars; i++) {
@@ -23,19 +22,19 @@ var Utility = function () {
     return randomstring;
   };
 
-  this.randomPhone = function (numInt) {
+  this.randomPhone = (numInt) => {
     var randomnum = '';
     // Generate random 10-digit number
     randomnum = String(Math.random()).substring(2, numInt + 2);
     return randomnum;
   };
 
-  this.areaContains = async function (selector, text) {
+  this.areaContains = async (selector, text) => {
     await browser.wait(EC.presenceOf($(selector)), 5000, 'Element taking too long to appear in the DOM');
     expect(await element(by.css(selector)).getText()).toContain(text);
   };
 
-  this.clickButton = async function (selector) {
+  this.clickButton = async (selector) => {
     await element(by.css(selector)).click();
     await browser.wait(EC.presenceOf($('div.alert')), 5000, 'Element taking too long to appear in the DOM');
   }
