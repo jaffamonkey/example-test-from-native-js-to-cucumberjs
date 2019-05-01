@@ -2,7 +2,7 @@ const seleniumServer = require("selenium-server");
 const chromedriver = require("chromedriver");
 
 const PKG = require('../package.json'); // so we can get the version of the project
-const SCREENSHOT_PATH = "./node_modules/nightwatch/screenshots/" + PKG.version + "/";
+const SCREENSHOT_PATH = "./tests/UI/nightwatch-screenshots/" + PKG.version + "/";
 
 const config = { // we use a nightwatch.conf.js file so we can include comments and helper functions
   "src_folders": [

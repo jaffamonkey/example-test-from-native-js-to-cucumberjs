@@ -72,7 +72,7 @@ exports.config = {
     bail: 0,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './tests/adventurous/mocha-webdriverio-selenium/errorShots/',
+    screenshotPath: './tests/UI/wdio-screenshots/',
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.

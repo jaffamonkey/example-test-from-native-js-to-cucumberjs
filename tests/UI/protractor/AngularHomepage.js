@@ -1,33 +1,31 @@
 
-module.exports = {
+var AngularHomepage = function () {
 
-  submitButton: element(by.css('.btn-primary')),
-  firstName: element(by.name('data[firstName]')),
-  lastName: element(by.name('data[lastName]')),
-  email: element(by.name('data[email]')),
-  phone: element(by.name('data[phoneNumber]')),
+var firstName = element(by.name('data[firstName]'));
+var lastName = element(by.name('data[lastName]'));
+var email = element(by.name('data[email]'));
+var phone = element(by.name('data[phoneNumber]'));
 
-  openhomepage: async function () {
+  this.getHomepage = async function () {
+    var EC = protractor.ExpectedConditions;  
     await browser.get('https://formio.github.io/angular-demo/#/');
-  },
-  randomAlphaCharsWord: function (numChars) {
-    let text = Math.random().toString(36).substring(numChars);
-    return text;
-  },
-  randomEmail: function (numChars) {
-    var allowedChars = "abcdefghiklmnopqrstuvwxyz";
-    var randomstring = '';
-    for (var i = 0; i < numChars; i++) {
-      var rnum = Math.floor(Math.random() * allowedChars.length);
-      randomstring += allowedChars.substring(rnum, rnum + 1);
-    }
-    randomstring += "@testemaildomain.com";
-    return randomstring;
-  },
-  randomPhone: function () {
-    var randomnum = '';
-    // Generate random 10-digit number
-    randomnum = String(Math.random()).substring(2, 12);
-    return randomnum;
-  }
+    await browser.wait(EC.presenceOf($('.formio-component-firstName')), 5000, 'Element taking too long to appear in the DOM');
+  };
+
+  this.setFirstName = async function(firstname) {
+    await firstName.sendKeys(firstname);
+  };
+
+  this.setLastName = async function(lastname) {
+    await lastName.sendKeys(lastname);
+  };
+
+  this.setEmail = async function(emailaddress) {
+    await email.sendKeys(emailaddress);
+  };
+
+  this.setPhone = async function(phonenumber) {
+    await phone.sendKeys(phonenumber);
+  };
 };
+module.exports = new AngularHomepage();

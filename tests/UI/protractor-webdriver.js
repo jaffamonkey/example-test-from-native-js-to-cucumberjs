@@ -1,18 +1,20 @@
 var home = require('./protractor/AngularHomepage');
+var utility = require('./protractor/Utility');
+var firstname = utility.randomAlphaCharsWord(10);
+var lastname = utility.randomAlphaCharsWord(10);
+var email = utility.randomEmail(10);
+var phone = utility.randomPhone(10);
 
-describe('Protractor Demo App', function () {
+describe('Protractor Demo App', () => {
   // we are using a proatctor library function ExpectedConditions
-  var EC = protractor.ExpectedConditions;
 
-  it('should give a valid search result', () => {
-    browser.get('https://formio.github.io/angular-demo/#/');
-    browser.wait(EC.presenceOf($('.formio-component-textfield')), 5000, 'Element taking too long to appear in the DOM');
-    home.firstName.sendKeys(home.randomAlphaCharsWord(10));
-    home.lastName.sendKeys(home.randomAlphaCharsWord(10));
-    home.email.sendKeys(home.randomEmail(10));
-    home.phone.sendKeys(home.randomPhone());
-    home.submitButton.click(home.submitButton);
-    browser.wait(EC.presenceOf($('.alert')), 5000, 'Element taking too long to appear in the DOM');
-    expect(element(by.css('div.alert')).getText()).toContain('Submission Complete.');
+  it('fill in a valid form', async () => {
+    await home.getHomepage();
+    await home.setFirstName(firstname);
+    await home.setLastName(lastname);
+    await home.setEmail(email);
+    await home.setPhone(phone);
+    await utility.clickButton('.btn-primary');
+    await utility.areaContains('div.alert', 'Submission Complete.');
   });
-});
+}); 
