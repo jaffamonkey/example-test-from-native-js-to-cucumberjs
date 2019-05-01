@@ -12,6 +12,7 @@ async function setup(env = 'chrome', configFile = './conf/nightwatch.conf.js') {
   await createSession({ env, configFile });
 }
 
+// using async, available with ES6
 async function shutdown() {
   await closeSession();
   await stopWebDriver();

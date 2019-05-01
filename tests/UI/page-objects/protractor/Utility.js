@@ -1,3 +1,4 @@
+/* global element, expect, by, protractor, browser, $*/
 var Utility = function () {
 
   var EC = protractor.ExpectedConditions;

@@ -2,25 +2,31 @@
 const Nightmare = require('nightmare');
 const nightmare = Nightmare({ show: true });
 
-describe('Simple website example', () => {
-  test('check page title', () => {
+describe('Check the DuckDuckGo search results page', () => {
+  test('Check page title', () => {
     nightmare
       .goto('http://localhost:8081')
       .type('input[name="q"]', 'donald trump simulator')
       .click('#searchButton')
-      .title()
+      .evaluate(() => {
+        return document.title;
+      })
       .end()
-      .expect(pageTitle).toContain('donald trump simulator site:github.com at DuckDuckGo');
+      .then((title) => {
+        expect(title).toContain('donald trump simulator site:github.com at DuckDuckGo');
+      })
   })
 
-  test('test the search', () => {
+  test('Check results page', () => {
     nightmare
       .goto('http://localhost:8081')
       .type('input[name="q"]', 'donald trump simulator')
       .click('#searchButton')
       .evaluate(() => { return document.querySelector('.serp__results').innerHTML() })
       .end()
-      .expect(result).toContain('TrumpKlon');
-  });
+      .then((result) => {
+        expect(result).toContain('TrumpKlon');
+      })
+  })
 });
 

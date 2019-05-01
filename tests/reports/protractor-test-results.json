@@ -1,15 +1,15 @@
 {
     "suite1": {
         "id": "suite1",
-        "description": "Protractor Demo App",
-        "fullName": "Protractor Demo App",
+        "description": "Complete form and check verification message",
+        "fullName": "Complete form and check verification message",
         "failedExpectations": [],
         "status": "finished",
         "specs": [
             {
                 "id": "spec0",
                 "description": "fill in a valid form",
-                "fullName": "Protractor Demo App fill in a valid form",
+                "fullName": "Complete form and check verification message fill in a valid form",
                 "failedExpectations": [],
                 "passedExpectations": [
                     {

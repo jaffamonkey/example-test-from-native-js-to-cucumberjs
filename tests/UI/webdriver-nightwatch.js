@@ -1,13 +1,14 @@
-var home = require('./nightwatch/Homepage');
+var home = require('./page-objects/nightwatch/Homepage');
 
 module.exports = {
   '@tags': ['donaldtrump'],
-  'DuckDuckGo search (one step)': function (browser) {
+
+  'Check the DuckDuckGo search results page (one step)': function (browser) {
     const pageObjs = browser.page.Homepage();
     pageObjs.performSearch()
   },
 
-  'DuckDuckGo search': function (browser) {
+  'Check the DuckDuckGo search results page': function (browser) {
     browser
       .url('http://localhost:8081')
       .waitForElementVisible('body')

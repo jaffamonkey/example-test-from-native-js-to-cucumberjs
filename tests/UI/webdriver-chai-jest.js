@@ -1,4 +1,5 @@
 /* eslint-env browser */
+/* global describe, test */
 // Initialise the webdriver browser driver (for Chrome)
 require('chromedriver');
 var webdriver = require('selenium-webdriver'),
@@ -19,9 +20,9 @@ var browser = new webdriver
         }
     }).build();
 
-describe('Basic Tests', () => {
+describe('Check the DuckDuckGo search results page', () => {
 
-    test('Check the search results page', () => {
+    test('Check search results', () => {
         browser.get('http://localhost:8081');
         browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate search field').sendKeys('donald trump simulator');
         browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate search button').click();
