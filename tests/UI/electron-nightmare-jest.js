@@ -10,9 +10,7 @@ describe('Simple website example', () => {
       .click('#searchButton')
       .title()
       .end()
-      .then((pageTitle) => {
-        expect(pageTitle).toContain('donald trump simulator site:github.com at DuckDuckGo');
-      })
+      .expect(pageTitle).toContain('donald trump simulator site:github.com at DuckDuckGo');
   })
 
   test('test the search', () => {
@@ -22,9 +20,7 @@ describe('Simple website example', () => {
       .click('#searchButton')
       .evaluate(() => { return document.querySelector('.serp__results').innerHTML() })
       .end()
-      .then((result) => {
-        expect(result).toContain('TrumpKlon');
-      })
+      .expect(result).toContain('TrumpKlon');
   });
 });
 

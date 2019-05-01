@@ -1,5 +1,6 @@
 const seleniumServer = require("selenium-server");
 const chromedriver = require("chromedriver");
+
 const PKG = require('../package.json'); // so we can get the version of the project
 const SCREENSHOT_PATH = "./node_modules/nightwatch/screenshots/" + PKG.version + "/";
 
@@ -7,7 +8,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
   "src_folders": [
     "test/e2e"     // we use '/test' as the name of our test directory by default. So 'test/e2e' for 'e2e'.
   ],
-  "page_objects_path": ["./tests/UI/pages"],
+  "page_objects_path": ["./tests/UI/nightwatch"],
   "output_folder": "./tests/reports",
   "selenium": {
     "start_process": true,
@@ -16,10 +17,10 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
     "host": "127.0.0.1",
     "port": 4444,
     "cli_args": {
-      "webdriver.chrome.driver" : chromedriver.path
+      "webdriver.chrome.driver": chromedriver.path
     }
   },
-  "test_workers" : {"enabled" : true, "workers" : "auto"}, // perform tests in parallel where possible
+  // "test_workers": { "enabled": true, "workers": "auto" }, // perform tests in parallel where possible
   "test_settings": {
     "default": {
       "launch_url": "http://localhost:8081",
@@ -29,6 +30,14 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
       "screenshots": {
         "enabled": true, // save screenshots taken here
         "path": SCREENSHOT_PATH
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          args: []
+        },
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
       },
       "globals": {
         "waitForConditionTimeout": 10000    // wait for content on the page before continuing
@@ -45,14 +54,6 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
       }, // this allows us to control the
       "globals": {
         "waitForConditionTimeout": 15000 // on localhost sometimes internet is slow so wait...
-      },
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "chromeOptions": {
-          args: []
-        },
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
       }
     },
     "chrome": { // your local Chrome browser (chromedriver)
@@ -66,7 +67,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
 }
 module.exports = config;
 
-function padLeft (count) { // theregister.co.uk/2016/03/23/npm_left_pad_chaos/
+function padLeft(count) { // theregister.co.uk/2016/03/23/npm_left_pad_chaos/
   return count < 10 ? '0' + count : count.toString();
 }
 
@@ -78,7 +79,7 @@ var FILECOUNT = 0; // "global" screenshot file count
  * While we're at it, we are adding some meta-data to the filename, specifically
  * the Platform/Browser where the test was run and the test (file) name.
  */
-function imgpath (browser) {
+function imgpath(browser) {
   var a = browser.options.desiredCapabilities;
   var meta = [a.platform];
   meta.push(a.browserName ? a.browserName : 'any');

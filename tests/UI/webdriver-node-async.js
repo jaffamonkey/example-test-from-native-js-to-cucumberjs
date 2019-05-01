@@ -3,6 +3,8 @@ const assert = require('assert');
 const { Builder, Capabilities, By } = require('selenium-webdriver');
 
 Promise.resolve()
+
+	// Using ES6 Async/Await
 	.then(async function () {
 		const driver = new Builder()
 			.withCapabilities(

@@ -13,12 +13,13 @@
     "eslint": "latest",
     "express": "latest",
     "geckodriver": "^1.16.1",
+    "jasmine-json-test-reporter": "latest",
     "jest": "latest",
     "jest-puppeteer": "^4.1.1",
     "nightmare": "^2.9.1",
     "nightwatch": "^1.0.19",
     "nightwatch-api": "latest",
-    "protractor": "latest",
+    "protractor": "5.4.1",
     "puppeteer": "latest",
     "request": "latest",
     "mime-types": "^2.1.13",
@@ -34,29 +35,19 @@
     "webdriverio": "^4.14.1"
   },
   "scripts": {
-<<<<<<< HEAD
-=======
     "startapi": "node ./api/api.js &",
     "startweb": "node ./web/server.js &",
->>>>>>> just-protractor-nightwatch
+    "wdupdate": "./node_modules/.bin/webdriver-manager update",
     "test:api": "node ./tests/API/api-test.js",
     "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
     "test:nightmare": "./node_modules/.bin/jest",
     "test:chai": "./node_modules/.bin/jest",
-<<<<<<< HEAD
-    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js -e local",
-=======
-    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatchapi.conf.js",
->>>>>>> just-protractor-nightwatch
+    "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatch.conf.js",
     "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js",
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
     "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
-<<<<<<< HEAD
-    "test:protractor": "./node_modules/.bin/webdriver-manager update && ./node_modules/.bin/protractor ./conf/protractor.conf.js",
-=======
     "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
->>>>>>> just-protractor-nightwatch
     "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
   },
@@ -66,12 +57,5 @@
     "testMatch": [
       "**/tests/UI/*jest.js"
     ]
-  },
-<<<<<<< HEAD
-  "devDependencies": {}
-=======
-  "devDependencies": {
-
   }
->>>>>>> just-protractor-nightwatch
 }

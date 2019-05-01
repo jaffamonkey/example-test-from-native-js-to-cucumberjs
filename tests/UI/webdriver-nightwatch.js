@@ -1,14 +1,20 @@
+var home = require('./nightwatch/Homepage');
+
 module.exports = {
   '@tags': ['donaldtrump'],
-  'Simple website example': function (browser) {
+  'DuckDuckGo search (one step)': function (browser) {
+    const pageObjs = browser.page.Homepage();
+    pageObjs.performSearch()
+  },
+
+  'DuckDuckGo search': function (browser) {
     browser
       .url('http://localhost:8081')
       .waitForElementVisible('body')
-      .setValue('input[name="q"]', 'donald trump simulator')
-      .click('#searchButton')
+      .setValue(home.elements.searchField, 'donald trump simulator')
+      .click(home.elements.searchButton)
       .assert.title('donald trump simulator site:github.com at DuckDuckGo')
-      .assert.containsText('div.results--main', 'TrumpKlon')
+      .assert.containsText(home.elements.results, 'TrumpKlon')
       .end();
   }
-
 };

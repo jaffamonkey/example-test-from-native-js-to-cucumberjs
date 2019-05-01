@@ -6,10 +6,10 @@ exports.config = {
 
     // Capabilities to be passed to the webdriver instance.
     capabilities: {
-        'browserName': 'chrome',
-        'chromeOptions': {
-            args: []
-        }
+        browserName: 'chrome',
+        chromeOptions: {
+            args: [ ]
+          }
     },
 
 

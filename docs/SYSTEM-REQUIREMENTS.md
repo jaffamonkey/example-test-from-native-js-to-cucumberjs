@@ -2,6 +2,8 @@
 
 * NodeJS
 * Git
+* Chrome
+* Firefox
 
 On Macs you can use the ```brew``` package manager to install these (or ```npm``` on Linux or Windows)
 
