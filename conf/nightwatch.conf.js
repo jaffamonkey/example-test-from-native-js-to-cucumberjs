@@ -1,6 +1,3 @@
-const seleniumServer = require("selenium-server");
-const chromedriver = require("chromedriver");
-
 const PKG = require('../package.json'); // so we can get the version of the project
 const SCREENSHOT_PATH = "./tests/UI/nightwatch-screenshots/" + PKG.version + "/";
 
@@ -8,63 +5,60 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
   "src_folders": [
     "test/e2e"     // we use '/test' as the name of our test directory by default. So 'test/e2e' for 'e2e'.
   ],
-  "page_objects_path": ["./tests/UI/page-objects/nightwatch"],
+  page_objects_path: ["./tests/UI/page-objects/nightwatch"],
   "output_folder": "./tests/reports",
-  "selenium": {
+  "webdriver": {
     "start_process": true,
-    "server_path": seleniumServer.path,
-    "log_path": "",
-    "host": "127.0.0.1",
-    "port": 4444,
-    "cli_args": {
-      "webdriver.chrome.driver": chromedriver.path
-    }
+    "host": "localhost",
+    "port": 4444
   },
+
   // "test_workers": { "enabled": true, "workers": "auto" }, // perform tests in parallel where possible
   "test_settings": {
     "default": {
       "launch_url": "http://localhost:8081",
-      "selenium_port": 4444,
-      "selenium_host": "127.0.0.1",
-      "silent": false,
-      "screenshots": {
-        "enabled": true, // save screenshots taken here
-        "path": SCREENSHOT_PATH
-      },
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "chromeOptions": {
-          args: []
+      "webdriver": {
+        "server_path": "./node_modules/.bin/geckodriver",
+        "cli_args": [
+          "--log", "debug"
+        ],
+        "silent": false,
+        "screenshots": {
+          "enabled": true, // save screenshots taken here
+          "path": SCREENSHOT_PATH
         },
-        "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "desiredCapabilities": {
+          "browserName": "firefox",
+          "firefoxOptions": {
+            args: ['hesdless', 'disable-gpu']
+          },
+          "javascriptEnabled": true,
+          "acceptSslCerts": true
+        },
+        "globals": {
+          "waitForConditionTimeout": 10000    // wait for content on the page before continuing
+        }
+      }
+    },
+    "chrome": {
+      "webdriver": {
+        "port": 9515,
+        "default_path_prefix": "",
+        "server_path": "./node_modules/.bin/chromedriver",
+        "cli_args": [
+          "--verbose"
+        ]
       },
-      "globals": {
-        "waitForConditionTimeout": 10000    // wait for content on the page before continuing
-      }
-    },
-    "local": {
-      "launch_url": "http://localhost:8081",
-      "selenium_port": 4444,
-      "selenium_host": "127.0.0.1",
-      "silent": true,
-      "screenshots": {
-        "enabled": true, // save screenshots taken here
-        "path": SCREENSHOT_PATH
-      }, // this allows us to control the
-      "globals": {
-        "waitForConditionTimeout": 15000 // on localhost sometimes internet is slow so wait...
-      }
-    },
-    "chrome": { // your local Chrome browser (chromedriver)
       "desiredCapabilities": {
         "browserName": "chrome",
         "javascriptEnabled": true,
-        "acceptSslCerts": true
+        "acceptSslCerts": true,
+        "args": ['headless', 'disable-gpu']
       }
-    }
+    },
   }
 }
+
 module.exports = config;
 
 function padLeft(count) { // theregister.co.uk/2016/03/23/npm_left_pad_chaos/

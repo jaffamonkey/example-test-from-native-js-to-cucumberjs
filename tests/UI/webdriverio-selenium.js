@@ -26,7 +26,7 @@ Promise.resolve()
 		await browser.init();
 		await browser.url('http://localhost:8081/');
 		const searchfield = browser.element('input[name="q"]');
-		searchfield.addValue('donald trump simulator');
+		await searchfield.addValue('donald trump simulator');
 		const searchbutton = browser.element('#searchButton');
 		await searchbutton.click();
 		const title = await browser.getTitle();

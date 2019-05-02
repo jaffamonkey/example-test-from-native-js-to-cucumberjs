@@ -8,4 +8,3 @@ npm run test:javascript
 npm run test:webdriverio
 npm run test:webdriver
 npm run test:protractor
-npm run test:cucumberjs
