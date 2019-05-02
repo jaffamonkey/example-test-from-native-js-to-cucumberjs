@@ -1,6 +1,4 @@
 const Nightmare = require('nightmare');
-const assert = require('assert');
-const resultsarea = '.results';
 const chai = require('chai')
 const expect = chai.expect
 
