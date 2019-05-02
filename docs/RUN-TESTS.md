@@ -26,13 +26,14 @@ node ./api/api.js
 
 #### Start test running
 
+### Test Environment
 
-### Nightwatch
-
-(To start the website that nightwatch will run tests against)
+(To start the website and api server, that the tests will test against)
 
 `npm run startweb` - command run: `node web/server.js &`
 `npm run startapi` - command run: `node api/api.js &`
+
+### Nightwatch
 
 `npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js`
 
