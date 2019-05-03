@@ -11,6 +11,12 @@ var Utility = function () {
     return text;
   };
 
+  this.takeScreenshot = (data, filename) => {
+    var stream = fs.createWriteStream(filename);
+    stream.write(new Buffer(data, 'base64'));
+    stream.end();
+  };
+
   this.randomEmail = (numChars) => {
     var allowedChars = "abcdefghiklmnopqrstuvwxyz";
     var randomstring = '';

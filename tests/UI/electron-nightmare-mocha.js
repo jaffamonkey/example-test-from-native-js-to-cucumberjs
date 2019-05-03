@@ -20,7 +20,7 @@ describe('Check the DuckDuckGo search results page title', function () {
           .wait(3000)
           .evaluate(() => document.getElementsByTagName('title')[0].innerText)
           .then(function (title) {
-            expect(title).contains('donald trump simulator site:github.com at DuckDuckGo')
+            assert(title).dcontains('donald trump simulator site:github.com at DuckDuckGo')
             done()
           })
           .catch(done)

@@ -66,6 +66,13 @@ For convenience to install packages, it is better to create a file `package.json
 
 ## The test file
 
+Although the purpose of tests varies, the context is similar:
+
+1. I do something
+2. Something happens
+
+So test steps are (simplified) an action followed by consequence(s) - the consequence is how we verify is a test has passed or failed.
+
 Create a new file in 'tests' folder called `test.js`. When this code is run, it first fires up Chromes browser, then excecutes the actions in the script.
 
 As a start, this line will mean Chrome will run the automated tests without UI (good for speed). `headless` means no browser will be visible on screen. `disable-gpu` means disable graphics acceleration for Chrome.

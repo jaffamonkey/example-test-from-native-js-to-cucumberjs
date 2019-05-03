@@ -1,5 +1,6 @@
 npm run test:api
 npm run test:superagent
+npm run test:mocha
 npm run test:nightmare
 npm run test:chai
 npm run test:nightwatchapi
