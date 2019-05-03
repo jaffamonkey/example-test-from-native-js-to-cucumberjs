@@ -30,7 +30,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
         "desiredCapabilities": {
           "browserName": "firefox",
           "firefoxOptions": {
-            args: ['hesdless', 'disable-gpu']
+            args: ['headless', 'disable-gpu']
           },
           "javascriptEnabled": true,
           "acceptSslCerts": true

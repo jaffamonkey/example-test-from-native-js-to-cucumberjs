@@ -44,6 +44,7 @@
     "test:webdriverio": "node ./tests/UI/webdriverio-selenium.js",
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
     "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
+    "test:puppeteer": "node ./tests/UI/puppeteer.js",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js",
     "test:mocha": "mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js"
   },
