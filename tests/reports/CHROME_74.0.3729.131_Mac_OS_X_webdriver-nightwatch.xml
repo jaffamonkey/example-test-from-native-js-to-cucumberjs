@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
+            failures="0"
             tests="2">
 
   <testsuite name="webdriver-nightwatch"
-    errors="0" failures="1" hostname="" id="" package="webdriver-nightwatch" skipped="0"
-    tests="2" time="6.360" timestamp="">
+    errors="0" failures="0" hostname="" id="" package="webdriver-nightwatch" skipped="0"
+    tests="2" time="5.191" timestamp="">
   
-    <testcase name="Check the DuckDuckGo search results page (one step)" classname="webdriver-nightwatch" time="2.199" assertions="3">
+    <testcase name="Check the DuckDuckGo search results page (one step)" classname="webdriver-nightwatch" time="2.113" assertions="3">
 
     
 
@@ -16,12 +16,13 @@
     
     </testcase>
   
-    <testcase name="Check the DuckDuckGo search results page" classname="webdriver-nightwatch" time="4.161" assertions="2">
+    <testcase name="Check the DuckDuckGo search results page" classname="webdriver-nightwatch" time="3.078" assertions="3">
 
-      <failure message="Testing if the page title equals &#34;donald trump simulatsor site:github.com at DuckDuckGo&#34; in 1000 ms. - expected [0;32m&#34;donald trump simulatsor site:github.com at DuckDuckGo&#34;[0m but got: [0;31m&#34;donald trump simulator site:github.com at DuckDuckGo&#34;[0m">    at Object.Check the DuckDuckGo search results page (/Users/pablo/github/starter-github-html-tests-travis-netlify/tests/UI/webdriver-nightwatch.js:17:15)
-    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    
 
-    <failure message="    at Object.Check the DuckDuckGo search results page (/Users/pablo/github/starter-github-html-tests-travis-netlify/tests/UI/webdriver-nightwatch.js:17:15)">    at process._tickCallback (internal/process/next_tick.js:68:7)</failure>
+    
+
+    
     </testcase>
   
 

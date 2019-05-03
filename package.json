@@ -45,7 +45,7 @@
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
     "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js",
-    "test:mocha": "mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js"
+    "test:mocha": "mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer.conf.js"
   },
   "jest": {
     "verbose": true,

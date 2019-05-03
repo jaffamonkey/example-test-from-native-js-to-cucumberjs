@@ -24,7 +24,7 @@ async function run() {
     .url('http://localhost:8081')
     .setValue('input[name="q"]', 'donald trump simulator')
     .click('#searchButton')
-    .assert.title('donald trump simuslator site:github.com at DuckDuckGo')
+    .assert.title('donald trump simulator site:github.com at DuckDuckGo')
     .assert.containsText('div.results--main', 'TrumpKlon');
 }
 
