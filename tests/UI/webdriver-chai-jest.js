@@ -28,7 +28,6 @@ describe('Check the DuckDuckGo search results page', () => {
         });
         await browser.getTitle().then((title) => {
             expect(title).to.equal('donald trump simulator site:github.com at DuckDuckGo');
-            // What this line does is find the first element with class "result_snippet" (the first search result)
         });
     });
 });
