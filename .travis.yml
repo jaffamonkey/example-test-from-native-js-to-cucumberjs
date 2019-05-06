@@ -11,4 +11,4 @@ branches:
 before_script:
   - npm install
 script:
-  - sh run-all-ui-tests.sh
+  - sh run-all-tests.sh
