@@ -42,7 +42,7 @@ You will see this:
 `server running on port 3001`
 
 
-#### Run webdriver-manager update (for Protractor test
+#### Run webdriver-manager update (for Protractor test)
 ```
 npm run wdupdate
 ```
@@ -66,6 +66,10 @@ npm run wdupdate
 
 `npm run test:protractor` - command run: `./node_modules/.bin/protractor ./conf/protractor.conf.js`
 
+### Puppeteer
+
+`npm run test:puppeteer` - command run: `./tests/UI/puppeteer.js`
+
 
 ### API
 
@@ -74,11 +78,15 @@ npm run wdupdate
 
 ### Nightmare
 
-`npm run test:nightmare` - command run: `./node_modules/.bin/jest`
+`npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js`
 
 ### Chai
 
 `npm run test:chai` - command run: `./node_modules/.bin/jest`
+
+### Mocha
+
+`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js`
 
 ### NightwatchAPI
 
@@ -88,6 +96,7 @@ npm run wdupdate
 
 `npm run test:javascript` - command run: `node ./tests/UI/webdriver-javascript.js`
 
+### WebdriverIO
 
 `npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
 
@@ -95,6 +104,6 @@ npm run wdupdate
 
 `npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
 
-### CucumberJS
+### Zombie
 
-`npm run test:cucumberjs` - command run: `./node_modules/.bin/cucumber-js -r tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature`
+`npm run test:zombie` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js`
