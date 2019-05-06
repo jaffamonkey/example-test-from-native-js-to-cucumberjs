@@ -10,7 +10,7 @@ describe('Check the DuckDuckGo search results page title', function () {
     nightmare = new Nightmare({ show: false })
   })
 
-  describe('Homepage', function () {
+  describe('Homepage', () => {
     describe('Page Title', () => {
       it('should show correct results page title', done => {
         // your actual testing urls will likely be `http://localhost:port/path`
