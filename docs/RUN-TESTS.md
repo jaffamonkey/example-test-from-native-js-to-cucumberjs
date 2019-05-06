@@ -78,11 +78,15 @@ npm run wdupdate
 
 ### Nightmare
 
-`npm run test:nightmare` - command run: `./node_modules/.bin/jest`
+`npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js`
 
 ### Chai
 
 `npm run test:chai` - command run: `./node_modules/.bin/jest`
+
+### Mocha
+
+`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js`
 
 ### NightwatchAPI
 
@@ -92,6 +96,7 @@ npm run wdupdate
 
 `npm run test:javascript` - command run: `node ./tests/UI/webdriver-javascript.js`
 
+### WebdriverIO
 
 `npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
 
