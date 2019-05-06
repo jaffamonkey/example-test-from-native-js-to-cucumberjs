@@ -1,4 +1,3 @@
-require('chromedriver');
 const assert = require('assert');
 const { Builder, Capabilities, By } = require('selenium-webdriver');
 
