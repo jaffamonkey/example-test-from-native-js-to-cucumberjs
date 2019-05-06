@@ -42,7 +42,7 @@ You will see this:
 `server running on port 3001`
 
 
-#### Run webdriver-manager update (for Protractor test
+#### Run webdriver-manager update (for Protractor test)
 ```
 npm run wdupdate
 ```
@@ -95,6 +95,6 @@ npm run wdupdate
 
 `npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
 
-### CucumberJS
+### Zombie
 
-`npm run test:cucumberjs` - command run: `./node_modules/.bin/cucumber-js -r tests/UI/cucumberjs-chai-webdriver/**/*.js ./tests/UI/*.feature`
+`npm run test:zombie` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js`
