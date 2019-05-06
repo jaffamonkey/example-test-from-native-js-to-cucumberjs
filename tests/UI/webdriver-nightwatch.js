@@ -15,7 +15,7 @@ module.exports = {
       .setValue(home.elements.searchField, 'donald trump simulator')
       .click(home.elements.searchButton)
       .assert.title('donald trump simulator site:github.com at DuckDuckGo')
-      .assert.containsText(home.elements.results, 'TrumpKlon')
+      .assert.containsText(home.elements.results, 'Donald Trump')
       .end();
   }
 };

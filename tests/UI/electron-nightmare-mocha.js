@@ -45,7 +45,7 @@ describe('Check the DuckDuckGo search results page title', function () {
           .wait(3000)
           .evaluate(() => document.getElementsByClassName('result__body')[0].innerText)
           .then(function (text) {
-            expect(text).contains('TrumpKlon')
+            expect(text).contains('Donald Trump')
             done()
           })
           .catch(done)

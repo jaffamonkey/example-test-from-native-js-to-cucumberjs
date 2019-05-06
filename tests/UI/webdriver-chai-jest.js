@@ -26,7 +26,7 @@ describe('Check the DuckDuckGo search results page', () => {
         browser.get('http://localhost:8081');
         browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate search field').sendKeys('donald trump simulator');
         browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate search button').click();
-        browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate link');
+        browser.wait(until.elementLocated(By.partialLinkText('Donald Trump')), 3000, 'Could not locate link');
         browser.getTitle().then(function (title) {
             expect(title).to.equal('donald trump simulator site:github.com at DuckDuckGo');
         });
@@ -34,7 +34,7 @@ describe('Check the DuckDuckGo search results page', () => {
         browser.findElement(By.className('results--main')).getAttribute('innerHTML').then(function (text) {
 
             // then checks that phrase "Donald Trump" is in the text.
-            expect(text).to.contain('TrumpKlon');
+            expect(text).to.contain('Donald Trump');
         })
     });
 });
