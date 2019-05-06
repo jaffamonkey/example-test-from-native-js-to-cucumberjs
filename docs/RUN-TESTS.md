@@ -66,6 +66,10 @@ npm run wdupdate
 
 `npm run test:protractor` - command run: `./node_modules/.bin/protractor ./conf/protractor.conf.js`
 
+### Puppeteer
+
+`npm run test:puppeteer` - command run: `./tests/UI/puppeteer.js`
+
 
 ### API
 
