@@ -17,8 +17,10 @@ Promise.resolve()
 		await driver.findElement(By.id('searchButton')).click();
 		const title = await driver.getTitle();
 		assert.equal((/donald trump simulator site:github.com at DuckDuckGo/i).test(title), true);
-		const results = await driver.findElement(By.className('result__snippet')).getAttribute('innerHTML');
-		assert.equal((/TrumpKlon/i).test(results), true);
+		console.log('The search results page title: ' + title);
+		const results = await driver.findElement(By.id('r1-0')).getText();
+		console.log('The first search result: ' + results);
+		assert.equal((/Donald Trump/i).test(results), true);
 		await driver.quit();
 	})
 	.catch(function (error) {

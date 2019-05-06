@@ -2,8 +2,8 @@ var JSONReporter = require('jasmine-json-test-reporter');
 
 exports.config = {
 
+    // This setting means we don't need to use Selenium server, we use Protractor directly to test against browsers.
     directConnect: true,
-
 
     // Capabilities to be passed to the webdriver instance.
     capabilities: {

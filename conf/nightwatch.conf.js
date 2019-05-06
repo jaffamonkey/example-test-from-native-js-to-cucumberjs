@@ -22,7 +22,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
         "cli_args": [
           "--log", "debug"
         ],
-        "silent": false,
+        "silent": true,
         "screenshots": {
           "enabled": true, // save screenshots taken here
           "path": SCREENSHOT_PATH
