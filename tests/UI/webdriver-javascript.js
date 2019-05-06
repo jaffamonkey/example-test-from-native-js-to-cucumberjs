@@ -1,6 +1,3 @@
-// Initialise the webdriver browser driver (for Chrome)
-require('chromedriver');
-
 // The easiest way to look at this, is it's creating an object that's webdriver.
 var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
