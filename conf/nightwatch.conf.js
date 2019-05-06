@@ -22,7 +22,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
         "cli_args": [
           "--log", "debug"
         ],
-        "silent": true,
+        "silent": false,
         "screenshots": {
           "enabled": true, // save screenshots taken here
           "path": SCREENSHOT_PATH
@@ -44,6 +44,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
       "webdriver": {
         "port": 9515,
         "default_path_prefix": "",
+        "silent": false,
         "server_path": "./node_modules/.bin/chromedriver",
         "cli_args": [
           "--verbose"
@@ -53,7 +54,9 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
         "browserName": "chrome",
         "javascriptEnabled": true,
         "acceptSslCerts": true,
-        "args": ['headless', 'disable-gpu']
+        "chromeOptions": {
+          args: ['headless', 'disable-gpu']
+        },
       }
     },
   }

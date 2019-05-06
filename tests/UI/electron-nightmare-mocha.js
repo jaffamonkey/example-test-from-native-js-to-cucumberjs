@@ -7,7 +7,7 @@ describe('Check the DuckDuckGo search results page title', function () {
 
   let nightmare = null
   beforeEach(() => {
-    nightmare = new Nightmare({ show: true })
+    nightmare = new Nightmare({ show: false })
   })
 
   describe('Homepage', function () {

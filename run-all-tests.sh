@@ -1,3 +1,8 @@
+npm run wdupdate
+npm run startapi
+npm run startweb
+npm run test:api
+npm run test:superagent
 npm run test:mocha
 npm run test:nightmare
 npm run test:chai

@@ -10,6 +10,5 @@ branches:
   - travis-ci
 before_script:
   - npm install
-  - node ./web/server.js &
 script:
-  - node tests/browser-test.js
+  - sh run-all-ui-tests.sh
