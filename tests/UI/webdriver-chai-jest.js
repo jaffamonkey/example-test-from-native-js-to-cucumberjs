@@ -1,7 +1,4 @@
 /* eslint-env browser */
-/* global describe, test */
-// Initialise the webdriver browser driver (for Chrome)
-require('chromedriver');
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
@@ -22,19 +19,16 @@ var browser = new webdriver
 
 describe('Check the DuckDuckGo search results page', () => {
 
-    test('Check search results', () => {
-        browser.get('http://localhost:8081');
-        browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate search field').sendKeys('donald trump simulator');
-        browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate search button').click();
-        browser.wait(until.elementLocated(By.partialLinkText('Donald Trump')), 3000, 'Could not locate link');
-        browser.getTitle().then(function (title) {
-            expect(title).to.equal('donald trump simulator site:github.com at DuckDuckGo');
+    it('Check search results', async () => {
+        await browser.get('http://localhost:8081');
+        await browser.findElement(By.name('q')).sendKeys('donald trump simulator');
+        await browser.findElement(By.id('searchButton')).click();
+        await browser.findElement(By.className('result__title')).getText().then((results) => {
+            expect(results).to.contain('TrumpKlon');
         });
-        // What this line does is find the first element with class "result_snippet" (the first search result)
-        browser.findElement(By.className('results--main')).getAttribute('innerHTML').then(function (text) {
-
-            // then checks that phrase "Donald Trump" is in the text.
-            expect(text).to.contain('Donald Trump');
-        })
+        await browser.getTitle().then((title) => {
+            expect(title).to.equal('donald trump simulator site:github.com at DuckDuckGo');
+            // What this line does is find the first element with class "result_snippet" (the first search result)
+        });
     });
 });
