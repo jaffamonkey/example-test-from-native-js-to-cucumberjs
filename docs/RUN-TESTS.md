@@ -18,13 +18,17 @@ Open a new tab in your Terminal program, for each command
 ```
 node ./web/server.js
 ```
+You will see this:
+`Server running at http://127.0.0.1:8081/`
 
 #### Start the API server
 ```
 node ./api/api.js
 ```
+You will see this:
+`server running on port 3001`
 
-#### Start test running
+#### Start tests running
 
 ### Test Environment
 
