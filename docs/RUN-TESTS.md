@@ -1,16 +1,29 @@
 # Browser and API tests
 
-## Requirements
+## The quick way
+
 Open up your Terminal Program (for Macs. it's in the `Utilities` folder), and navigate to your repo folder. For example:
 ```
 cd /User/myname/projects/repo-name
 ```
-Then install the packages listed in Dependencies section of the `package.json` file.
+Then run these two shell script, which will do the setup and run all the tests at once.  
+_To run individually, see further below._
+
+```
+sh set-up.sh
+sh run-all-tests.sh
+```
+
+## Install
+
+The tests need certain packages, which are listed in the `package.json` file.
+
+From the terminal, run:
 ```
 npm install
 ```
 
-## Browser testing
+## Browser/API testing
 
 Open a new tab in your Terminal program, for each command
 
@@ -27,6 +40,12 @@ node ./api/api.js
 ```
 You will see this:
 `server running on port 3001`
+
+
+#### Run webdriver-manager update (for Protractor test
+```
+npm run wdupdate
+```
 
 #### Start tests running
 
