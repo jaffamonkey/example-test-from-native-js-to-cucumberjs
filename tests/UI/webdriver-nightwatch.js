@@ -17,6 +17,5 @@ module.exports = {
       .assert.title('donald trump simulator site:github.com at DuckDuckGo')
       .assert.containsText(home.elements.results, 'Donald Trump')
       .end();
-
   }
 };
