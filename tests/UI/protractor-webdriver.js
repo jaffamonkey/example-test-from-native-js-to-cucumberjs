@@ -1,5 +1,6 @@
 var home = require('./page-objects/protractor/AngularHomepage');
 var utility = require('./page-objects/protractor/Utility');
+
 var firstname = utility.randomAlphaCharsWord(10);
 var lastname = utility.randomAlphaCharsWord(10);
 var email = utility.randomEmail(10);

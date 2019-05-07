@@ -1,5 +1,5 @@
 describe('Check the DuckDuckGo search results page', function () {
-    let page;
+    // let page;
 
     before(async function () {
         page = await browser.newPage();
