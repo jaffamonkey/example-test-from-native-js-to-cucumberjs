@@ -1,3 +1,4 @@
+const chromedriver = require('chromedriver');
 const PKG = require('../package.json'); // so we can get the version of the project
 const SCREENSHOT_PATH = "./tests/screenshots/";
 
@@ -45,7 +46,7 @@ const config = { // we use a nightwatch.conf.js file so we can include comments 
         "port": 9515,
         "default_path_prefix": "",
         "silent": false,
-        "server_path": "./node_modules/.bin/chromedriver",
+        "server_path": chromedriver.path,
         "cli_args": [
           "--verbose"
         ]
