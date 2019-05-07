@@ -28,11 +28,11 @@ Promise.resolve()
 		await browser.init();
 		await browser.url('http://localhost:8081/');
 		const searchfield = browser.element('input[name="q"]');
-		await searchfield.addValue('donald trump simulator');
+		await searchfield.addValue('TrumpKlon');
 		const searchbutton = browser.element('#searchButton');
 		await searchbutton.click();
 		const title = await browser.getTitle();
-		assert.equal((/donald trump simulator site:github.com at DuckDuckGo/i).test(title), true);
+		assert.equal((/TrumpKlon site:github.com at DuckDuckGo/i).test(title), true);
 		await browser.end();
 		killProcesses();
 	})

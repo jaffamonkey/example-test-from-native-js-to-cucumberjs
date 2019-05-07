@@ -12,9 +12,9 @@ module.exports = {
     browser
       .url('http://localhost:8081')
       .waitForElementVisible('body')
-      .setValue(home.elements.searchField, 'donald trump simulator')
+      .setValue(home.elements.searchField, 'TrumpKlon')
       .click(home.elements.searchButton)
-      .assert.title('donald trump simulator site:github.com at DuckDuckGo')
+      .assert.title('TrumpKlon site:github.com at DuckDuckGo')
       .assert.containsText(home.elements.results, 'Donald Trump')
       .end();
   }

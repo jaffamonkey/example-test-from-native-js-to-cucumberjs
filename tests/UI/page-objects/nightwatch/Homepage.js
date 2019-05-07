@@ -15,9 +15,9 @@ module.exports = {
       return this.api
         .url('http://localhost:8081')
         .waitForElementVisible('body')
-        .setValue('input[name="q"]', 'donald trump simulator')
+        .setValue('input[name="q"]', 'TrumpKlon')
         .click('#searchButton')
-        .assert.title('donald trump simulator site:github.com at DuckDuckGo')
+        .assert.title('TrumpKlon site:github.com at DuckDuckGo')
         .assert.containsText('div.results--main', 'Donald Trump')
         .end()
     }

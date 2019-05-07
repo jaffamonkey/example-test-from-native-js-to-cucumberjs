@@ -15,16 +15,16 @@ describe('User visits signup page', function () {
     describe('Check the DuckDuckGo search results page', () => {
 
         it('Perform search', () => {
-            browser.fill('q', 'donald trump simulator')
+            browser.fill('q', 'TrumpKlon')
             return browser.pressButton('Search');
         });
 
         it('The page title is correct', function () {
-            return browser.assert.text('title', 'donald trump simulator at DuckDuckGo');
+            return browser.assert.text('title', 'TrumpKlon at DuckDuckGo');
         });
 
-        it('Relevant search results displayed', function () {
-            return browser.assert.text('h2.result__title', /The Donald Trump Simulator/i);
+        it('Relevant first search result displayed', function () {
+            return browser.assert.text('h2.result__title', /TrumpKlon/i);
         });
     });
 });

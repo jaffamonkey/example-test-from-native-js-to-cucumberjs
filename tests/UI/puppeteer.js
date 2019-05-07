@@ -6,7 +6,7 @@ const puppeteer = require('puppeteer');
 
   await page.goto('http://localhost:8081');
   // Type into search box.
-  await page.type('input[name="q"]', 'donald trump simulator');
+  await page.type('input[name="q"]', 'TrumpKlon');
   await page.click('#searchButton')
 
   // Wait for suggest overlay to appear and click "show all results".

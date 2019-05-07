@@ -10,17 +10,13 @@ describe('Check the DuckDuckGo search results page', function () {
         await page.close();
     })
 
-    it('should have the correct page title', async function () {
-        const SEARCHFIELD_SELECTOR = 'input[name="q"]';
-        const BUTTON_SELECTOR = '#searchButton';
-        await page.type(SEARCHFIELD_SELECTOR, 'donald trump simulator');
-        await page.click(BUTTON_SELECTOR);
+    it('should have the correct page title and first search result', async function () {
+        await page.type('input[name="q"]', 'TrumpKlon');
+        await page.click('#searchButton');
         await page.waitFor('.results--main');
-        expect(await page.title()).to.eql('donald trump simulator site:github.com at DuckDuckGo');
-    });
-
-    it('should have correct first result', async function () {
-        const RESULTS_SELECTOR = '.results--main';
-        expect(await page.$$(RESULTS_SELECTOR)).to.have.lengthOf(1);
+        expect(await page.title()).to.eql('TrumpKlon site:github.com at DuckDuckGo');
+        await page.waitFor('.result__title');
+        const firstresult = await page.$eval('.result__title', txt => txt.textContent.trim())
+        expect(firstresult).to.eql('GitHub - blinkgestalten/TrumpKlon: An artwork for automated ...Your browser indicates if you\'ve visited this link');
     });
 });

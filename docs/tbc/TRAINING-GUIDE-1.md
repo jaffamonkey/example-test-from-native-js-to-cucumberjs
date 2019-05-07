@@ -103,7 +103,7 @@ try {
   browser.get('http://localhost:8081');
 
   // Now the search field is filled in with our search terms, after the field becomes visible (allowing for page load time).
-  browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('donald trump simulator');
+  browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('TrumpKlon');
 
   // Now we click the search button, after the button becomes visible.
   browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate the search button').click();
@@ -112,7 +112,7 @@ try {
   browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
 
   // Now checking that the page title is what is expected.
-  browser.wait(until.titleIs('donald trump simulator site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title').then(() => {
+  browser.wait(until.titleIs('TrumpKlon site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title').then(() => {
 
     // Output success message to screen. For this to happens if the previous steps have all run successfully.
     console.log('Browser test passed!');
@@ -136,7 +136,7 @@ browser.get('http://localhost:8081');
 ```
 **Wait for field to be visible, then fill in field with a value***
 ```
-browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('donald trump simulator');
+browser.wait(until.elementLocated(By.name('q')), 10000, 'Could not locate').sendKeys('TrumpKlon');
 ```
 **Locating the element that has name "search", then click**
 ```
