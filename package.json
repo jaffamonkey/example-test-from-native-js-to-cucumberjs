@@ -5,6 +5,7 @@
   "author": "jaffamonkey <paullittlebury@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "artillery": "latest",
     "assert": "^1.4.1",
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
@@ -19,6 +20,7 @@
     "nightmare": "^2.9.1",
     "nightwatch": "^1.0.19",
     "nightwatch-api": "latest",
+    "pa11y": "latest",
     "protractor": "5.4.1",
     "puppeteer": "latest",
     "request": "latest",
@@ -48,6 +50,8 @@
     "test:mocha": "./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/mocha-puppeteer.js",
     "test:zombie": "./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js",
     "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/bdd/**/*.js -f node_modules/cucumber-pretty ./tests/UI/*.feature",
+    "test:pa11y": "node ./tests/performance/pa11y/pa11y.js > ./tests/reports/pa11y-report.json",
+    "test:artillery": "./node_modules/.bin/artillery run ./tests/performance/artillery/artillery.yml > ./tests/reports/artillery-report.txt",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
   },
   "jest": {
