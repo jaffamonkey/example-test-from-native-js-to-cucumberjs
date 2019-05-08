@@ -2,6 +2,7 @@
 var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
   until = webdriver.until;
+var errorMessage = 'Could not locate the correct ';
 
 // This is creating an object that is the browser
 const browser = new webdriver
@@ -15,25 +16,16 @@ const browser = new webdriver
   }).build();
 
 try {
-  // This line is telling the browser to open a url.
   browser.get('http://localhost:8081');
-
-  // Now the search field is filled in with our search terms, after the field becomes visible (allowing for page load time).
-  browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('TrumpKlon');
-
-  // Now we click the search button, after the button becomes visible.
-  browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate the search button').click();
-
-  // Now checking that the page title is what is expected.
-  browser.wait(until.titleIs('TrumpKlon site:github.com at DuckDuckGo'), 3000, 'Could not locate correct title')
-
-  // This looks for a link text that includes "Donald Trump", which is the expected result.
-  browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
-
+  browser.wait(until.elementLocated(By.name('q')), 3000, errorMessage + 'field').sendKeys('TrumpKlon');
+  browser.wait(until.elementLocated(By.id('searchButton')), 3000, errorMessage + 'button').click();
+  browser.wait(until.titleIs('TrumpKlon site:github.com at DuckDuckGo'), 3000, errorMessage + 'title')
+  browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, errorMessage + 'link');
+}
+catch (err) {
+  console.log(err)
+  return false;
 }
 finally {
-  console.log('A final step that tells us all the test steps passed')
-
-  // Close all of the open browser windows, then stop chromedriver.
   browser.quit();
 }

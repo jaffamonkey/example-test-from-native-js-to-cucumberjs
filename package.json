@@ -9,9 +9,12 @@
     "body-parser": "^1.18.3",
     "chai": "^4.2.0",
     "chromedriver": "^2.46.0",
+    "cucumber": "4.2.1",
+    "cucumber-html-reporter": "4.0.3",
+    "cucumber-pretty": "1.4.1",
+    "nightwatch-cucumber": "9.1.2",
     "eslint": "latest",
     "express": "latest",
-    "geckodriver": "^1.16.1",
     "jasmine-json-test-reporter": "latest",
     "jest": "latest",
     "mocha": "latest",
@@ -46,6 +49,7 @@
     "test:puppeteer": "node ./tests/UI/puppeteer.js",
     "test:mocha": "./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js",
     "test:zombie": "./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js",
+    "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/bdd/**/*.js -f node_modules/cucumber-pretty ./tests/UI/*.feature",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
   },
   "jest": {

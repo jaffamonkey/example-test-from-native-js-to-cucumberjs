@@ -11,7 +11,6 @@ describe('Check the DuckDuckGo search results page title', function () {
   })
 
   it('should show correct results page title', done => {
-    // your actual testing urls will likely be `http://localhost:port/path`
     nightmare.goto('http://localhost:8081')
       .type('input[name="q"]', 'TrumpKlon')
       .click('#searchButton')

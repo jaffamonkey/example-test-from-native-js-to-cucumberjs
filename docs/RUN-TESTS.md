@@ -56,6 +56,11 @@ npm run wdupdate
 `npm run startweb` - command run: `node web/server.js &`
 `npm run startapi` - command run: `node api/api.js &`
 
+### API
+
+`npm run test:api` - command run: `node ./tests/API/api-test.js`
+`npm run test:superagent` - command run: `node ./tests/API/api-test-superagent.js`
+
 ### Nightwatch
 
 `npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js`
