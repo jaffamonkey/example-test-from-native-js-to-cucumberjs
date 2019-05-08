@@ -75,11 +75,6 @@ npm run wdupdate
 
 `npm run test:puppeteer` - command run: `./tests/UI/puppeteer.js`
 
-### API
-
-`npm run test:api` - command run: `node ./tests/API/api-test.js`
-`npm run test:superagent` - command run: `node ./tests/API/api-test-superagent.js`
-
 ### Nightmare/Mocha
 
 `npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js`
@@ -90,7 +85,7 @@ npm run wdupdate
 
 ### Mocha/Puppoeteer
 
-`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js`
+`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/mocha-puppeteer.js`
 
 ### Nightwatch-api/Webdriver
 

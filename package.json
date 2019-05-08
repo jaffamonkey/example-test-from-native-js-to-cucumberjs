@@ -45,7 +45,7 @@
     "test:webdriver": "node ./tests/UI/webdriver-node-async.js",
     "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
     "test:puppeteer": "node ./tests/UI/puppeteer.js",
-    "test:mocha": "./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js",
+    "test:mocha": "./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/mocha-puppeteer.js",
     "test:zombie": "./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js",
     "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/UI/bdd/**/*.js -f node_modules/cucumber-pretty ./tests/UI/*.feature",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
