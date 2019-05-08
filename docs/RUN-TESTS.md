@@ -63,7 +63,7 @@ npm run wdupdate
 
 ### Nightwatch/Webdriver
 
-`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js`
+`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/nightwatch-webdriver.js --config ./conf/nightwatch.conf.js`
 
 ### Protractor/Webdriver-manager/Jasmine
 
@@ -94,7 +94,7 @@ npm run wdupdate
 
 ### Nightwatch-api/Webdriver
 
-`npm run test:nightwatchapi` - command run: `node ./tests/UI/webdriver-nightwatchapi.js -e local`
+`npm run test:nightwatchapi` - command run: `node ./tests/UI/nightwatchapi-webdriver.js -e local`
 
 ### Node/Webdriver
 
