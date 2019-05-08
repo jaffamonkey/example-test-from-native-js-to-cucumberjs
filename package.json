@@ -36,7 +36,7 @@
     "test:api": "node ./tests/API/api-test.js",
     "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
     "test:nightmare": "./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js",
-    "test:chai": "./node_modules/.bin/jest ./tests/UI/webdriver-chai-jest.js",
+    "test:jest": "./node_modules/.bin/jest ./tests/UI/jest-webdriver.js",
     "test:nightwatchapi": "node ./tests/UI/webdriver-nightwatchapi.js --config ./conf/nightwatch.conf.js -e chrome",
     "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js -e chrome",
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
@@ -51,7 +51,7 @@
   "jest": {
     "verbose": true,
     "testMatch": [
-      "**/tests/UI/*jest.js"
+      "**/tests/UI/jest*.js"
     ]
   }
 }

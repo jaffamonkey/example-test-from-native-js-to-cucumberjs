@@ -80,9 +80,9 @@ npm run wdupdate
 
 `npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js`
 
-### Chai
+### Jest
 
-`npm run test:chai` - command run: `./node_modules/.bin/jest`
+`npm run test:jest` - command run: `./node_modules/.bin/jest ./tests/UI/jest-webdriver.js"`
 
 ### Mocha
 

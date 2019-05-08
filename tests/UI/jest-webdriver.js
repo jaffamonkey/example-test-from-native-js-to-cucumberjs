@@ -1,11 +1,6 @@
 /* eslint-env browser */
 var webdriver = require('selenium-webdriver'),
-    By = webdriver.By,
-    until = webdriver.until;
-
-// Chai packages give us more flexibility with how to check on various areas of the page
-var chai = require('chai');
-var expect = chai.expect;
+    By = webdriver.By;
 
 var browser = new webdriver
     .Builder()
@@ -19,15 +14,13 @@ var browser = new webdriver
 
 describe('Check the DuckDuckGo search results page', () => {
 
-    it('Check search results', async () => {
+    it('Check the page title', async () => {
         await browser.get('http://localhost:8081');
         await browser.findElement(By.name('q')).sendKeys('TrumpKlon');
         await browser.findElement(By.id('searchButton')).click();
-        await browser.findElement(By.className('result__title')).getText().then((results) => {
-            expect(results).to.contain('TrumpKlon');
-        });
-        await browser.getTitle().then((title) => {
-            expect(title).to.equal('TrumpKlon site:github.com at DuckDuckGo');
-        });
+        var title = await browser.getTitle();
+        expect(title).toEqual('TrumpKlon site:github.com at DuckDuckGo');
+        var result = await browser.findElement(By.className('result__title')).getText();
+        expect(result).toMatch(/TrumpKlon/);
     });
 });
