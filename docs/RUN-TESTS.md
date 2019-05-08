@@ -61,11 +61,11 @@ npm run wdupdate
 `npm run test:api` - command run: `node ./tests/API/api-test.js`
 `npm run test:superagent` - command run: `node ./tests/API/api-test-superagent.js`
 
-### Nightwatch
+### Nightwatch/Webdriver
 
 `npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/webdriver-nightwatch.js --config ./conf/nightwatch.conf.js`
 
-### Protractor
+### Protractor/Webdriver-manager/Jasmine
 
 `npm run update-webdriver-manager` - command run: `./node_modules/.bin/webdriver-manager update`
 
@@ -75,40 +75,39 @@ npm run wdupdate
 
 `npm run test:puppeteer` - command run: `./tests/UI/puppeteer.js`
 
-
 ### API
 
 `npm run test:api` - command run: `node ./tests/API/api-test.js`
 `npm run test:superagent` - command run: `node ./tests/API/api-test-superagent.js`
 
-### Nightmare
+### Nightmare/Mocha
 
 `npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js`
 
-### Jest
+### Jest/Webdriver
 
 `npm run test:jest` - command run: `./node_modules/.bin/jest ./tests/UI/jest-webdriver.js"`
 
-### Mocha
+### Mocha/Puppoeteer
 
 `npm run test:mocha` - command run: `./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/UI/puppeteer-mocha.js`
 
-### NightwatchAPI
+### Nightwatch-api/Webdriver
 
 `npm run test:nightwatchapi` - command run: `node ./tests/UI/webdriver-nightwatchapi.js -e local`
 
-### Node
+### Node/Webdriver
 
 `npm run test:javascript` - command run: `node ./tests/UI/webdriver-javascript.js`
 
-### WebdriverIO
+### WebdriverIO/Selenium-standalone
 
 `npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
 
-### Node (Async)
+### Webdriver-async
 
 `npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
 
-### Zombie
+### Zombie/Mocha
 
 `npm run test:zombie` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js`

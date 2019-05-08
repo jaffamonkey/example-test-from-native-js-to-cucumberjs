@@ -20,10 +20,9 @@ Promise.resolve()
 			desiredCapabilities: {
 				browserName: 'chrome',
 				chromeOptions: {
-					args: [ 'headless', 'disable-gpu']
+					args: ['headless', 'disable-gpu']
 				}
-			},
-			// logLevel: 'verbose'
+			}
 		});
 		await browser.init();
 		await browser.url('http://localhost:8081/');
