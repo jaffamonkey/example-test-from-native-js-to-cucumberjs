@@ -4,7 +4,7 @@ var webdriver = require('selenium-webdriver'),
   until = webdriver.until;
 var errorMessage = 'Could not locate the correct ';
 
-// This is creating an object that is the browser
+// This is creating an webdriver object which enable interaction with the browser
 const browser = new webdriver
   .Builder()
   .usingServer()
