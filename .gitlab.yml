@@ -18,4 +18,4 @@ install_dependencies:
 
 testing_testing:
   stage: test
-  script: sh run-all-test.sh
+  script: npm test:jest
