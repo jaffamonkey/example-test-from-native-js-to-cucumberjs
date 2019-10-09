@@ -20,4 +20,4 @@ testing_testing:
   stage: test
     - npm install
   script: 
-    - npm run test
+    - ./node_modules/.bin/jest ./tests/UI/jest-webdriver.js
