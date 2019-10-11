@@ -1,22 +1,15 @@
 image: node:latest
 
-stages:
-  - build
-  - test
-   
+before_script:
+  - ci/install-chrome
+  - npm install selenium-webdriver
+  - npm install jest
+
 cache:
   paths:
-    - node_modules/
+  - node_modules/
 
-install_dependencies:
-  stage: build
+test:
   script:
-    - npm install
-  artifacts:
-    paths:
-      - node_modules/
-
-testing_testing:
-  stage: test
-  script: 
-    - ./node_modules/.bin/jest ./tests/UI/jest-webdriver.js
+  # Run npm test in virtual display mode
+  - xvfb-run -a npm test
