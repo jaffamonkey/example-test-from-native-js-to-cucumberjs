@@ -16,6 +16,7 @@
     "express": "latest",
     "jasmine-json-test-reporter": "latest",
     "jest": "latest",
+    "jest-image-snapshot": "latest",
     "mocha": "latest",
     "nightmare": "^2.9.1",
     "nightwatch": "^1.0.19",
