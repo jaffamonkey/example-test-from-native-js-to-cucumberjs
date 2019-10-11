@@ -18,6 +18,5 @@ install_dependencies:
 
 testing_testing:
   stage: test
-    - npm install
   script: 
     - ./node_modules/.bin/jest ./tests/UI/jest-webdriver.js
