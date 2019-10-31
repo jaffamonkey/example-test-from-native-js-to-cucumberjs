@@ -41,6 +41,7 @@
     "test:superagent": "node ./tests/API/api-test-superagent-assert.js",
     "test:nightmare": "./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js",
     "test": "./node_modules/.bin/jest ./tests/UI/jest-webdriver.js",
+    "int-test": "./node_modules/.bin/jest ./tests/UI/jest-webdriver.js",
     "test:nightwatchapi": "node ./tests/UI/nightwatchapi-webdriver.js --config ./conf/nightwatch.conf.js -e chrome",
     "test:nightwatch": "./node_modules/.bin/nightwatch --test ./tests/UI/nightwatch-webdriver.js --config ./conf/nightwatch.conf.js -e chrome",
     "test:javascript": "node ./tests/UI/webdriver-javascript.js",
