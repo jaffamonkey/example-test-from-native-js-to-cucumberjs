@@ -18,6 +18,6 @@ describe('Check the DuckDuckGo search results page', function () {
         await page.waitFor('.result__title');
         await page.screenshot({path: './tests/screenshots/puppeteer-mocha-test-screenshot.png'});
         const firstresult = await page.$eval('.result__title', txt => txt.textContent.trim())
-        expect(firstresult).to.eql('GitHub - blinkgestalten/TrumpKlon: An artwork for automated ...Your browser indicates if you\'ve visited this link');
+        expect(firstresult).to.eql('GitHub - blinkgestalten/TrumpKlon: An artwork for automated tweet...Your browser indicates if you\'ve visited this link');
     });
 });

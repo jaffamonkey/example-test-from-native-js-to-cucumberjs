@@ -1,7 +1,7 @@
 killall node
 killall *chromedriver
 killall *geckodriver
-npm install
+yarn
 npm run wdupdate
 npm run startapi
 npm run startweb
