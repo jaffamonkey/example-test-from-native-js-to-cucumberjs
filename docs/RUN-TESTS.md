@@ -20,7 +20,7 @@ The tests need certain packages, which are listed in the `package.json` file.
 
 From the terminal, run:
 ```
-npm install
+yarn
 ```
 
 ## Browser/API testing
