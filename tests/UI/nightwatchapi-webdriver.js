@@ -7,7 +7,7 @@ const {
 } = require('nightwatch-api');
 
 // Selenium server is not necessary as we are the the W3C webdriver API, so we just nbeed to start the browser driver
-async function setup(env = 'chrome', configFile = './conf/nightwatch.conf.js') {
+async function setup(env = 'chrome', configFile = './nightwatch.conf.js') {
   await startWebDriver({ env, configFile });
   await createSession({ env, configFile });
 }

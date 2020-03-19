@@ -13,7 +13,7 @@ module.exports = {
   commands: [{
     performSearch: function () {
       return this.api
-        .url('http://localhost:8081')
+        .url('https://elated-montalcini-28a317.netlify.com')
         .waitForElementVisible('body')
         .setValue('input[name="q"]', 'TrumpKlon')
         .click('#searchButton')
