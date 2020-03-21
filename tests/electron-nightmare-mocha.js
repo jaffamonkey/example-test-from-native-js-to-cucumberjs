@@ -4,12 +4,14 @@ let assert = require('chai').assert;
 describe('Check the DuckDuckGo search results page title', function () {
   this.timeout('60s')
 
-    //before each test,
-    beforeEach(function(){
-      nightmare = Nightmare({
-        show: false
-      });
+  //before each test,
+  beforeEach(function (done) {
+    nightmare = Nightmare({
+      show: false
     });
+    done();
+  });
+
 
   it('should show correct results page title', function (done) {
     nightmare.goto('https://duckduckgo.com')
@@ -31,7 +33,7 @@ describe('Check the DuckDuckGo search results page title', function () {
       .end()
       .then((text) => {
         console.log('Result:', text);
-        assert.include(text,'TrumpKlon') 
+        assert.include(text, 'TrumpKlon')
       }).then(() => done());
   });
 })
