@@ -1,4 +1,4 @@
-var { After, Before } = require('cucumber');
+const { After, Before } = require('cucumber');
 const World = require('../support/world');
 
 function testCaseHook(finished, testCase, callback) {

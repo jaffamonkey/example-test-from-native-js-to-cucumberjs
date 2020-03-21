@@ -45,7 +45,7 @@
     "test:puppeteer": "node ./tests/puppeteer.js",
     "test:mocha": "./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/mocha-puppeteer.js",
     "test:zombie": "./node_modules/.bin/mocha --recursive ./tests/zombie-test.js",
-    "test:cucumberjs": "./node_modules/.bin/cucumber-js -r ./tests/features/step_definitions/*.js -f node_modules/cucumber-pretty ./tests/features/*.feature",
+    "test:cucumberjs": "./node_modules/.bin/cucumber-js -f node_modules/cucumber-pretty ./tests/features/cucumberjs.feature",
     "test:pa11y": "node ./tests/performance/pa11y/pa11y.js > ./tests/reports/pa11y-report.json",
     "test:artillery": "./node_modules/.bin/artillery run ./tests/performance/artillery/artillery.yml > ./tests/reports/artillery-report.txt",
     "lint": "./node_modules/.bin/eslint ./tests/**/**/*.js"
