@@ -4,32 +4,32 @@ const expect = chai.expect
 
 describe('Check the DuckDuckGo search results page title', function () {
   this.timeout('60s')
-  beforeEach(() => {
-    nightmare = new Nightmare({ show: false })
-  })
 
-  it('should show correct results page title', done => {
+  //before each test,
+  beforeEach(function(){
+    nightmare = Nightmare();
+  });
+  
+  it('should show correct results page title', function(done) {
     nightmare.goto('https://duckduckgo.com')
       .type('input[name="q"]', 'TrumpKlon')
       .click('#search_button_homepage')
       .evaluate(() => document.getElementsByTagName('title')[0].innerText)
       .end()
-      .then(function (title) {
-        expect(title).to.eql('TrumpKlon at DuckDuckGo');
-        done()
-      })
+      .then((title) => {
+        expect(title).to.eql('TrumpKlon at DuckDuckGo')
+      }).then(() => done());
   });
 
-  it('should show correct results', done => {
+  it('should show correct results', function(done) {
     nightmare
       .goto('https://duckduckgo.com')
       .type('input[name="q"]', 'TrumpKlon')
       .click('#search_button_homepage')
       .evaluate(() => document.getElementsByClassName('result__title')[0].innerText)
       .end()
-      .then(function (text) {
+      .then((text) => {
         expect(text).to.contain('TrumpKlon')
-        done()
-      })
+      }).then(() => done());
   });
 })
