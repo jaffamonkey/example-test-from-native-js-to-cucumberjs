@@ -12,6 +12,7 @@ before_script:
   - yarn
   - npm run wdupdate
 script:
+  - npm run test:nightmare
   - npm run test:mocha
   - npm run test:jest
   - npm run test:nightwatchapi
