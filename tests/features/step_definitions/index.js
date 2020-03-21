@@ -5,7 +5,7 @@ Given('I am on test website homepage', async () => World.goToHomePage())
 
 Given('I fill in the search field with {string}', async (string) => World.fillInSearchField(string))
 
-When('I click the search button', async () => World.clickSearchButton())
+When('I click the search button', async () => World.clicksearch_button_homepage())
 
 Then('the page title is {string}', async (string) => World.thePageTitle(string))
 

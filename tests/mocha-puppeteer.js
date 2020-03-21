@@ -12,7 +12,7 @@ describe('Check the DuckDuckGo search results page', function () {
 
     it('should have the correct page title and first search result', async function () {
         await page.type('input[name="q"]', 'TrumpKlon');
-        await page.click('#searchButton');
+        await page.click('#search_button_homepage');
         await page.waitFor('.results--main');
         expect(await page.title()).to.eql('TrumpKlon at DuckDuckGo');
         await page.waitFor('.result__title');

@@ -13,7 +13,7 @@ module.exports = {
       .url('https://duckduckgo.com')
       .waitForElementVisible('body')
       .setValue(home.elements.searchField, 'TrumpKlon')
-      .click(home.elements.searchButton)
+      .click(home.elements.search_button_homepage)
       .assert.title('TrumpKlon at DuckDuckGo')
       .assert.containsText(home.elements.results, 'Donald Trump')
       .end();
@@ -26,11 +26,11 @@ module.exports = {
     searchField: {
       selector: 'input[name="q"]'
     },
-    searchButton: {
-      selector: '#searchButton'
+    search_button_homepage: {
+      selector: '#search_button_homepage'
     },
     results: {
-      selector: 'div.results--main'
+      selector: '#links'
     },
   },
   commands: [{
@@ -39,9 +39,9 @@ module.exports = {
         .url('https://elated-montalcini-28a317.netlify.com')
         .waitForElementVisible('body')
         .setValue('input[name="q"]', 'TrumpKlon')
-        .click('#searchButton')
+        .click('#search_button_homepage')
         .assert.title('TrumpKlon site:github.com at DuckDuckGo')
-        .assert.containsText('div.results--main', 'Donald Trump')
+        .assert.containsText('#links', 'Donald Trump')
         .end()
     }
   }]

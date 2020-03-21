@@ -28,8 +28,8 @@ Promise.resolve()
 		await browser.url('https://duckduckgo.com');
 		const searchfield = browser.element('input[name="q"]');
 		await searchfield.addValue('TrumpKlon');
-		const searchbutton = browser.element('#searchButton');
-		await searchbutton.click();
+		const search_button_homepage = browser.element('#search_button_homepage');
+		await search_button_homepage.click();
 		const title = await browser.getTitle();
 		assert.equal((/TrumpKlon site:github.com at DuckDuckGo/i).test(title), true);
 		await browser.end();

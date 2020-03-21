@@ -18,7 +18,7 @@ describe('Check the DuckDuckGo search results page', () => {
     it('Check the page title', async () => {
         await browser.get('https://duckduckgo.com');
         await browser.findElement(By.name('q')).sendKeys('TrumpKlon');
-        await browser.findElement(By.id('searchButton')).click();
+        await browser.findElement(By.id('search_button_homepage')).click();
         var title = await browser.getTitle();
         expect(title).toEqual('TrumpKlon at DuckDuckGo');
         var result = await browser.findElement(By.className('result__title')).getText();

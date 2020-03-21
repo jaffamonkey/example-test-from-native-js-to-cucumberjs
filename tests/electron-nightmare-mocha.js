@@ -13,7 +13,7 @@ describe('Check the DuckDuckGo search results page title', function () {
   it('should show correct results page title', done => {
     nightmare.goto('https://duckduckgo.com')
       .type('input[name="q"]', 'TrumpKlon')
-      .click('#searchButton')
+      .click('#search_button_homepage')
       .evaluate(() => document.getElementsByTagName('title')[0].innerText)
       .end()
       .then(function (title) {
@@ -26,7 +26,7 @@ describe('Check the DuckDuckGo search results page title', function () {
     nightmare
       .goto('https://duckduckgo.com')
       .type('input[name="q"]', 'TrumpKlon')
-      .click('#searchButton')
+      .click('#search_button_homepage')
       .evaluate(() => document.getElementsByClassName('result__title')[0].innerText)
       .end()
       .then(function (text) {

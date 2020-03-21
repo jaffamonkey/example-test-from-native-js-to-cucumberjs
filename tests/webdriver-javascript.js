@@ -18,7 +18,7 @@ const browser = new webdriver
 try {
   browser.get('https://duckduckgo.com');
   browser.wait(until.elementLocated(By.name('q')), 3000, errorMessage + 'field').sendKeys('TrumpKlon');
-  browser.wait(until.elementLocated(By.id('searchButton')), 3000, errorMessage + 'button').click();
+  browser.wait(until.elementLocated(By.id('search_button_homepage')), 3000, errorMessage + 'button').click();
   browser.wait(until.titleIs('TrumpKlon at DuckDuckGo'), 3000, errorMessage + 'title')
   browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, errorMessage + 'link');
 }

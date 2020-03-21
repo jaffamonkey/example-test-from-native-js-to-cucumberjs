@@ -30,8 +30,8 @@ class CustomWorld {
     return this.driver.findElement(By.name('q')).sendKeys(string);
   }
 
-  clickSearchButton() {
-    return this.driver.findElement(By.id('searchButton')).click();
+  clicksearch_button_homepage() {
+    return this.driver.findElement(By.id('search_button_homepage')).click();
   }
 
   thePageTitle(string) {

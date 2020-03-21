@@ -106,7 +106,7 @@ try {
   browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('TrumpKlon');
 
   // Now we click the search button, after the button becomes visible.
-  browser.wait(until.elementLocated(By.id('searchButton')), 3000, 'Could not locate the search button').click();
+  browser.wait(until.elementLocated(By.id('search_button_homepage')), 3000, 'Could not locate the search button').click();
 
   // This looks for a link text that includes "Trumpklon", which is the expected result.
   browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');

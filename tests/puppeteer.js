@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
   await page.goto('https://duckduckgo.com');
   // Type into search box.
   await page.type('input[name="q"]', 'TrumpKlon');
-  await page.click('#searchButton')
+  await page.click('#search_button_homepage')
 
   // Wait for suggest overlay to appear and click "show all results".
   const resultsSelector = '.results--main';

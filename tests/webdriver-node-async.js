@@ -13,7 +13,7 @@ Promise.resolve()
 			.build();
 		await driver.get('https://duckduckgo.com');
 		await driver.findElement(By.name('q')).sendKeys('TrumpKlon')
-		await driver.findElement(By.id('searchButton')).click();
+		await driver.findElement(By.id('search_button_homepage')).click();
 		const title = await driver.getTitle();
 		assert.equal((/TrumpKlon at DuckDuckGo/i).test(title), true);
 		console.log('The search results page title: ' + title);

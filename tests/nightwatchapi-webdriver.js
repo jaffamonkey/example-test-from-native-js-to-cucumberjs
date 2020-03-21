@@ -25,9 +25,9 @@ async function run() {
   await client
     .url('https://duckduckgo.com')
     .setValue('input[name="q"]', 'TrumpKlon')
-    .click('#searchButton')
+    .click('#search_button_homepage')
     .assert.title('TrumpKlon site:github.com at DuckDuckGo')
-    .assert.containsText('div.results--main', 'Donald Trump');
+    .assert.containsText('#links', 'Donald Trump');
 }
 
 (async function () {
