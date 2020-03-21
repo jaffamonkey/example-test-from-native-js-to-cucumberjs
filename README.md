@@ -14,6 +14,8 @@ _Don't try and process all the lines at once, guaranteed brain-freeze. Look at e
 
 
 ## Quick start
+
+The focus is on the code, rather than fancy reports and screenshots, so results and details appear in CLI.
 ```
 sh setup.sh
 sh run-all-tests.sh

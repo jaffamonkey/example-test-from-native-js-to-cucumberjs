@@ -1,6 +1,7 @@
 // Protractor configuration file, see link for more information
 // https://github.com/angular/protractor/blob/master/lib/config.ts
-var JSONReporter = require('jasmine-json-test-reporter');
+
+var { SpecReporter } = require('jasmine-spec-reporter');
 
 exports.config = {
 
@@ -18,11 +19,28 @@ exports.config = {
     framework: 'jasmine',
 
     onPrepare: function () {
-      jasmine.getEnv().addReporter(new JSONReporter({
-        file: '../tests/protractor-test-results.json',
-        beautify: true,
-        indentationLevel: 4 // used if beautify === true
-      }));
+      jasmine.getEnv().addReporter(new SpecReporter({
+        displayStacktrace: 'all',      // display stacktrace for each failed assertion, values: (all|specs|summary|none) 
+        displaySuccessesSummary: false, // display summary of all successes after execution 
+        displayFailuresSummary: true,   // display summary of all failures after execution 
+        displayPendingSummary: true,    // display summary of all pending specs after execution 
+        displaySuccessfulSpec: true,    // display each successful spec 
+        displayFailedSpec: true,        // display each failed spec 
+        displayPendingSpec: false,      // display each pending spec 
+        displaySpecDuration: false,     // display each spec duration 
+        displaySuiteNumber: false,      // display each suite number (hierarchical) 
+        colors: {
+            success: 'green',
+            failure: 'red',
+            pending: 'yellow'
+        },
+        prefixes: {
+            success: '✓ ',
+            failure: '✗ ',
+            pending: '* '
+        },
+        customProcessors: []
+    }));
     },
 
     jasmineNodeOpts: {
