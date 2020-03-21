@@ -19,7 +19,7 @@ describe('Check the DuckDuckGo search results page', () => {
         await browser.findElement(By.id('search_button_homepage')).click();
         var title = await browser.getTitle();
         expect(title).toEqual('TrumpKlon at DuckDuckGo');
-        var result = await browser.findElement(By.id('r1-0')).getText();
+        var result = await browser.findElement(By.id('links')).getText();
         expect(result).toMatch(/TrumpKlon/);
     });
 });
