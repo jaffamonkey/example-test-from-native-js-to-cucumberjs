@@ -1,6 +1,6 @@
 /* global describe */
 const Browser = require('../node_modules/zombie');
-// Browser.visit('https://duckduckgo.com');
+Browser.visit('https://duckduckgo.com');
 
 describe('User visits signup page', function () {
 
