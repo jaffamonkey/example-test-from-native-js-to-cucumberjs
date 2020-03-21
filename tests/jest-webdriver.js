@@ -1,5 +1,3 @@
-// tests/jest-webdriver.js
-
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By;
 
@@ -25,12 +23,3 @@ describe('Check the DuckDuckGo search results page', () => {
         expect(result).toMatch(/TrumpKlon/);
     });
 });
-
-// entry in package.json
-
-"jest": {
-    "verbose": true,
-    "testMatch": [
-      "tests/jest*.js"
-    ]
-  }

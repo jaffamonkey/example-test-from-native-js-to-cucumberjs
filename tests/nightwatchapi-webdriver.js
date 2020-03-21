@@ -1,5 +1,3 @@
-//nightwatchapi-webdriver.js
-
 const {
   createSession,
   closeSession,
@@ -40,37 +38,3 @@ async function run() {
     await shutdown();
   }
 })();
-
-// nightwatch.json
-{
-  "src_folders": [
-    "tests"
-  ],
-  "page_objects_path": [
-    "page-objects"
-  ],
-  "webdriver": {
-    "start_process": true
-  },
-  "test_settings": {
-    "default": {
-      "webdriver": {
-        "server_path": "node_modules/.bin/chromedriver",
-        "port": 9515,
-        "cli_args": [
-          "--log", "debug"
-        ]
-      },
-      "desiredCapabilities": {
-        "browserName": "chrome",
-        "chromeOptions": {
-          "args": [
-            "headless",
-            "disable-gpu"
-          ]
-        },
-        "acceptSslCerts": true
-      }
-    }
-  }
-}
