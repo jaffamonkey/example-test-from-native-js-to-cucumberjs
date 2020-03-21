@@ -11,5 +11,4 @@ branches:
 before_script:
   - npm install
 script:
-  - sh setup.sh
   - sh run-all-tests.sh
