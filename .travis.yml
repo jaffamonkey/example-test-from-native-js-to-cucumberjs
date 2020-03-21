@@ -4,11 +4,11 @@ addons:
   chrome: stable
 language: node_js
 node_js:
-  - '11'
+  - '13'
 branches:
   only:
   - master
 before_script:
-  - yarn
+  - sh setup.sh
 script:
-  - sh run-all-tests.sh
+  - run-all-tests.sh
