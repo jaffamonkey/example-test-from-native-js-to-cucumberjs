@@ -9,10 +9,10 @@ const puppeteer = require('puppeteer');
     // Type into search box.
     await page.type('input[name="q"]', 'TrumpKlon');
     await page.click('#search_button_homepage')
-    await page.waitForSelector('#links');
+    await page.waitForSelector('#zci-github');
     // Wait for suggest overlay to appear and click "show all results".
     const stringIsIncluded = await page.evaluate(() => {
-      const resultsSelector = '#links';
+      const resultsSelector = '#zci-github';
       const string = 'TrumpKlon';
       return document.querySelector(resultsSelector).innerText.includes(string);
     });
