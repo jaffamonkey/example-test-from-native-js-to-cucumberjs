@@ -53,8 +53,8 @@ npm run wdupdate
 
 (To start the website and api server, that the tests will test against)
 
-`npm run startweb` - command run: `node web/server.js &`
-`npm run startapi` - command run: `node api/api.js &`
+`npm run startweb` - command run: `node ./servers/web/server.js &`
+`npm run startapi` - command run: `node ./servers/api/api.js &`
 
 ### API
 
