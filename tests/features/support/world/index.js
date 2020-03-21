@@ -11,7 +11,7 @@ const BASE_URL = 'https://duckduckgo.com';
 function buildDriver() {
   const chromeCapabilities = Capabilities.chrome();
   const chromeOptions = {
-    args: ['incognito', 'window-size=1920,1080', 'headless', 'disable-gpu'],
+    args: ['headless', 'disable-gpu'],
   };
 
   chromeCapabilities.set('chromeOptions', chromeOptions);
