@@ -5,9 +5,9 @@
 
   <testsuite name="nightwatch-webdriver"
     errors="0" failures="0" hostname="" id="" package="nightwatch-webdriver" skipped="0"
-    tests="2" time="6.696" timestamp="">
+    tests="2" time="9.157" timestamp="">
   
-    <testcase name="Check the DuckDuckGo search results page (one step)" classname="nightwatch-webdriver" time="2.685" assertions="3">
+    <testcase name="Check the DuckDuckGo search results page (one step)" classname="nightwatch-webdriver" time="5.127" assertions="3">
 
     
 
@@ -16,7 +16,7 @@
     
     </testcase>
   
-    <testcase name="Check the DuckDuckGo search results page" classname="nightwatch-webdriver" time="4.011" assertions="3">
+    <testcase name="Check the DuckDuckGo search results page" classname="nightwatch-webdriver" time="4.030" assertions="3">
 
     
 
