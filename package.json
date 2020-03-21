@@ -19,7 +19,7 @@
     "jest-image-snapshot": "latest",
     "mocha": "latest",
     "nightmare": "latest",
-    "nightwatch": "^1.0.19",
+    "nightwatch": "latest",
     "nightwatch-api": "latest",
     "pa11y": "latest",
     "protractor": "latest",
