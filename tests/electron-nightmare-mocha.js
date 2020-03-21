@@ -7,7 +7,7 @@ describe('Check the DuckDuckGo search results page title', function () {
     //before each test,
     beforeEach(function(){
       nightmare = Nightmare({
-        show: true
+        show: false
       });
     });
 
@@ -20,8 +20,7 @@ describe('Check the DuckDuckGo search results page title', function () {
       .then((title) => {
         console.log('Title:', title);
         assert.equal(title, 'TrumpKlon at DuckDuckGo');
-        done();
-      })
+      }).then(() => done());
   });
 
   it('should show correct results', function (done) {
@@ -33,7 +32,6 @@ describe('Check the DuckDuckGo search results page title', function () {
       .then((text) => {
         console.log('Result:', text);
         assert.include(text,'TrumpKlon') 
-        done();
-      })
+      }).then(() => done());
   });
 })
