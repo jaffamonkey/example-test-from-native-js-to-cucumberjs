@@ -40,7 +40,7 @@ class CustomWorld {
   }
 
   firstSearchResultContains(string) {
-    return this.driver.findElement(By.css('#r1-0 > div > div.result__snippet.js-result-snippet')).getText()
+    return this.driver.findElement(By.css('.result__title')).getText()
       .then(function (resultText) {
         expect(resultText).to.contain(string);
       });
