@@ -14,7 +14,7 @@
     "cucumber-pretty": "latest",
     "eslint": "latest",
     "express": "latest",
-    "jasmine-json-test-reporter": "latest",
+    "jasmine-spec-reporter": "latest",
     "jest": "24.9.0",
     "jest-image-snapshot": "latest",
     "mocha": "latest",

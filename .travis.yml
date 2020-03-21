@@ -9,6 +9,10 @@ branches:
   only:
   - master
 before_script:
+  - killall node
+  - killall *chromedriver
+  - killall *geckodriver
+  - killall Google\ Chrome
   - yarn
   - npm run wdupdate
 script:

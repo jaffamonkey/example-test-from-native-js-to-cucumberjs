@@ -1,27 +1,24 @@
 const puppeteer = require('puppeteer');
 
 (async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
+  try {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
 
-  await page.goto('https://duckduckgo.com');
-  // Type into search box.
-  await page.type('input[name="q"]', 'TrumpKlon');
-  await page.click('#search_button_homepage')
-
-  // Wait for suggest overlay to appear and click "show all results".
-  const resultsSelector = '.results--main';
-  await page.waitForSelector(resultsSelector);
-
-  // Extract the results from the page.
-  const links = await page.evaluate(resultsSelector => {
-    const anchors = Array.from(document.querySelectorAll(resultsSelector));
-    return anchors.map(anchor => {
-      const title = anchor.textContent.split('|')[0].trim();
-      return `${title} - ${anchor.href}`;
+    await page.goto('https://duckduckgo.com');
+    // Type into search box.
+    await page.type('input[name="q"]', 'TrumpKlon');
+    await page.click('#search_button_homepage')
+    await page.waitForSelector('#links');
+    // Wait for suggest overlay to appear and click "show all results".
+    const stringIsIncluded = await page.evaluate(() => {
+      const resultsSelector = '#links';
+      const string = 'TrumpKlon';
+      return document.querySelector(resultsSelector).innerText.includes(string);
     });
-  }, resultsSelector);
-  console.log(links.join('\n'));
-
-  await browser.close();
+    console.log(stringIsIncluded);
+    await browser.close();
+  } catch (err) {
+    console.error(err);
+  }
 })();

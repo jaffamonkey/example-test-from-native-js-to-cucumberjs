@@ -9,7 +9,7 @@ describe('User visits signup page', function () {
     });
 
     before(function (done) {
-        browser.visit('https://duckduckgo.com/html', done);
+        browser.visit('https://duckduckgo.com', done);
     });
 
     describe('Check the DuckDuckGo search results page', () => {
