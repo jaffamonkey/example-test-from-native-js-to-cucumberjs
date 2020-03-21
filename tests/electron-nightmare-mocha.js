@@ -4,8 +4,6 @@ const expect = chai.expect
 
 describe('Check the DuckDuckGo search results page title', function () {
   this.timeout('60s')
-
-  let nightmare = null
   beforeEach(() => {
     nightmare = new Nightmare({ show: false })
   })
