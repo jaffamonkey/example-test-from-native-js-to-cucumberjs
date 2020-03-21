@@ -1,3 +1,5 @@
+//nightwatchapi-webdriver.js
+
 const {
   createSession,
   closeSession,
@@ -7,7 +9,7 @@ const {
 } = require('nightwatch-api');
 
 // Selenium server is not necessary as we are the the W3C webdriver API, so we just nbeed to start the browser driver
-async function setup(env = 'chrome', configFile = './nightwatch.conf.js') {
+async function setup(env = 'chrome', configFile = './conf/nightwatch.conf.js') {
   await startWebDriver({ env, configFile });
   await createSession({ env, configFile });
 }
@@ -21,7 +23,7 @@ async function shutdown() {
 async function run() {
   // "client" is the browser object
   await client
-    .url('http://localhost:8081')
+    .url('https://duckduckgo.com')
     .setValue('input[name="q"]', 'TrumpKlon')
     .click('#searchButton')
     .assert.title('TrumpKlon site:github.com at DuckDuckGo')
@@ -38,3 +40,37 @@ async function run() {
     await shutdown();
   }
 })();
+
+// nightwatch.json
+{
+  "src_folders": [
+    "tests"
+  ],
+  "page_objects_path": [
+    "page-objects"
+  ],
+  "webdriver": {
+    "start_process": true
+  },
+  "test_settings": {
+    "default": {
+      "webdriver": {
+        "server_path": "node_modules/.bin/chromedriver",
+        "port": 9515,
+        "cli_args": [
+          "--log", "debug"
+        ]
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "chromeOptions": {
+          "args": [
+            "headless",
+            "disable-gpu"
+          ]
+        },
+        "acceptSslCerts": true
+      }
+    }
+  }
+}

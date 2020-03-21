@@ -23,7 +23,7 @@ From the terminal, run:
 yarn
 ```
 
-## Browser/API testing
+## Browser testing
 
 Open a new tab in your Terminal program, for each command
 
@@ -58,12 +58,12 @@ npm run wdupdate
 
 ### API
 
-`npm run test:api` - command run: `node ./tests/API/api-test.js`
-`npm run test:superagent` - command run: `node ./tests/API/api-test-superagent.js`
+`npm run test:api` - command run: `node ./tests/api-test.js`
+`npm run test:superagent` - command run: `node ./tests/api-test-superagent.js`
 
 ### Nightwatch/Webdriver
 
-`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/UI/nightwatch-webdriver.js --config ./nightwatch.conf.js`
+`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/nightwatch-webdriver.js --config ./nightwatch.conf.js`
 
 ### Protractor/Webdriver-manager/Jasmine
 
@@ -73,36 +73,36 @@ npm run wdupdate
 
 ### Puppeteer
 
-`npm run test:puppeteer` - command run: `./tests/UI/puppeteer.js`
+`npm run test:puppeteer` - command run: `./tests/puppeteer.js`
 
 ### Nightmare/Mocha
 
-`npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/electron-nightmare-mocha.js`
+`npm run test:nightmare` - command run: `./node_modules/.bin/mocha --recursive ./tests/electron-nightmare-mocha.js`
 
 ### Jest/Webdriver
 
-`npm run test:jest` - command run: `./node_modules/.bin/jest ./tests/UI/jest-webdriver.js"`
+`npm run test:jest` - command run: `./node_modules/.bin/jest ./tests/jest-webdriver.js"`
 
 ### Mocha/Puppoeteer
 
-`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./puppeteer.conf.js --recursive ./tests/UI/mocha-puppeteer.js`
+`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./puppeteer.conf.js --recursive ./tests/mocha-puppeteer.js`
 
 ### Nightwatch-api/Webdriver
 
-`npm run test:nightwatchapi` - command run: `node ./tests/UI/nightwatchapi-webdriver.js -e local`
+`npm run test:nightwatchapi` - command run: `node ./tests/nightwatchapi-webdriver.js -e local`
 
 ### Node/Webdriver
 
-`npm run test:javascript` - command run: `node ./tests/UI/webdriver-javascript.js`
+`npm run test:javascript` - command run: `node ./tests/webdriver-javascript.js`
 
 ### WebdriverIO/Selenium-standalone
 
-`npm run test:webdriverio` - command run: `node ./tests/UI/webdriverio-selenium.js`
+`npm run test:webdriverio` - command run: `node ./tests/webdriverio-selenium.js`
 
 ### Webdriver-async
 
-`npm run test:webdriver` - command run: `node ./tests/UI/webdriver-node-async.js`
+`npm run test:webdriver` - command run: `node ./tests/webdriver-node-async.js`
 
 ### Zombie/Mocha
 
-`npm run test:zombie` - command run: `./node_modules/.bin/mocha --recursive ./tests/UI/zombiejs.js`
+`npm run test:zombie` - command run: `./node_modules/.bin/mocha --recursive ./tests/zombiejs.js`

@@ -25,7 +25,7 @@ Promise.resolve()
 			}
 		});
 		await browser.init();
-		await browser.url('http://localhost:8081/');
+		await browser.url('https://duckduckgo.com');
 		const searchfield = browser.element('input[name="q"]');
 		await searchfield.addValue('TrumpKlon');
 		const searchbutton = browser.element('#searchButton');

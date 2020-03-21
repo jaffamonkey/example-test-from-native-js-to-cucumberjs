@@ -10,7 +10,7 @@ async function runExample() {
 	try {
 
 		// Test http://example.com/
-		const result = await pa11y('http://localhost:8081/', {
+		const result = await pa11y('https://duckduckgo.com/', {
 
 			// Log what's happening to the console
 			log: {

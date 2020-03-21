@@ -100,7 +100,7 @@ const browser = new webdriver
 
 try {
   // This line is telling the browser to open a url.
-  browser.get('http://localhost:8081');
+  browser.get('https://duckduckgo.com');
 
   // Now the search field is filled in with our search terms, after the field becomes visible (allowing for page load time).
   browser.wait(until.elementLocated(By.name('q')), 3000, 'Could not locate the search field').sendKeys('TrumpKlon');
@@ -132,7 +132,7 @@ This can look more daunting, but the test code is mostly standard setup, though 
 
 **Open up url**
 ```
-browser.get('http://localhost:8081');
+browser.get('https://duckduckgo.com');
 ```
 **Wait for field to be visible, then fill in field with a value***
 ```

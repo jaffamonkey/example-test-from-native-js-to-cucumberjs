@@ -1,6 +1,6 @@
 /* global describe */
 const Browser = require('../../node_modules/zombie');
-Browser.localhost('localhost', 8081);
+Browser.localhost('https://duckduckgo.com', 443);
 
 describe('User visits signup page', function () {
 

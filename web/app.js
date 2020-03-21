@@ -21,7 +21,7 @@ server.listen(8082, () => {
     console.log("Server listening at 8082");
 });
 
-// To test: curl -d “Hello World” -H “Content-Type: text” -X POST http://localhost:8081
+// To test: curl -d “Hello World” -H “Content-Type: text” -X POST https://duckduckgo.com
 // The output is below
 // % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
 // Dload  Upload   Total   Spent    Left  Speed

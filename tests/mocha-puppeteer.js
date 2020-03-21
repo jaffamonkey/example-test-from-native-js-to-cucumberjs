@@ -3,7 +3,7 @@ describe('Check the DuckDuckGo search results page', function () {
 
     before(async function () {
         page = await browser.newPage();
-        await page.goto('http://localhost:8081');
+        await page.goto('https://duckduckgo.com');
     });
 
     after(async function () {
@@ -14,7 +14,7 @@ describe('Check the DuckDuckGo search results page', function () {
         await page.type('input[name="q"]', 'TrumpKlon');
         await page.click('#searchButton');
         await page.waitFor('.results--main');
-        expect(await page.title()).to.eql('TrumpKlon site:github.com at DuckDuckGo');
+        expect(await page.title()).to.eql('TrumpKlon at DuckDuckGo');
         await page.waitFor('.result__title');
         await page.screenshot({path: './tests/screenshots/puppeteer-mocha-test-screenshot.png'});
         const firstresult = await page.$eval('.result__title', txt => txt.textContent.trim())

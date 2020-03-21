@@ -1,5 +1,5 @@
 config:
-  target: 'http://localhost:8081'
+  target: 'https://duckduckgo.com'
   phases:
     - duration: 60
       arrivalRate: 20

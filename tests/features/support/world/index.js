@@ -5,7 +5,7 @@ var chai = require('chai');
 var expect = chai.expect;
 
 const DEFAULT_TIMEOUT = 60000;
-const BASE_URL = 'http://localhost:8081';
+const BASE_URL = 'https://duckduckgo.com';
 
 function buildDriver() {
   const chromeCapabilities = Capabilities.chrome();

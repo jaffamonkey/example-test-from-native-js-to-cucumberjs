@@ -1,4 +1,5 @@
-/* eslint-env browser */
+// tests/jest-webdriver.js
+
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By;
 
@@ -15,12 +16,21 @@ var browser = new webdriver
 describe('Check the DuckDuckGo search results page', () => {
 
     it('Check the page title', async () => {
-        await browser.get('http://localhost:8081');
+        await browser.get('https://duckduckgo.com');
         await browser.findElement(By.name('q')).sendKeys('TrumpKlon');
         await browser.findElement(By.id('searchButton')).click();
         var title = await browser.getTitle();
-        expect(title).toEqual('TrumpKlon site:github.com at DuckDuckGo');
+        expect(title).toEqual('TrumpKlon at DuckDuckGo');
         var result = await browser.findElement(By.className('result__title')).getText();
         expect(result).toMatch(/TrumpKlon/);
     });
 });
+
+// entry in package.json
+
+"jest": {
+    "verbose": true,
+    "testMatch": [
+      "tests/jest*.js"
+    ]
+  }

@@ -1,9 +1,9 @@
 {
   "src_folders": [
-    "tests/UI"
+    "tests"
   ],
   "page_objects_path": [
-    "tests/UI/page-objects/nightwatch"
+    "tests/page-objects/nightwatch"
   ],
   "webdriver": {
     "start_process": true

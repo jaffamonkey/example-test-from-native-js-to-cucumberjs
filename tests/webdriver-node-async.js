@@ -11,11 +11,11 @@ Promise.resolve()
 					.set('chromeOptions', { args: ['--headless', 'disable-gpu'] })
 			)
 			.build();
-		await driver.get('http://localhost:8081/');
+		await driver.get('https://duckduckgo.com');
 		await driver.findElement(By.name('q')).sendKeys('TrumpKlon')
 		await driver.findElement(By.id('searchButton')).click();
 		const title = await driver.getTitle();
-		assert.equal((/TrumpKlon site:github.com at DuckDuckGo/i).test(title), true);
+		assert.equal((/TrumpKlon at DuckDuckGo/i).test(title), true);
 		console.log('The search results page title: ' + title);
 		const results = await driver.findElement(By.id('r1-0')).getText();
 		console.log('The first search result: ' + results);
