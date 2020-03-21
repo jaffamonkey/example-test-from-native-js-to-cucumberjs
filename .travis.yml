@@ -9,6 +9,6 @@ branches:
   only:
   - master
 before_script:
-  - sh setup.sh
+  - setup.sh
 script:
   - run-all-tests.sh

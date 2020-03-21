@@ -1,3 +1,4 @@
+#! /bin/sh
 killall node
 killall *chromedriver
 killall *geckodriver
