@@ -4,8 +4,12 @@ const expect = chai.expect
 
 describe('Check the DuckDuckGo search results page title', function () {
   this.timeout('60s')
-  nightmare = new Nightmare()
-  
+
+  let nightmare = null
+  beforeEach(() => {
+    nightmare = new Nightmare({ show: false })
+  })
+
   it('should show correct results page title', done => {
     nightmare.goto('https://duckduckgo.com')
       .type('input[name="q"]', 'TrumpKlon')
