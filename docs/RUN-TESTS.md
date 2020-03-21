@@ -77,10 +77,6 @@ npm run wdupdate
 
 `npm run test:javascript` - command run: `node ./tests/webdriver-javascript.js`
 
-### WebdriverIO/Selenium-standalone
-
-`npm run test:webdriverio` - command run: `node ./tests/webdriverio-selenium.js`
-
 ### Webdriver-async
 
 `npm run test:webdriver` - command run: `node ./tests/webdriver-node-async.js`

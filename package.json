@@ -27,8 +27,6 @@
     "request": "latest",
     "selenium-webdriver": "^3.5.0",
     "superagent": "latest",
-    "wdio-selenium-standalone-service": "latest",
-    "webdriverio": "latest",
     "zombie": "latest"
   },
   "scripts": {
@@ -42,7 +40,6 @@
     "test:nightwatchapi": "node ./tests/nightwatchapi-webdriver.js",
     "test:nightwatch": "./node_modules/.bin/nightwatch --config ./conf/nightwatch.json --test ./tests/nightwatch-webdriver.js",
     "test:javascript": "node ./tests/webdriver-javascript.js",
-    "test:webdriverio": "node ./tests/webdriverio-selenium.js -c ./conf/wdio.conf",
     "test:webdriver": "node ./tests/webdriver-node-async.js",
     "test:protractor": "./node_modules/.bin/protractor ./conf/protractor.conf.js",
     "test:puppeteer": "node ./tests/puppeteer.js",
