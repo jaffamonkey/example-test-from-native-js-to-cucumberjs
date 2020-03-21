@@ -10,3 +10,4 @@ npm run test:protractor
 npm run test:puppeteer
 npm run test:zombie
 npm run test:cucumberjs
+npm run test:webdriverio

@@ -7,7 +7,7 @@ const {
 } = require('nightwatch-api');
 
 // Selenium server is not necessary as we are the the W3C webdriver API, so we just nbeed to start the browser driver
-async function setup(env = 'chrome', configFile = './conf/nightwatch.conf.js') {
+async function setup(env = 'chrome', configFile = './conf/nightwatchapi.json') {
   await startWebDriver({ env, configFile });
   await createSession({ env, configFile });
 }
@@ -24,7 +24,7 @@ async function run() {
     .url('https://duckduckgo.com')
     .setValue('input[name="q"]', 'TrumpKlon')
     .click('#search_button_homepage')
-    .assert.title('TrumpKlon site:github.com at DuckDuckGo')
+    .assert.title('TrumpKlon at DuckDuckGo')
     .assert.containsText('#links', 'Donald Trump');
 }
 

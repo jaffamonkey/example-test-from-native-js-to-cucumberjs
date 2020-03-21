@@ -6,7 +6,7 @@ exports.config = {
     // Define which test specs should run. 
     //
     specs: [
-        './tests/webdriverio-selenium.js'
+        '.,/tests/webdriverio-selenium.js'
     ],
     // Patterns to exclude.
     exclude: [

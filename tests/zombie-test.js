@@ -1,6 +1,6 @@
 /* global describe */
-const Browser = require('../../node_modules/zombie');
-Browser.localhost('https://duckduckgo.com', 443);
+const Browser = require('../node_modules/zombie');
+// Browser.visit('https://duckduckgo.com');
 
 describe('User visits signup page', function () {
 
@@ -9,14 +9,14 @@ describe('User visits signup page', function () {
     });
 
     before(function (done) {
-        browser.visit('/', done);
+        browser.visit('https://duckduckgo.com', done);
     });
 
     describe('Check the DuckDuckGo search results page', () => {
 
         it('Perform search', () => {
             browser.fill('q', 'TrumpKlon')
-            return browser.pressButton('Search');
+            return browser.pressButton('#search_button_homepage');
         });
 
         it('The page title is correct', function () {

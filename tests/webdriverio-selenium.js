@@ -31,7 +31,7 @@ Promise.resolve()
 		const search_button_homepage = browser.element('#search_button_homepage');
 		await search_button_homepage.click();
 		const title = await browser.getTitle();
-		assert.equal((/TrumpKlon site:github.com at DuckDuckGo/i).test(title), true);
+		assert.equal((/TrumpKlon at DuckDuckGo/i).test(title), true);
 		await browser.end();
 		killProcesses();
 	})

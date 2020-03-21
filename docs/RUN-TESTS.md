@@ -23,20 +23,9 @@ From the terminal, run:
 yarn
 ```
 
-## Browser testing
-
-Open a new tab in your Terminal program, for each command
-
-#### Start the web server
-```
-node ./web/server.js
-```
-You will see this:
-`Server running at http://127.0.0.1:8081/`
-
 #### Start the API server
 ```
-node ./api/api.js
+node ./servers/api/api.js
 ```
 You will see this:
 `server running on port 3001`
@@ -49,13 +38,6 @@ npm run wdupdate
 
 #### Start tests running
 
-### Test Environment
-
-(To start the website and api server, that the tests will test against)
-
-`npm run startweb` - command run: `node ./servers/web/server.js &`
-`npm run startapi` - command run: `node ./servers/api/api.js &`
-
 ### API
 
 `npm run test:api` - command run: `node ./tests/api-test.js`
@@ -63,7 +45,7 @@ npm run wdupdate
 
 ### Nightwatch/Webdriver
 
-`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/nightwatch-webdriver.js --config ./nightwatch.conf.js`
+`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/nightwatch-webdriver.js --config ./nightwatch.json`
 
 ### Protractor/Webdriver-manager/Jasmine
 
@@ -89,7 +71,7 @@ npm run wdupdate
 
 ### Nightwatch-api/Webdriver
 
-`npm run test:nightwatchapi` - command run: `node ./tests/nightwatchapi-webdriver.js -e local`
+`npm run test:nightwatchapi` - command run: `node ./tests/nightwatchapi-webdriver.js -e default`
 
 ### Node/Webdriver
 

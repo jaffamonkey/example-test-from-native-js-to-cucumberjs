@@ -18,7 +18,7 @@ exports.config = {
 
     onPrepare: function () {
         jasmine.getEnv().addReporter(new JSONReporter({
-            file: 'tests/reports/protractor-test-results.json',
+            file: '../tests/reports/protractor-test-results.json',
             beautify: true,
             indentationLevel: 4 // used if beautify === true
         }));
@@ -29,5 +29,5 @@ exports.config = {
     },
     // Spec patterns are relative to the current working directory when
     // protractor is called.
-    specs: ['tests/protractor*.js']
+    specs: ['../tests/protractor*.js']
 }

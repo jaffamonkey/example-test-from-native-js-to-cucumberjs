@@ -17,7 +17,7 @@ describe('Check the DuckDuckGo search results page title', function () {
       .evaluate(() => document.getElementsByTagName('title')[0].innerText)
       .end()
       .then(function (title) {
-        expect(title).to.eql('TrumpKlon site:github.com at DuckDuckGo');
+        expect(title).to.eql('TrumpKlon at DuckDuckGo');
         done()
       })
   });

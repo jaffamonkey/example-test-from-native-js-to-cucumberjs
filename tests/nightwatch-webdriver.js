@@ -13,7 +13,7 @@ module.exports = {
       .url('https://duckduckgo.com')
       .waitForElementVisible('body')
       .setValue(home.elements.searchField, 'TrumpKlon')
-      .click(home.elements.search_button_homepage)
+      .click(home.elements.searchButton)
       .assert.title('TrumpKlon at DuckDuckGo')
       .assert.containsText(home.elements.results, 'Donald Trump')
       .end();

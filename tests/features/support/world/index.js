@@ -1,3 +1,4 @@
+// features/support/index.js
 const { setWorldConstructor, setDefaultTimeout } = require('cucumber');
 const { Builder, Capabilities, By, until } = require('selenium-webdriver');
 require('chromedriver');
