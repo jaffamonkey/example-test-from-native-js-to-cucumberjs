@@ -9,6 +9,7 @@ branches:
   only:
   - master
 before_script:
-  - setup.sh
+  - yarn
 script:
-  - run-all-tests.sh
+  - sh setup.sh
+  - sh run-all-tests.sh
