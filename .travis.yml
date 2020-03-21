@@ -7,8 +7,9 @@ node_js:
   - '11'
 branches:
   only:
-  - travis-ci
+  - master
 before_script:
   - npm install
 script:
+  - sh setup.sh
   - sh run-all-tests.sh

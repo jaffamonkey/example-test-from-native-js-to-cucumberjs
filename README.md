@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.com/jaffamonkey/test-engineering-workshop-js.svg?token=r2G3BaxqddAcRBHK61uA&branch=master)
+![Build Status](https://travis-ci.com/jaffamonkey/example-test-from-native-js-to-cucumberjs.svg?token=r2G3BaxqddAcRBHK61uA&branch=master)
 
 #### A very important thing to remember when looking at code...
 
