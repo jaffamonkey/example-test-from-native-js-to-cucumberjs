@@ -40,18 +40,17 @@ npm run wdupdate
 
 ### API
 
-`npm run test:api` - command run: `node ./tests/api-test.js`
 `npm run test:superagent` - command run: `node ./tests/api-test-superagent.js`
 
 ### Nightwatch/Webdriver
 
-`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/nightwatch-webdriver.js --config ./nightwatch.json`
+`npm run test:nightwatch` - command run: `./node_modules/.bin/nightwatch --test ./tests/nightwatch-webdriver.js --config ./conf/nightwatch.json`
 
 ### Protractor/Webdriver-manager/Jasmine
 
 `npm run update-webdriver-manager` - command run: `./node_modules/.bin/webdriver-manager update`
 
-`npm run test:protractor` - command run: `./node_modules/.bin/protractor ./protractor.conf.js`
+`npm run test:protractor` - command run: `./node_modules/.bin/protractor ./conf/protractor.conf.js`
 
 ### Puppeteer
 
@@ -67,7 +66,7 @@ npm run wdupdate
 
 ### Mocha/Puppoeteer
 
-`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./puppeteer.conf.js --recursive ./tests/mocha-puppeteer.js`
+`npm run test:mocha` - command run: `./node_modules/.bin/mocha ./conf/puppeteer.conf.js --recursive ./tests/mocha-puppeteer.js`
 
 ### Nightwatch-api/Webdriver
 
