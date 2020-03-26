@@ -5,11 +5,11 @@ server.on("request", (request, response) => {
         body.push(chunk);
     });
     request
-        .on("end", () => {
+        .on("end", function () {
             let bodyString = body.concat().toString();
             response.end(bodyString);
         })
-        .on("error", () => {
+        .on("error", function () {
             response.statusCode = 400;
             response.end();
         });
@@ -17,7 +17,7 @@ server.on("request", (request, response) => {
         console.err(err);
     });
 });
-server.listen(8082, () => {
+server.listen(8082, function () {
     console.log("Server listening at 8082");
 });
 

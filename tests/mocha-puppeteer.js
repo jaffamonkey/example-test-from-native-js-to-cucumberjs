@@ -7,7 +7,7 @@ describe('Check the DuckDuckGo search results page', function () {
 
     after(async function () {
         await page.close();
-    })
+    });
 
     it('should have the correct page title and first search result', async function () {
         await page.type('input[name="q"]', 'TrumpKlon');
@@ -16,7 +16,7 @@ describe('Check the DuckDuckGo search results page', function () {
         expect(await page.title()).to.eql('TrumpKlon at DuckDuckGo');
         await page.waitFor('.result__title');
         await page.screenshot({path: './tests/screenshots/puppeteer-mocha-test-screenshot.png'});
-        const firstresult = await page.$eval('#links', txt => txt.textContent.trim())
+        const firstresult = await page.$eval('#links', txt => txt.textContent.trim());
         expect(firstresult).to.have.string('GitHub - blinkgestalten/TrumpKlon');
     });
 });

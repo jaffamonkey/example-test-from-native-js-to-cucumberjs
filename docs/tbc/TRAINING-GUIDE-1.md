@@ -112,7 +112,7 @@ try {
   browser.wait(until.elementLocated(By.partialLinkText('TrumpKlon')), 3000, 'Could not locate correct link');
 
   // Now checking that the page title is what is expected.
-  browser.wait(until.titleIs('TrumpKlon at DuckDuckGo'), 3000, 'Could not locate correct title').then(() => {
+  browser.wait(until.titleIs('TrumpKlon at DuckDuckGo'), 3000, 'Could not locate correct title').then(function () {
 
     // Output success message to screen. For this to happens if the previous steps have all run successfully.
     console.log('Browser test passed!');

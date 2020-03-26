@@ -9,7 +9,7 @@ superagent
   .end((err, res) => {
     assert.ifError(err);
     assert.equal(res.status, 201); 
-    assert.equal(randomTitle, res.body.todo.title)
+    assert.equal(randomTitle, res.body.todo.title);
   });
 
 superagent

@@ -7,10 +7,10 @@ var email = utility.randomEmail(10);
 var phone = utility.randomPhone(10);
 
 // Protractor uses Jasmine framework by default
-describe('Complete form and check verification message', () => {
+describe('Complete form and check verification message', function () {
 
   // using async, available with ES6
-  it('fill in a valid form', async () => {
+  it('fill in a valid form', async function () {
     await home.getHomepage();
     await home.setFirstName(firstname);
     await home.setLastName(lastname);

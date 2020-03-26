@@ -1,6 +1,5 @@
 const assert = require('assert');
 const { Builder, Capabilities, By } = require('selenium-webdriver');
-
 Promise.resolve()
 
 	// using async, available with ES6
@@ -12,7 +11,7 @@ Promise.resolve()
 			)
 			.build();
 		await driver.get('https://duckduckgo.com');
-		await driver.findElement(By.name('q')).sendKeys('TrumpKlon')
+		await driver.findElement(By.name('q')).sendKeys('TrumpKlon');
 		await driver.findElement(By.id('search_button_homepage')).click();
 		const title = await driver.getTitle();
 		assert.equal((/TrumpKlon at DuckDuckGo/i).test(title), true);

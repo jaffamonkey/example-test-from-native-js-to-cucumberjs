@@ -12,10 +12,10 @@ describe('User visits signup page', function () {
         browser.visit('https://duckduckgo.com', done);
     });
 
-    describe('Check the DuckDuckGo search results page', () => {
+    describe('Check the DuckDuckGo search results page', function () {
 
-        it('Perform search', () => {
-            browser.fill('q', 'TrumpKlon')
+        it('Perform search', function () {
+            browser.fill('q', 'TrumpKlon');
             return browser.pressButton('#search_button_homepage');
         });
 

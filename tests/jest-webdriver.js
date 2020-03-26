@@ -11,9 +11,9 @@ var browser = new webdriver
         }
     }).build();
 
-describe('Check the DuckDuckGo search results page', () => {
+describe('Check the DuckDuckGo search results page', function () {
 
-    it('Check the page title', async () => {
+    it('Check the page title', async function () {
         await browser.get('https://duckduckgo.com');
         await browser.findElement(By.name('q')).sendKeys('TrumpKlon');
         await browser.findElement(By.id('search_button_homepage')).click();

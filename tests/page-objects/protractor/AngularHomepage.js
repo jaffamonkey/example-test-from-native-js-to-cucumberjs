@@ -8,7 +8,7 @@ var AngularHomepage = function () {
   var phone = element(by.name('data[phoneNumber]'));
 
   // using async, available with ES6
-  this.getHomepage = async () => {
+  this.getHomepage = async function () {
 
     // we are using a proatctor library function ExpectedConditions
     var EC = protractor.ExpectedConditions;

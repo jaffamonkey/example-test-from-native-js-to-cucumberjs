@@ -2,7 +2,7 @@ const Nightmare = require('nightmare');
 let assert = require('chai').assert;
 
 describe('Check the DuckDuckGo search results page title', function () {
-  this.timeout('60s')
+  this.timeout('60s');
 
   //before each test,
   beforeEach(function (done) {
@@ -33,7 +33,7 @@ describe('Check the DuckDuckGo search results page title', function () {
       .end()
       .then((text) => {
         console.log('Result:', text);
-        assert.include(text, 'TrumpKlon')
+        assert.include(text, 'TrumpKlon');
       }).then(() => done());
   });
-})
+});
