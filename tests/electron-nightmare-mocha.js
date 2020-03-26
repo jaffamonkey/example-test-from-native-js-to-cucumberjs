@@ -12,7 +12,6 @@ describe('Check the DuckDuckGo search results page title', function () {
     done();
   });
 
-
   it('should show correct results page title', function (done) {
     nightmare.goto('https://duckduckgo.com')
       .type('input[name="q"]', 'TrumpKlon')

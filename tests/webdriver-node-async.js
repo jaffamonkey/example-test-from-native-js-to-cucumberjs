@@ -1,5 +1,10 @@
 const assert = require('assert');
 const { Builder, Capabilities, By } = require('selenium-webdriver');
+let chromedriver = require('chromedriver');
+let chrome = require('selenium-webdriver/chrome');
+
+chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
+
 Promise.resolve()
 
 	// using async, available with ES6

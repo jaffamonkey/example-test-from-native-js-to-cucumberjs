@@ -10,13 +10,7 @@ var Utility = function () {
     let text = Math.random().toString(36).substring(numChars);
     return text;
   };
-
-  this.takeScreenshot = (data, filename) => {
-    var stream = fs.createWriteStream(filename);
-    stream.write(new Buffer(data, 'base64'));
-    stream.end();
-  };
-
+  
   this.randomEmail = (numChars) => {
     var allowedChars = "abcdefghiklmnopqrstuvwxyz";
     var randomstring = '';

@@ -26,4 +26,3 @@ npm run test:zombie
 echo "${PURPLE}Running test using ${LIGHTBLUE}cucumberjs/chromedriver"
 npm run test:cucumberjs
 echo "${PURPLE}TEST RUN COMPLETE"
-EOF

@@ -3,6 +3,10 @@ var webdriver = require('selenium-webdriver'),
   By = webdriver.By,
   until = webdriver.until;
 var errorMessage = 'Could not locate the correct ';
+let chrome = require('selenium-webdriver/chrome');
+let chromedriver = require('chromedriver');
+
+chrome.setDefaultService(new chrome.ServiceBuilder(chromedriver.path).build());
 
 // This is creating an webdriver object which enable interaction with the browser
 const browser = new webdriver
@@ -24,7 +28,6 @@ try {
 }
 catch (err) {
   console.log(err);
-  return false;
 }
 finally {
   browser.quit();
