@@ -11,12 +11,12 @@ describe('Complete form and check verification message', function () {
 
   // using async, available with ES6
   it('fill in a valid form', function() {
-    await home.getHomepage();
-    await home.setFirstName(firstname);
-    await home.setLastName(lastname);
-    await home.setEmail(email);
-    await home.setPhone(phone);
-    await utility.clickButton('.btn-primary');
-    await utility.areaContains('div.alert', 'Submission Complete.');
+    home.getHomepage();
+    home.setFirstName(firstname);
+    home.setLastName(lastname);
+    home.setEmail(email);
+    home.setPhone(phone);
+    utility.clickButton('.btn-primary');
+    utility.areaContains('div.alert', 'Submission Complete.');
   });
 }); 
