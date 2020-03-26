@@ -10,7 +10,7 @@ var phone = utility.randomPhone(10);
 describe('Complete form and check verification message', function () {
 
   // using async, available with ES6
-  it('fill in a valid form', async function () {
+  it('fill in a valid form', function() {
     await home.getHomepage();
     await home.setFirstName(firstname);
     await home.setLastName(lastname);
